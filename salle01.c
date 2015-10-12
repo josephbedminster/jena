@@ -20,13 +20,16 @@ void            salle01(int salle)
 	}
       if (action == 2)
 	{
-	  my_putstr("salle 02");
-	  // salle02(salle);
+	  my_putstr("\nVous poussez une vielle porte en bois, et penetrez dans la salle suivante.\n");
+	  salle = 2;
+	  salle02(salle);
         }
       if (action == 3)
 	{
-	  my_putstr("salle 03");
-	  // salle03(salle);
+	  my_putstr("\nPendant que vous marchez vers la salle au nord, des rats dans votre direction.\n ");
+	  my_putstr("Effraye, vous vous collez au mur et attendez que tout les rats soient passes.\n");
+	  salle = 3;
+	  salle03(salle);
         }
       if (action == 4)
 	{
