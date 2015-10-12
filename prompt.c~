@@ -1,4 +1,4 @@
-int             prompt()
+int             prompt(t_creature *mob)
 {
   char          *entree;
   int           result;
