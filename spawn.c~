@@ -1,21 +1,28 @@
-void		spawn()
+#include "fonctions.h"
+
+void		spawn(int salle)
 {
-do
-  {
-    read = readLine();
-    if (my_strcmp(read, "gauche") == 0 )
-      my_putstr("Imposible d'aller a gauche\n");
-    if (my_strcmp(read, "droite") == 0 )
-      my_putstr("Imposible d'aller a droite\n");
-    if (my_strcmp(read, "devant") == 0 )
-      my_putstr("Imposible d'aller devant\n");
-    if (my_strcmp(read, "derriere") == 0 )
-      my_putstr("Imposible d'aller devant\n");
-    if (my_strcmp(read, "regarder") == 0 )
-      {
-        my_putstr("C'est une piece carree, nous ne pouvons rien y faire dedant.\n");
-      }
-  }
- while (my_strcmp(read, "dessous") != 0 );
-my_putstr("Vous prennez l'escalier\n");
+  int		action;
+  
+  action = 0;
+  look(salle);
+  while (action == 0)
+    {
+      /*On propose ici le prompt au joueur*/
+      action = readline(salle);
+      /*Traitement de laction :*/
+      if ((action >= 1) && (action <= 5))
+	{
+	  erreur_depla(salle);
+	  action = 0;
+	}
+      else if (action == 6)
+	{
+	  salle01(salle);
+	}
+      else
+	/*A RETIRER*/
+	my_putstr("Erreur");
+ 
+   }
 }

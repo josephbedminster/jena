@@ -2,7 +2,7 @@
 
 int		main()
 {
-  int		salle;
+  int *salle;
 
   salle = 0;
   //  accueil();

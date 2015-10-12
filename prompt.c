@@ -1,4 +1,6 @@
-int             prompt()
+#include "fonctions.h"
+
+int             readline(int salle)
 {
   char          *entree;
   int           result;
@@ -7,9 +9,9 @@ int             prompt()
   while (result == 0)
     {
       entree = malloc(sizeof(char*));
-      my_putstr(" > ");
+      my_putstr("Entrez votre commande : ");
       my_strcpy(entree, readLine());
-      result = comp(entree);
+      result = comparer(entree, salle);
     }
   return (result);
 }

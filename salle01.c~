@@ -5,6 +5,7 @@ void            salle01(int salle)
   int		action;
 
   action = 0;
+  salle = 1;
 
   look(salle);
   while (action == 0)
@@ -15,8 +16,7 @@ void            salle01(int salle)
       if (action == 1)
 	{
 	  my_putstr("salle 04");
-	  salle = 4;
-	  salle04(salle);
+	  //  salle04(salle);
 	}
       if (action == 2)
 	{
@@ -35,7 +35,7 @@ void            salle01(int salle)
         }
       if (action == 5)
 	{
-	  my_putstr("Froussard que vous etes, vous decidez de remonter l'echelle.\n");
+	  my_putstr("retour salle spawn\n");
           salle = 0;
 	  spawn(salle);
         }
