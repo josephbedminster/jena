@@ -3,7 +3,7 @@ int             comp(char *entree)
   int           resultat;
 
   resultat = 0;
-  resultat = my_strcmp(entree, "regarder");
+  resultat = my_strcmp(entree, "look");
   if (resultat == 0)
     return (1);
 
@@ -23,11 +23,11 @@ int             comp(char *entree)
   if (resultat == 0)
     return (5);
 
-  resultat = my_strcmp(entree, "prendre");
+  resultat = my_strcmp(entree, "take");
   if (resultat == 0)
     return (6);
 
-  resultat = my_strcmp(entree, "aide");
+  resultat = my_strcmp(entree, "help");
   if (resultat == 0)
     return (7);
 
