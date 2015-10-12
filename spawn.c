@@ -18,6 +18,7 @@ void		spawn(int salle)
 	}
       else if (action == 6)
 	{
+	  my_putstr("\nVous descendez une echelle en bois.");
 	  salle = 1;
 	  salle01(salle);
 	}

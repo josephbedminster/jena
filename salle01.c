@@ -14,7 +14,7 @@ void            salle01(int salle)
       /*Traitement de laction :*/
       if (action == 1)
 	{
-	  my_putstr("salle 04");
+	  my_putstr("\nVous avez pris le passage qui menait a l'ouest. Vous traversez un long couloir.\n");
 	  salle = 4;
 	  salle04(salle);
 	}
@@ -30,12 +30,13 @@ void            salle01(int salle)
         }
       if (action == 4)
 	{
-	  my_putstr("salle 05");
-	  // salle05(salle);
+	  my_putstr("\nLe couloir que vous traversez est eclaire par quelques torches.\n");
+	  salle = 5;
+	  salle05(salle);
         }
       if (action == 5)
 	{
-	  my_putstr("Froussard que vous etes, vous decidez de remonter l'echelle.\n");
+	  my_putstr("\nFroussard que vous etes, vous decidez de remonter l'echelle.\n");
           salle = 0;
 	  spawn(salle);
         }

@@ -14,36 +14,24 @@ void            salle04(int salle)
       /*Traitement de laction :*/
       if (action == 1)
         {
-          my_putstr("salle 04");
-          salle = 4;
-          salle04(salle);
-        }
-      if (action == 2)
-        {
-          my_putstr("salle 02");
-          // salle02(salle);                                                    
-        }
-      if (action == 3)
-        {
-          my_putstr("salle 03");
-          // salle03(salle);                                                    
+	  //	  salle = 14;
+          //salle04(salle);
         }
       if (action == 4)
         {
-          my_putstr("salle 05");
-          // salle05(salle);                                                    
-        }
-      if (action == 5)
-        {
-          my_putstr("Froussard que vous etes, vous decidez de remonter l'echell\
-e.\n");
-          salle = 0;
-          spawn(salle);
-        }
-      if (action == 6)
+	  //  salle = 16;
+	  //salle16(salle);
+	}
+      if ((action == 3) || ((action >= 5) && (action <= 6)))
         {
           erreur_depla(salle);
-          action = 0;
+	  action = 0;
+	}
+      if (action == 2)
+        {
+          salle = 1;
+	  salle01(salle);                                                 
         }
+      
     }
 }

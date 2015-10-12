@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 
 int             comparer(char* entree, int salle);
@@ -12,3 +13,4 @@ void            my_putchar(char c);
 char            *readLine();
 int 	    	my_strcmp(char *s1, char *s2);
 char		*my_strcpy(char *dest, char *src);
+void            suspens();
