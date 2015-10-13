@@ -1,6 +1,6 @@
 #include "fonctions.h"
 
-int             readline(int salle)
+int             readline(int salle, t_player *player)
 {
   char          *entree;
   int           result;
@@ -11,7 +11,7 @@ int             readline(int salle)
       entree = malloc(sizeof(char*));
       my_putstr("Entrez votre commande : ");
       my_strcpy(entree, readLine());
-      result = comparer(entree, salle);
+      result = comparer(entree, salle, player);
     }
   return (result);
 }

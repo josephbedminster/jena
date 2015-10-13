@@ -1,6 +1,6 @@
 #include "fonctions.h"
 
-void            salle02(int salle)
+void            salle02(int salle, t_player *player)
 {
   int           action;
 
@@ -10,13 +10,13 @@ void            salle02(int salle)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle);
+      action = readline(salle, player);
       /*Traitement de laction :*/
       if (action == 1)
         {
 	  my_putstr("\nA la vue des cadavres, vous retournez dans la salle precedante\n"); 
           salle = 1;                                                   
-          salle01(salle);                                                     
+          salle01(salle, player);                           
         }
       if (action == 3)
         {
