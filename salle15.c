@@ -17,15 +17,18 @@ void            salle15(int salle, t_player *player)
       /*Traitement de laction :*/
       if (action == 3)
         {
+	  my_putstr("\nJ'espere ne pas avoir oublier de chose dans cette hangard, et puis si je n'arrive rien a");
+	  my_putstr(" faire avec mon vaisseaux mere je pourrais peut etre prendre un de ces petits vaisseaux.\n\n");
 	  g_map[6][0].content = 0;
-	  salle = 14;                                                   
-          salle14(salle, player);                           
+	  salle = 14;
+          salle14(salle, player);
         }
       if (action == 4)
         {
+	  my_putstr("Vous pensez que ce hangard est grand comment ? car je ne voie pas le fond");
 	  g_map[6][0].content = 0;
-	  salle = 16;                                                       
-          salle16(salle, player);                                                     
+	  salle = 16;
+          salle16(salle, player);
         }
       /*Prendre*/
       if (action == 5)

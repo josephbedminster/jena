@@ -17,9 +17,11 @@ void            salle16(int salle, t_player *player)
       /*Traitement de laction :*/
       if (action == 3)
         {
+	  my_putstr("\nEt bien atteindre le fond de se hangard etait long,mais bon j'ai trouver de petit");
+	  my_putstr(" chose interessante mais se trou dans la coque m'inquiette.\n\n");
 	  g_map[7][0].content = 0;
-	  salle = 15;                                                   
-          salle15(salle, player);                           
+	  salle = 15;
+          salle15(salle, player);
         }
       /*Prendre*/
       if (action == 5)

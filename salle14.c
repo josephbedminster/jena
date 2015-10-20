@@ -17,9 +17,10 @@ void            salle14(int salle, t_player *player)
       /*Traitement de laction :*/
       if (action == 2)
         {
+	  my_putstr("\nCe hangard ne m'inspire vraiment pas,je prefere faire demi-tour.\n\n");
 	  g_map[5][0].content = 0;
-	  salle = 13;                                                   
-          salle13(salle, player);                           
+	  salle = 13;
+          salle13(salle, player);
         }
       if (action == 4)
         {
@@ -34,9 +35,10 @@ void            salle14(int salle, t_player *player)
 	    }
 	  else
 	    {
-	  g_map[5][0].content = 0;
-	  salle = 15;                                                       
-          salle15(salle, player);                                                     
+	      my_putstr("\nPfiou!!! Heureusement que j'ai ma combinaison sinon je ne pense pas survivre.\n\n");
+	      g_map[5][0].content = 0;
+	      salle = 15;
+	      salle15(salle, player);
 	    }
 	}
       /*Prendre*/

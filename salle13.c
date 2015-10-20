@@ -17,6 +17,7 @@ void            salle13(int salle, t_player *player)
       /*Traitement de laction :*/
       if (action == 1)
         {
+	  my_putstr("\nPitier que je ne trouve pas de cadravre...\n\n");
 	  g_map[5][1].content = 0;
 	  salle = 14;
           salle14(salle, player);
@@ -46,6 +47,7 @@ void            salle13(int salle, t_player *player)
 	}
       if (action == 4)
         {
+	  my_putstr("\nTout les tuyaux de se vaisseaux se dirige vers ma direction, je pense m'approcher des salles machines.\n\n");
 	  g_map[5][1].content = 0;
 	  salle = 17;
 	  salle17(salle, player);
