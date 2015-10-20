@@ -39,6 +39,7 @@ void            salle13(int salle, t_player *player)
 	}
       if (action == 3)
         {
+	  my_putstr("\nOn retourne la ou je me suis reveiller, peut etre que un souvenir me reviendra...\n\n");
 	  g_map[5][1].content = 0;
 	  salle = 12;
 	  salle12(salle, player);
