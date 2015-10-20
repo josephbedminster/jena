@@ -18,8 +18,8 @@ void            salle13(int salle, t_player *player)
       if (action == 1)
         {
 	  g_map[5][1].content = 0;
-	  salle = 14;                                                   
-          salle14(salle, player);                           
+	  salle = 14;
+          salle14(salle, player);
         }
       if (action == 2)
         {

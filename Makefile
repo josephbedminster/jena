@@ -14,7 +14,5 @@ clean:
 		$(RM) $(OBJ)
 fclean:		clean
 		$(RM) $(NAME)
-		rm *.c~
-		rm  *.h~
 re:		fclean
 		make

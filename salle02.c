@@ -21,8 +21,8 @@ void            salle02(int salle, t_player *player)
         {
 	  my_putstr("\nPourquoi quitter un endroit si charmant ? J'espere avoir un peut plus apprit sur moi même.\n\n");
 	  g_map[1][0].content = 0;
-	  salle = 3;                                                   
-          salle03(salle, player);                           
+	  salle = 3;
+          salle03(salle, player);
         }
       /*Prendre*/
       if (action == 5)
