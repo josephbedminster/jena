@@ -2,13 +2,13 @@
 
 int		main()
 {
-
   int		salle;
   t_player	*player;
 
-  salle = 0;
-  player = malloc(sizeof(t_player));  
+  salle = 12;
+  player = malloc(sizeof(t_player*));
+  init_globales(player);
   accueil(player);
-  spawn(salle, player);
+  salle12(salle, player);
   return (0);
 }

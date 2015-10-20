@@ -1,11 +1,14 @@
 #include "fonctions.h"
 
+extern t_map g_map[10][4];
+
 void            salle04(int salle, t_player *player)
 {
   int           action;
 
   action = 0;
-
+  g_map[1][2].visited = 1;
+  g_map[1][2].content = 1;
   look(salle);
   while (action == 0)
     {
@@ -14,24 +17,21 @@ void            salle04(int salle, t_player *player)
       /*Traitement de laction :*/
       if (action == 1)
         {
-	  //	  salle = 14;
-          //salle04(salle);
+	  my_putstr("\nDes fois je me demande vraiment pourquoi je vous ecoute, au lieu de me barricader dans cette ");
+	  my_putstr("armurie je retourne explorer se drole de vaiseau...");
+	  g_map[1][2].content = 0;
+	  salle = 3;
+          salle03(salle, player);
         }
-      if (action == 4)
+      if (action == 5)
         {
-	  //  salle = 16;
-	  //salle16(salle);
-	}
-      if ((action == 3) || ((action >= 5) && (action <= 6)))
+          prendre(salle, player);
+	  action = 0;
+        }
+      if ((action >= 2) && (action <= 4))
         {
           erreur_depla(salle);
 	  action = 0;
 	}
-      if (action == 2)
-        {
-          salle = 1;
-	  salle01(salle, player);                                      
-        }
-      
     }
 }

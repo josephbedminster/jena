@@ -1,14 +1,6 @@
 #include "fonctions.h"
 
-int     my_putstr(char *str)
+void		my_putstr(char* str)
 {
-  char  i;
-
-  i = 0;
-  while (str[i] != '\0')
-    {
-      my_putchar(str[i]);
-      i++;
-    }
-  return (0);
+  write(1, str, my_strlen(str));
 }

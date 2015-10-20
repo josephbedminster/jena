@@ -4,14 +4,29 @@ int             readline(int salle, t_player *player)
 {
   char          *entree;
   int           result;
-
+  
   result = 0;
   while (result == 0)
     {
-      entree = malloc(sizeof(char*));
-      my_putstr("Entrez votre commande : ");
-      my_strcpy(entree, readLine());
+      my_putstr("Que dois-je faire : ");
+      entree = readLine();
       result = comparer(entree, salle, player);
     }
   return (result);
+}
+
+char             *readline_prendre()
+{
+  char          *entree;
+  my_putstr("   Que dois-je prendre ? > ");
+  entree = readLine();
+  return (entree);
+}
+
+char             *readLine_code()
+{
+  char          *entree;
+  my_putstr("   ENTREZ VOTRE CODE > ");
+  entree = readLine();
+  return (entree);
 }
