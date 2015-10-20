@@ -30,7 +30,8 @@ void            salle13(int salle, t_player *player)
 	    }
 	  else
 	    {
-	      my_putstr("\nEt bien,on peut dire que cette carte me sert un peut partout malgres que le sergent Colas ne sois pas la,je le remercie.\n\n");
+	      my_putstr("\nEncore une porte verrouilee ! On peut dire que le badge d'acces du sergent m'est utile !\n");
+	      my_putstr("S'il etait toujours en un seul morceau, je l'aurai bien remercie...\n\n");
 	      g_map[5][1].content = 0;
 	      salle = 23;
 	      salle23(salle, player);
