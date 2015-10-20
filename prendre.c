@@ -17,12 +17,13 @@ int		prendre(int salle, t_player *player)
 	  system("cat douche.txt");
 	  my_putstr("\n\n");
 	  SCORE = SCORE + 20;
+	  return (0);
 	}
       else if (strcmp(entree, "carte") == 0)
 	{
 	  if (CARTE_COM == 0)
 	    {
-	      my_putstr("\nEcoutez, je ne sais pas si c'est important mais j'ai trouver une carte d'acces avec mon nom dessus !\n\n");
+	      my_putstr("\nEcoutez, je ne sais pas si c'est important mais j'ai trouve une carte d'acces avec mon nom dessus !\n\n");
 	      system("cat carte_com.txt");
 	      my_putstr("\n");
 	      CARTE_COM = 1;
@@ -46,7 +47,7 @@ int		prendre(int salle, t_player *player)
 	{
 	  if (CARTE_ACCES == 0)
 	    {
-	      my_putstr("\nVous etes sur ? Beurk.\nTres bien ! Je prend le badge d'acces du sergent Colas.\n\n");
+	      my_putstr("\nVous etes sur ? Degoutant !\nBon, tres bien ! Je prend le badge d'acces du sergent Colas.\n\n");
 	      CARTE_ACCES = 1;
 	      SCORE = SCORE + 5;
 	    }

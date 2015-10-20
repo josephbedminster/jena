@@ -17,8 +17,7 @@ void            salle04(int salle, t_player *player)
       /*Traitement de laction :*/
       if (action == 1)
         {
-	  my_putstr("\nDes fois je me demande vraiment pourquoi je vous ecoute, au lieu de me barricader dans cette ");
-	  my_putstr("armurie je retourne explorer se drole de vaiseau...");
+	  my_putstr("\nVous etes sur ? Je trouvais la presence de toutes ces armes presque rassurante !\n");
 	  g_map[1][2].content = 0;
 	  salle = 3;
           salle03(salle, player);

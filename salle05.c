@@ -17,11 +17,19 @@ void            salle05(int salle, t_player *player)
       /*Traitement de laction :*/
       if (action == 2)
         {
-	  my_putstr("\nOh une salle avec une porte totalement fermer, pourquoi ne pas essayer de trouver se qui la deverouille.\n\n");
-	  g_map[2][0].content = 0;
-          salle = 6;
-	  salle06(salle, player);
-        }
+	  if (CARTE_ACCES == 0)
+	    {
+	      my_putstr("\nLa porte est verouillee ! Il faudrait que je trouve ce qui la deverouille....\n");
+	      my_putstr("Dis comme ca, ca parait assez facile non ?\n\n");
+	      action == 0;
+	    }
+	  else
+	    {
+	      g_map[2][0].content = 0;
+	      salle = 6;
+	      salle06(salle, player);
+	    }
+	}
       if (action == 4)
         {
 	  my_putstr("\nOn retourne vers le cadavre du sergent, vous etes sur de vouloir vraiment y retourner ? Moi personnelement cela ne me plait pas.");

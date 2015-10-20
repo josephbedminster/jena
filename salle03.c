@@ -24,13 +24,15 @@ void            salle03(int salle, t_player *player)
 	  entree = readLine_code();
 	  if ((strcmp(entree, "jena") == 0) || ((strcmp(entree, "JENA") == 0)))
 	    {
-	      my_putstr("Oh mais jai trouver le code, c'est mon propres prenom donc cela veut dire que ...\n");
+	      my_putstr("Ca marche ! La porte se deverouille !\n");
+	      my_putstr("Une minute ! Le code est mon prenom ?...\n");
+	      my_putstr("Cela veut dire que ...\n");
 	      sleep(2);
 	      my_putstr("Je");
 	      sleep(2);
 	      my_putstr("\n...\n");
 	      sleep(2);
-	      my_putstr("C'est mon quartier ?\n\n");
+	      my_putstr("Ce sont mes quartiers ?!\n\n");
 	      g_map[1][1].content = 0;
 	      salle = 2;
 	      salle02(salle, player);
@@ -65,7 +67,7 @@ void            salle03(int salle, t_player *player)
 	  entree = readLine_code();
 	  if ((strcmp(entree, "ICARUS") == 0))
 	    {
-	      my_putstr("\nApparament aucuns code ne me resiste !\n\n");
+	      my_putstr("\nICARUS, logique !\nEsperons que la cabine de pilotage ne sois pas trop endommagee !\n\n");
 	      g_map[1][1].content = 0;
 	      salle = 1;
 	      salle01(salle, player);
@@ -78,7 +80,7 @@ void            salle03(int salle, t_player *player)
 	}
       if (action == 4)
 	{
-	  my_putstr("\nJe suis presque sur d'avoir fini avec ces trois salles.\n\n");
+	  my_putstr("\nTres bien, rebroussons chemin pour l'instant !\n\n");
 	  g_map[1][1].content = 0;
 	  salle = 6;
 	  salle06(salle, player);

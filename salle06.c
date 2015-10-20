@@ -17,18 +17,19 @@ void            salle06(int salle, t_player *player)
       /*Traitement de laction :*/
       if (action == 1)
         {
-	  my_putstr("\nEt bien tout compte fait je preferais le dortoir pour homme, ");
-	  my_putstr("qui sais je pourrais y trouver des informations sur les hommes mort avent.\n\n");
+	  my_putstr("\nCe couloir ouvre sur plusieurs portes. Il y a des noms a l'entree de chaque porte. ");
+	  my_putstr("COLAS, CURLLY, ... Ce doit etre les quartiers des hommes de l'equipage.\n");
+	  my_putstr("Esperons que j'en aprenne d'avantage sur l'equipage.");
 	  g_map[2][1].content = 0;
 	  salle = 5;
           salle05(salle, player);
         }
       if (action == 2)
         {
-	  my_putstr("\nEncore une salle mais combien il y en a de ce genre ? Vous pensez que c'est encore grand ?\n\n");
+	  my_putstr("\nOn dirait... Des quartiers ! Tout est en desordre, mais je devine aux bottes et aux accessoires sur les lits que ce doit etre les quartiers des femmes.\n\n");
 	  g_map[2][1].content = 0;
 	  salle = 7;
-	  salle07(salle, player);                                                         
+	  salle07(salle, player);
         }
       if (action == 3)
         {
@@ -43,7 +44,7 @@ void            salle06(int salle, t_player *player)
             {
 	      my_putstr("J'essaye le badge sur le boitier de la porte...\n");
 	      sleep(1);
-	      my_putstr("Ca marche, la porte s'est ouverte !\n");
+	      my_putstr("Et... Ca marche, la porte s'est ouverte !\n");
               g_map[2][1].content = 0;
               salle = 3;
               salle03(salle, player);
@@ -58,6 +59,6 @@ void            salle06(int salle, t_player *player)
         {
           prendre(salle, player);
 	  action = 0;
-        } 
+        }
     }
 }
