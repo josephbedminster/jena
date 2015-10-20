@@ -1,0 +1,54 @@
+#include "fonctions.h"
+
+extern t_map g_map[10][4];
+
+void            salle10(int salle, t_player *player)
+{
+  int           action;
+
+  action = 0;
+  g_map[3][2].visited = 1;
+  g_map[3][2].content = 1;
+  look(salle);
+  while (action == 0)
+    {
+      /*On propose ici le prompt au joueur*/
+      action = readline(salle, player);
+      /*Traitement de laction :*/
+      if (action == 1)
+        {
+	  if (CARTE_ACCES == 1)
+	    {
+	      my_putstr("\nJe quitte ce qui ressemble a un laboratoire d'experiences, pour retourner vers des cadavres. Super...\n");
+	      my_putstr("Vous n'avez pas une meilleure idée ? Vous donnez certes de bon conseils, mais des fois j'hesite vraiment.\n\n");
+	      g_map[3][2].content = 0;
+	      salle = 9;                                                   
+	      salle09(salle, player);                           
+	    }
+	  else
+	    {
+	      my_putstr("\nImpossible de passer cette baie vitre sans la deverouiller, pourtant je connait se qu'il y a derriere.\n\n");
+	      action = 0;
+	    }
+	}
+      if (action == 3)
+        {
+	  my_putstr("\nOh un endroit pour se reposer ? Apres tout se que je viens de decouvrir je ne dirais pas non a une petite sieste.\n");
+	  g_map[3][2].content = 0;
+	  salle = 7;
+	  salle07(salle, player);
+	}
+      /*Prendre*/
+      if (action == 5)
+        {
+          prendre(salle, player);
+          action = 0;
+        }
+      /*fin prendre*/
+      if ((action == 2) || (action == 4))
+        {
+          erreur_depla(salle);
+          action = 0;
+        }
+    }
+}

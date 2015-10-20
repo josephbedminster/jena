@@ -1,0 +1,4 @@
+Winda : 21 Pts.
+jonathan : 5 Pts.
+Joey : 3 Pts.
+test putstr : 15 Pts.

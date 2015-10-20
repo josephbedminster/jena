@@ -1,0 +1,51 @@
+typedef struct s_enemy
+{
+  char *name;
+  int **attack_power;
+  int pv;
+  char **attack_name;
+}		t_enemy;
+
+t_enemy tab_enemy[] = {
+  {"noob", {10, 15 ,30}, 50, {"fire0", "thunder"}},
+  {"noob", {10, 15 ,30}, 50, {"fire0", "thunder"}}
+};
+
+
+player_turn)()
+{
+  char entre = readLine()
+
+    if (entre == "fire")
+      struc->enemy.pv -= 50;
+    else if (entre == "medicament")
+      struc->player.pv += 50;
+    else 
+      putstr rien du tout
+}
+
+ia_turn ()
+{
+  res = rand() % 10;
+  if (res == 1)
+    aff attack
+      struct->player.pv -= tab_enemy[res].attack_power;
+}
+
+battle()
+{
+  while (pv > 0 || pvmonstre > 0)
+    {
+      if (i % 2 == 0)
+	{
+	  player__turn();
+      }
+      else
+	ia_turn();
+      i++;
+    }
+  if (pv == 0)
+    return 1 == tes mort
+    else 
+return 0 == enemy mort
+}
