@@ -28,9 +28,10 @@ void            salle24(int salle, t_player *player)
 
       if (action == 3)
         {
+	  my_putstr("\nj'ai besoin de retourner en arriere, vous vous souvenez la ou je pouvais marcher sur du sol et non des cartons !\n\n ");
 	  g_map[6][2].content = 0;
-	  salle = 23;                                                   
-          salle23(salle, player);                           
+	  salle = 23;
+          salle23(salle, player);
         }
       if ((action == 4) || ((action >= 1) && (action <= 2)))
         {
