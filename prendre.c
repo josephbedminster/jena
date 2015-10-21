@@ -20,6 +20,14 @@ int		prendre(int salle)
 	  system("cat douche.txt");
 	  my_putstr("\n\n");
 	  SCORE = SCORE + 20;
+	  DOUCHE_TAKEN = 1;
+	  return (0);
+	}
+      else if (strcmp(entree, "du repos") == 0)
+	{
+	  my_putstr("\n\n");
+	  jena.pv = jena.pvmax;
+	  my_putstr("\n\nJe me suis reposée un peu, j'ai récupéré toute ma forme !\n\n");
 	  return (0);
 	}
       else if (strcmp(entree, "carte") == 0)
@@ -140,7 +148,7 @@ int		prendre(int salle)
   /*DEBUT 11*/
   if(salle == 11)
     {
-      if (strcmp(entree, "medicaments") == 0)
+      if (strcmp(entree, "medicament") == 0)
 	{
 	  if (MEDIC_RESE > 0)
 	    {

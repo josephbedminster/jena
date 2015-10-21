@@ -10,8 +10,9 @@ void		fouiller(int salle)
     {
       if (CARTE_COM == 0)
         {
-          my_putstr("\nJe pense que je peux récuperer :\n");
-          my_putstr(" - une <carte> d'identification\n\n");
+          my_putstr("\nJe pense que je peux prendre :\n");
+          my_putstr(" - une <carte> d'identification\n");
+	  my_putstr(" - <du repos> dans le lit\n\n");
         }
       else
         {
@@ -60,7 +61,7 @@ void		fouiller(int salle)
       if (MEDIC_RESE != 0)
         {
           my_putstr("\nJe pense que je peux récuperer :\n");
-          my_putstr(" - des <medicaments>\n\n");
+          my_putstr(" - un <medicament>\n\n");
         }
       else
         {

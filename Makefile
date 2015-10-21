@@ -12,8 +12,13 @@ $(NAME) :	$(OBJ)
 		echo "DEVELOPEMENT OPEN SOURCE" >> README.txt
 		echo "ECOLE PREP ETNA ALTERNANCE, FRANCE\n" >> README.txt
 		echo "DEVELOPEURS :" >> README.txt
-		echo "- ROLLAND THOMAS" >> README.txt
-		echo "- BEDMINSTER JOSEPH\n" >> README.txt
+		echo "- ROLLAND THOMAS (ETNA)" >> README.txt
+		echo "- BEDMINSTER JOSEPH (ETNA)\n" >> README.txt
+		echo "COLLABORATEURS :\n" >> README.txt
+		echo "- AZIS WINDA (ETNA)" >> README.txt
+		echo "- COLAS GEOFFREY (ETNA)" >> README.txt
+		echo "- KAUCH JONATHAN (EPITECH)" >> README.txt
+		echo "- FRAYS CHRISTOPHE (EPITECH)\n" >> README.txt
 		echo "=============================" >> README.txt
 		date >> README.txt
 		echo "=============================" >> README.txt
