@@ -1,3 +1,4 @@
+/*
 rm ../README.md
 echo "##PROJET : Les Aventures de Jena" >> ../README.md
 echo "###![img1] (http://www.hostingpics.net/thumbs/82/06/74/mini_820674spaceship2.png) Contexte" >> ../README.md
@@ -27,3 +28,4 @@ cat *.c *.h *.txt | wc -l >> ../README.md
 echo "   " >> ../README.md
 echo "Nombre de caracteres : " >> ../README.md
 cat *.c *.h *.txt | wc -c >> ../README.md
+*/

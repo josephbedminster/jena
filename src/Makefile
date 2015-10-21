@@ -7,7 +7,6 @@ OBJ =           $(SRC:%.c=%.o)
 RM =            rm -rf
 
 $(NAME) :	$(OBJ)
-		bash create_readme.sh
 		$(CC) $(SRC) $(CFLAGS) -o ../$(NAME)
 
 all:		$(NAME)
