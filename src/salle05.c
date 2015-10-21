@@ -20,18 +20,10 @@ void            salle05(int salle)
       /*Traitement de laction :*/
       if (action == 2)
         {
-	  if (CARTE_ACCES == 0)
-	    {
-	      my_putstr("\nLa porte est verouillee ! Il faudrait que je trouve ce qui la deverouille....\n");
-	      my_putstr("Dis comme ca, ca parait assez facile non ?\n\n");
-	      action = 0;
-	    }
-	  else
-	    {
+	  my_putstr("\nje traverse un petit couloir etroit. Je commence a avoir sacrementpeur...\n\n");
 	      g_map[2][0].content = 0;
 	      salle = 6;
 	      salle06(salle);
-	    }
 	}
       if (action == 4)
         {

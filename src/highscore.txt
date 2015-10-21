@@ -3,3 +3,4 @@ Winda : 21 Pts.
 jonathan : 5 Pts.
 Joey : 41 Pts.
 g : 0 Pts.
+winda est nul elle a un score nul. : 112 Pts.

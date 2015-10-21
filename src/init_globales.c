@@ -13,7 +13,7 @@ t_attack attackList[NB_ATTACK] = {
 };
 
 t_player jena[1]= {
-  {1, 100, 100, 2, weaponList}
+  {1, 100, 100, 0, weaponList}
 };
 
 void	init_globales()

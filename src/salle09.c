@@ -26,7 +26,7 @@ void            salle09(int salle)
 	      my_putstr("Il y a encore un homme mort sur la table d'operation... Le sol est recouvert de sang.\n");
 	      my_putstr("Il a du se trainer jusqu'ici et se hisser sur la table...\n");
 	      my_putstr("Je m'approche du corps...\n");
-	      //	      sleep(5);
+	      //sleep(5);
 	      my_putstr("Il est ecrit -Sergent Colas- sur l'uniforme.\n");
 	      //sleep(5);
 	      my_putstr("Un objet semble depasser de la poche interieure de la veste.\nOn dirait un badge d'acces.\n");
