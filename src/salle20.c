@@ -8,6 +8,7 @@ extern t_player jena;
 void            salle20(int salle)
 {
   int           action;
+  int           b;
 
   action = 0;
   g_map[8][2].visited = 1;

@@ -9,6 +9,7 @@ void            salle08(int salle)
 {
   int           action;
   char		*entree_code;
+  int           b;
 
   entree_code = malloc(sizeof(entree_code));
   action = 0;

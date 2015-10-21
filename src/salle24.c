@@ -9,6 +9,7 @@ void            salle24(int salle)
 {
   int           action;
   char		*entree;
+  int           b;
 
   entree = malloc(sizeof(char*));
   action = 0;
