@@ -7,16 +7,8 @@ void            accueil()
   entree = malloc(sizeof(char*));
   system("clear");
   system("clear");
-  system("cat header.txt");
-  //my_putstr("\n\n ============================================\n");
-  //my_putstr("              ADVENTURES OF JENA           \n");
-  //my_putstr(" ============================================\n\n");
-  //my_putstr("Aventurier, entrez votre nom : ");                                                                           
-  //my_strcpy(entree, readLine());                                                                                          
-  //  Le username servira juste a enregistrer les highscores player->name = entree;
-  //my_putstr(player->name);                                                                                                
-  
-  
+  system("cat src/header.txt");
+
   my_putstr("\n\n\n[Demande de communication entrante]\n");
   //sleep(1);
   my_putstr("[Connection...]\n");

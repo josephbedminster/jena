@@ -22,7 +22,7 @@ void            salle03(int salle)
       /*Traitement de laction :*/
       if (action == 1)
         {
-	  system("cat code_com.txt");
+	  system("cat src/code_com.txt");
 	  my_putstr("\n");
 	  entree = readLine_code();
 	  if ((strcmp(entree, "jena") == 0) || ((strcmp(entree, "JENA") == 0)))
@@ -65,7 +65,7 @@ void            salle03(int salle)
 	}
       if (action == 3)
 	{
-	  system("cat code_pil.txt");
+	  system("cat src/code_pil.txt");
 	  my_putstr("\n");
 	  entree = readLine_code();
 	  if ((strcmp(entree, "ICARUS") == 0))

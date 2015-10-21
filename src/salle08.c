@@ -42,7 +42,7 @@ void            salle08(int salle)
         }
       if (action == 4)
 	{
-	  system("cat code_inf.txt");
+	  system("cat src/code_inf.txt");
           my_putstr("\n");
 	  entree_code = readLine_code();
           if ((strcmp(entree_code, "adn") == 0) || ((strcmp(entree_code, "ADN") == 0)))

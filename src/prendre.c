@@ -17,7 +17,7 @@ int		prendre(int salle)
     {
       if (strcmp(entree, "douche") == 0)
 	{
-	  system("cat douche.txt");
+	  system("cat src/douche.txt");
 	  my_putstr("\n\n");
 	  SCORE = SCORE + 20;
 	  DOUCHE_TAKEN = 1;
@@ -35,7 +35,7 @@ int		prendre(int salle)
 	  if (CARTE_COM == 0)
 	    {
 	      my_putstr("\nEcoutez, je ne sais pas si c'est important mais j'ai trouve une carte d'acces avec mon nom dessus !\n\n");
-	      system("cat carte_com.txt");
+	      system("cat src/carte_com.txt");
 	      my_putstr("\n");
 	      CARTE_COM = 1;
 	      SCORE = SCORE + 5;

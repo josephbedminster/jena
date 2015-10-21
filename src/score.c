@@ -6,7 +6,7 @@ void		score()
   my_putnbr(SCORE);
   my_putstr("\n");
 
- FILE *f = fopen("highscore.txt", "a+");
+ FILE *f = fopen("src/highscore.txt", "a+");
  if (f == NULL)
    {
      fprintf(stderr, "Error opening file!\n");
@@ -15,6 +15,6 @@ void		score()
 
  fprintf(f,"%s : %d Pts.\n", USER, SCORE);
  fclose(f);
- system("cat highscore.txt");
+ system("cat src/highscore.txt");
  exit(0);
 }

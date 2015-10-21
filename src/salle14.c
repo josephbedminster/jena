@@ -33,8 +33,8 @@ void            salle14(int salle)
 	      my_putstr("Je me sens mal !...\n");
 	      sleep(3);
 	      my_putstr("Je...\n");
-	      score();
 	      gameover();
+	      score();
 	    }
 	  else
 	    {
