@@ -15,6 +15,12 @@ void            salle11(int salle)
   g_map[4][0].visited = 1;
   g_map[4][0].content = 1;
   look(salle);
+  srand(time(NULL));
+  b = rand();
+  if ((b%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
+    {
+      start_battle();
+    }
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/

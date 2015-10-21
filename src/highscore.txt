@@ -4,3 +4,6 @@ jonathan : 5 Pts.
 Joey : 41 Pts.
 g : 0 Pts.
 winda est nul elle a un score nul. : 112 Pts.
+nefast : 371 Pts.
+Jo : 0 Pts.
+j : 60 Pts.

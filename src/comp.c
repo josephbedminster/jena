@@ -1,5 +1,7 @@
 #include "fonctions.h"
 
+
+
 int             comparer(char* entree, int salle)
 {
   int           resultat;

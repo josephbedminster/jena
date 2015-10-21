@@ -8,11 +8,18 @@ extern t_player jena;
 void            salle01(int salle)
 {
   int		action;
+  int		b;
 
   action = 0;
   g_map[0][1].visited = 1;
   g_map[0][1].content = 1;
   look(salle);
+  srand(time(NULL));
+  b = rand();
+  if ((b%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
+    {
+      start_battle();
+    }
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
@@ -24,18 +31,18 @@ void            salle01(int salle)
 	  g_map[0][1].content = 0;
 	  salle = 3;
 	  salle03(salle);
-        }
+	}
       /*Prendre*/
       if (action == 5)
-        {
-          prendre(salle);
-          action = 0;
-        }
+	{
+	  prendre(salle);
+	  action = 0;
+	}
       /*fin prendre*/
       if ((action >= 1) && (action <= 3))
 	{
-          erreur_depla(salle);
-          action = 0;
-        }
+	  erreur_depla(salle);
+	  action = 0;
+	}
     }
 }
