@@ -1,15 +1,18 @@
 rm README.md
-echo "#PROJET --JENA--" >> README.md
-echo "###DEVELOPEMENT OPEN SOURCE" >> README.md
-echo "ECOLE PREP ETNA ALTERNANCE, FRANCE" >> README.md
-echo "###DEVELOPPEURS" >> README.md
-echo "  ROLLAND THOMAS (ETNA)" >> README.md
-echo "  BEDMINSTER JOSEPH (ETNA)" >> README.md
-echo "###COLLABORATEURS" >> README.md
-echo "  AZIS WINDA (ETNA)" >> README.md
-echo "  COLAS GEOFFREY (ETNA)" >> README.md
-echo "  KAUCH JONATHAN (EPITECH)" >> README.md
-echo "  FRAYSSE CHRISTOPHE (EPITECH)" >> README.md
+echo "#PROJET: Les Aventures de Jena" >> README.md
+echo "###Developpement open-source" >> README.md
+echo "Projet libre - Ecole ETNA ALternance, France" >> README.md
+echo "---" >> README.md
+echo "###Developpeurs" >> README.md
+echo "  Rolland Thomas (ETNA)," >> README.md
+echo "  Bedminster Joseph (ETNA), " >> README.md
+echo "---" >> README.md
+echo "###Collaborateurs" >> README.md
+echo "  Azis Winda (ETNA), " >> README.md
+echo "  Colas Geoffrey (ETNA), " >> README.md
+echo "  Kauch Jonathan (EPITECH), " >> README.md
+echo "  Fraysse Christophe (EPITECH)" >> README.md
+echo "---" >> README.md
 echo "###INFOS" >> README.md
 date >> README.md
 echo " | Nombre de lignes : " >> README.md
