@@ -11,6 +11,7 @@
 #include <time.h>
 
 /*USER*/
+int		ERREUR_PROMPT;
 char*		USER;
 int		SCORE;
 int		ARME_EQUIP;

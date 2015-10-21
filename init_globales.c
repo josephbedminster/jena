@@ -19,6 +19,7 @@ t_player jena[1]= {
 void	init_globales()
 {
   /*VARIABLES GLOBALES*/
+  ERREUR_PROMPT = 0;
   COMBI = 0;
   CARTE_ACCES = 0;
   CARTE_COM = 0;
