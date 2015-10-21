@@ -1,8 +1,11 @@
 #include "fonctions.h"
 
 extern t_map g_map[10][4];
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
-void            salle02(int salle, t_player *player)
+void            salle02(int salle)
 {
   char		*entree;
   int           action;
@@ -15,7 +18,7 @@ void            salle02(int salle, t_player *player)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle, player);
+      action = readline(salle);
       /*Traitement de laction :*/
       if (action == 2)
         {
@@ -23,12 +26,12 @@ void            salle02(int salle, t_player *player)
 	  my_putstr("C'est reparti pour l'aventure dans ce vaisseau super-flippant !\n");
 	  g_map[1][0].content = 0;
 	  salle = 3;
-          salle03(salle, player);
+          salle03(salle);
         }
       /*Prendre*/
       if (action == 5)
         {
-	  prendre(salle, player);
+	  prendre(salle);
           action = 0;
         }
       /*fin prendre*/

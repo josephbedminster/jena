@@ -1,4 +1,7 @@
 #include "fonctions.h"
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
 void		fouiller(int salle)
 {
@@ -17,6 +20,22 @@ void		fouiller(int salle)
       return;
     }
   /*FIN SALLE02*/
+
+  /*SALLE 04*/
+  if (salle == 4)
+    {
+      if (jena.weaponTab[0].available == 0)
+        {
+          my_putstr("\nJe pense que je peux récuperer :\n");
+          my_putstr(" - une <pistolet> laser \n\n");
+        }
+      else
+        {
+          my_putstr("\nJ'ai beau chercher, je vois rien a récuperer.\n\n");
+        }
+      return;
+    }
+  /*FIN SALLE04*/
 
   /*SALLE 08*/
   if (salle == 8)

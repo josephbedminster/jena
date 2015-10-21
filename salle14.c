@@ -1,8 +1,11 @@
 #include "fonctions.h"
 
 extern t_map g_map[10][4];
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
-void            salle14(int salle, t_player *player)
+void            salle14(int salle)
 {
   int           action;
 
@@ -13,14 +16,14 @@ void            salle14(int salle, t_player *player)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle, player);
+      action = readline(salle);
       /*Traitement de laction :*/
       if (action == 2)
         {
 	  my_putstr("\nCe hangard ne m'inspire vraiment pas,je prefere faire demi-tour.\n\n");
 	  g_map[5][0].content = 0;
 	  salle = 13;
-          salle13(salle, player);
+          salle13(salle);
         }
       if (action == 4)
         {
@@ -38,13 +41,13 @@ void            salle14(int salle, t_player *player)
 	      my_putstr("\nPfiou!!! Heureusement que j'ai ma combinaison sinon je ne pense pas survivre.\n\n");
 	      g_map[5][0].content = 0;
 	      salle = 15;
-	      salle15(salle, player);
+	      salle15(salle);
 	    }
 	}
       /*Prendre*/
       if (action == 5)
         {
-          prendre(salle, player);
+          prendre(salle);
           action = 0;
         }
       /*fin prendre*/

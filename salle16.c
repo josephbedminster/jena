@@ -1,8 +1,11 @@
 #include "fonctions.h"
 
 extern t_map g_map[10][4];
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
-void            salle16(int salle, t_player *player)
+void            salle16(int salle)
 {
   int           action;
 
@@ -13,7 +16,7 @@ void            salle16(int salle, t_player *player)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle, player);
+      action = readline(salle);
       /*Traitement de laction :*/
       if (action == 3)
         {
@@ -21,12 +24,12 @@ void            salle16(int salle, t_player *player)
 	  my_putstr(" chose interessante mais se trou dans la coque m'inquiette.\n\n");
 	  g_map[7][0].content = 0;
 	  salle = 15;
-          salle15(salle, player);
+          salle15(salle);
         }
       /*Prendre*/
       if (action == 5)
         {
-          prendre(salle, player);
+          prendre(salle);
           action = 0;
         }
       /*fin prendre*/

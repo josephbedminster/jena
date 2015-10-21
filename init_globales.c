@@ -1,23 +1,32 @@
 #include "fonctions.h"
-t_player*		init_globales(t_player *player)
+
+
+t_weapon weaponList[NB_WEAPON] = {
+  {0, "Pistolet Laser", 30},
+  {0, "Fusil a plasma", 40}
+};
+
+// idem ici pour l'enemi
+t_attack attackList[NB_ATTACK] = {
+  {"Charge", 20},
+  {"Melee", 35}
+};
+
+t_player jena[1]= {
+  {1, 100, 100, 2, weaponList}
+};
+
+void	init_globales()
 {
 /*VARIABLES GLOBALES*/
 COMBI = 0;
 CARTE_ACCES = 0;
 CARTE_COM = 0;
-MEDIC_RESE = 5;
+MEDIC_RESE = 2;
 DIAG_S09A08 = 0;
 DIAG_S12A09 = 0;
 SCORE = 0;
 /*FIN*/
-
-/*INIT STRUCTURE PLAYER*/
-player->lvl = 1;
-player->pv = 100;
-player->pv = 100;
-player->medicaments = 0;
-/*FIN*/
- return (player);
 }
 
 /*MAP*/
@@ -44,8 +53,3 @@ t_map g_map[10][4] = {
     {0, 7, {0,0,0,0}, 0, 0}, {1, 7, {1,1,0,0}, 0, 0}, {1, 7, {1,0,0,1}, 0, 0}, {0, 7, {0,0,0,0}, 0, 0}
   }
 };
-
-/*MARCHE PAS                                                                                                                 t_enemy tab_enemy[] = {
- {"Monstre1", {10, 15}, 50, {"Melee", "Charge"}},
- {"Monstre2", {10, 0}, 50, {"Charge", "Repli"}}
- };*/

@@ -12,11 +12,9 @@ void		score()
      fprintf(stderr, "Error opening file!\n");
      exit(1);
    }
- 
- // sep = " : ";
+
  fprintf(f,"%s : %d Pts.\n", USER, SCORE);
- //fprintf(f, "%s", sep);
- //fprintf(f,"%d Pts.\n", SCORE);
  fclose(f);
  system("cat highscore.txt");
+ exit(0);
 }

@@ -1,6 +1,6 @@
 #include "fonctions.h"
 
-int             comparer(char* entree, int salle, t_player *player)
+int             comparer(char* entree, int salle)
 {
   int           resultat;
 
@@ -38,7 +38,7 @@ int             comparer(char* entree, int salle, t_player *player)
   resultat = my_strcmp(entree, "qui suis-je ?");
   if (resultat == 0)
     {
-      quisuisje(player);
+      quisuisje();
       return (0);
     }
 
@@ -80,7 +80,7 @@ int             comparer(char* entree, int salle, t_player *player)
   if (resultat == 0)
     {
       my_putstr("Vous vous etes suicide avec vos mains.\n");
-      score();      
+      score();
       gameover();
       exit(0);
     }

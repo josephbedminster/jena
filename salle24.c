@@ -1,8 +1,11 @@
 #include "fonctions.h"
 
 extern t_map g_map[10][4];
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
-void            salle24(int salle, t_player *player)
+void            salle24(int salle)
 {
   int           action;
   char		*entree;
@@ -15,13 +18,13 @@ void            salle24(int salle, t_player *player)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle, player);
+      action = readline(salle);
       /*Traitement de laction :*/
 
       /*Prendre*/
       if (action == 5)
         {
-          prendre(salle, player);
+          prendre(salle);
           action = 0;
         }
       /*fin prendre*/
@@ -31,7 +34,7 @@ void            salle24(int salle, t_player *player)
 	  my_putstr("\nj'ai besoin de retourner en arriere, vous vous souvenez la ou je pouvais marcher sur du sol et non des cartons !\n\n ");
 	  g_map[6][2].content = 0;
 	  salle = 23;
-          salle23(salle, player);
+          salle23(salle);
         }
       if ((action == 4) || ((action >= 1) && (action <= 2)))
         {

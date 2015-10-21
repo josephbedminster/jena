@@ -1,8 +1,11 @@
 #include "fonctions.h"
 
 extern t_map g_map[10][4];
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
-void            salle13(int salle, t_player *player)
+void            salle13(int salle)
 {
   int           action;
 
@@ -13,14 +16,14 @@ void            salle13(int salle, t_player *player)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle, player);
+      action = readline(salle);
       /*Traitement de laction :*/
       if (action == 1)
         {
 	  my_putstr("\nPitier que je ne trouve pas de cadravre...\n\n");
 	  g_map[5][1].content = 0;
 	  salle = 14;
-          salle14(salle, player);
+          salle14(salle);
         }
       if (action == 2)
         {
@@ -35,7 +38,7 @@ void            salle13(int salle, t_player *player)
 	      my_putstr("S'il etait toujours en un seul morceau, je l'aurai bien remercie...\n\n");
 	      g_map[5][1].content = 0;
 	      salle = 23;
-	      salle23(salle, player);
+	      salle23(salle);
 	    }
 	}
       if (action == 3)
@@ -43,14 +46,14 @@ void            salle13(int salle, t_player *player)
 	  my_putstr("\nOn retourne la ou je me suis reveiller, peut etre que un souvenir me reviendra...\n\n");
 	  g_map[5][1].content = 0;
 	  salle = 12;
-	  salle12(salle, player);
+	  salle12(salle);
 	}
       if (action == 4)
         {
 	  my_putstr("\nTout les tuyaux de se vaisseaux se dirige vers ma direction, je pense m'approcher des salles machines.\n\n");
 	  g_map[5][1].content = 0;
 	  salle = 17;
-	  salle17(salle, player);
+	  salle17(salle);
 	}
       if (action == 5)
         {

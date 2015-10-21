@@ -1,8 +1,11 @@
 #include "fonctions.h"
 
 extern t_map g_map[10][4];
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
-void            salle03(int salle, t_player *player)
+void            salle03(int salle)
 {
   int           action;
   char 		*entree;
@@ -15,7 +18,7 @@ void            salle03(int salle, t_player *player)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle, player);
+      action = readline(salle);
       /*Traitement de laction :*/
       if (action == 1)
         {
@@ -35,7 +38,7 @@ void            salle03(int salle, t_player *player)
 	      my_putstr("Ce sont mes quartiers ?!\n\n");
 	      g_map[1][1].content = 0;
 	      salle = 2;
-	      salle02(salle, player);
+	      salle02(salle);
 	    }
 	  else
 	    {
@@ -57,7 +60,7 @@ void            salle03(int salle, t_player *player)
 	      my_putstr("\nMais c'ette carte me donne un grand acces on dirait.\n\n");
 	      g_map[1][1].content = 0;
 	      salle = 4;
-	      salle04(salle, player);
+	      salle04(salle);
 	    }
 	}
       if (action == 3)
@@ -70,7 +73,7 @@ void            salle03(int salle, t_player *player)
 	      my_putstr("\nICARUS, logique !\nEsperons que la cabine de pilotage ne sois pas trop endommagee !\n\n");
 	      g_map[1][1].content = 0;
 	      salle = 1;
-	      salle01(salle, player);
+	      salle01(salle);
 	    }
 	  else
 	    {
@@ -83,11 +86,11 @@ void            salle03(int salle, t_player *player)
 	  my_putstr("\nTres bien, rebroussons chemin pour l'instant !\n\n");
 	  g_map[1][1].content = 0;
 	  salle = 6;
-	  salle06(salle, player);
+	  salle06(salle);
 	}
       if (action == 5)
 	{
-	  prendre(salle, player);
+	  prendre(salle);
 	  action = 0;
 	}
     }

@@ -1,8 +1,11 @@
 #include "fonctions.h"
 
 extern t_map g_map[10][4];
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
-void            salle08(int salle, t_player *player)
+void            salle08(int salle)
 {
   int           action;
   char		*entree_code;
@@ -15,7 +18,7 @@ void            salle08(int salle, t_player *player)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle, player);
+      action = readline(salle);
       /*Traitement de laction :*/
       if (action == 1)
 	{
@@ -26,16 +29,16 @@ void            salle08(int salle, t_player *player)
 	{
 	  my_putstr("\nJ'espere que tout le vaisseau n'est pas que remplis de cadavres.\n\n");
 	  g_map[3][0].content = 0;
-	  salle = 9;                                                   
-          salle09(salle, player);                           
+	  salle = 9;
+          salle09(salle);
         }
       if (action == 3)
         {
 	  my_putstr("\nA travers la porte j'ai appercu un lit, c'est vrai que je manque de someil");
 	  my_putstr(" mais j'espere juste que c'est les quartiers des femmes.\n\n");
 	  g_map[3][0].content = 0;
-	  salle = 5;                                                       
-          salle05(salle, player);                                                     
+	  salle = 5;
+          salle05(salle);
         }
       if (action == 4)
 	{
@@ -48,7 +51,7 @@ void            salle08(int salle, t_player *player)
 	      my_putstr("\nHeureusement que vous etes la, je serai restée bloquée devant cette porte toute la journée sans vous !\n\n");
 	      g_map[3][0].content = 0;
 	      salle = 11;
-	      salle11(salle, player);
+	      salle11(salle);
 	    }
 	  else
 	    {
@@ -59,7 +62,7 @@ void            salle08(int salle, t_player *player)
       /*Prendre*/
       if (action == 5)
         {
-	  prendre(salle, player);
+	  prendre(salle);
           action = 0;
         }
       /*fin prendre*/

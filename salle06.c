@@ -1,11 +1,14 @@
  #include "fonctions.h"
 
 extern t_map g_map[10][4];
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
-void            salle06(int salle, t_player *player)
+void            salle06(int salle)
 {
   int           action;
-  
+
   action = 0;
   g_map[2][1].visited = 1;
   g_map[2][1].content = 1;
@@ -13,7 +16,7 @@ void            salle06(int salle, t_player *player)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle, player);
+      action = readline(salle);
       /*Traitement de laction :*/
       if (action == 1)
         {
@@ -22,14 +25,14 @@ void            salle06(int salle, t_player *player)
 	  my_putstr("Esperons que j'en aprenne d'avantage sur l'equipage.");
 	  g_map[2][1].content = 0;
 	  salle = 5;
-          salle05(salle, player);
+          salle05(salle);
         }
       if (action == 2)
         {
 	  my_putstr("\nOn dirait... Des quartiers ! Tout est en desordre, mais je devine aux bottes et aux accessoires sur les lits que ce doit etre les quartiers des femmes.\n\n");
 	  g_map[2][1].content = 0;
 	  salle = 7;
-	  salle07(salle, player);
+	  salle07(salle);
         }
       if (action == 3)
         {
@@ -47,7 +50,7 @@ void            salle06(int salle, t_player *player)
 	      my_putstr("Et... Ca marche, la porte s'est ouverte !\n");
               g_map[2][1].content = 0;
               salle = 3;
-              salle03(salle, player);
+              salle03(salle);
             }
         }
       if (action == 4)
@@ -57,7 +60,7 @@ void            salle06(int salle, t_player *player)
         }
       if (action == 5)
         {
-          prendre(salle, player);
+          prendre(salle);
 	  action = 0;
         }
     }

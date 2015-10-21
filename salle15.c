@@ -1,8 +1,11 @@
 #include "fonctions.h"
 
 extern t_map g_map[10][4];
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
-void            salle15(int salle, t_player *player)
+void            salle15(int salle)
 {
   int           action;
 
@@ -13,7 +16,7 @@ void            salle15(int salle, t_player *player)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle, player);
+      action = readline(salle);
       /*Traitement de laction :*/
       if (action == 3)
         {
@@ -21,19 +24,19 @@ void            salle15(int salle, t_player *player)
 	  my_putstr(" faire avec mon vaisseaux mere je pourrais peut etre prendre un de ces petits vaisseaux.\n\n");
 	  g_map[6][0].content = 0;
 	  salle = 14;
-          salle14(salle, player);
+          salle14(salle);
         }
       if (action == 4)
         {
 	  my_putstr("Vous pensez que ce hangard est grand comment ? car je ne voie pas le fond");
 	  g_map[6][0].content = 0;
 	  salle = 16;
-          salle16(salle, player);
+          salle16(salle);
         }
       /*Prendre*/
       if (action == 5)
         {
-          prendre(salle, player);
+          prendre(salle);
           action = 0;
         }
       /*fin prendre*/

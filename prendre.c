@@ -1,7 +1,10 @@
 #include "fonctions.h"
 #include "fonctions.h"
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
-int		prendre(int salle, t_player *player)
+int		prendre(int salle)
 {
   char		*entree;
 
@@ -39,6 +42,35 @@ int		prendre(int salle, t_player *player)
 	}
     }
   /*FIN 02*/
+
+  /*DEBUT 04*/
+  if(salle == 4)
+    {
+      if (strcmp(entree, "pistolet") == 0)
+        {
+          if (jena.weaponTab[0].available == 0)
+            {
+              my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
+	      my_putstr("Un Pistolet Laser flambant neuf ! Il est charge et pret a l'emploi !\n");
+	      my_putstr("Je me sens deja plus rassurée !\n");
+              jena.weaponTab[0].available = 1;
+              SCORE = SCORE + 10;
+            }
+          else
+            {
+              my_putstr("\nIl y a quelques armes et outils dont j'ignore la fonction.\n");
+	      my_putstr("Je ne vois rien d'autre d'immediatement utile a emmener avec moi.\n");
+            }
+        }
+      else
+        {
+          my_putstr("Je ne vois pas de ");
+          my_putstr(entree);
+          my_putstr(" dans cette salle !\n\n");
+        }
+      return (0);
+    }
+  /*FIN 04*/
 
   /*DEBUT 08*/
   if(salle == 8)
@@ -100,7 +132,7 @@ int		prendre(int salle, t_player *player)
 	  if (MEDIC_RESE > 0)
 	    {
 	      my_putstr("J'ai fouillé dans les armoires, et ai trouvé [x1] Médicament !\n\n");
-	      player->medicaments = + 1;
+	      jena.medicaments = + 1;
 	      MEDIC_RESE--;
 	      SCORE = SCORE + 1;
 	    }

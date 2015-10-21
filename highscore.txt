@@ -2,3 +2,6 @@ Winda : 21 Pts.
 jonathan : 5 Pts.
 Joey : 3 Pts.
 test putstr : 15 Pts.
+s : 5 Pts.
+jo : 40 Pts.
+Jo2 : 42 Pts.

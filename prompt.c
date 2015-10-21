@@ -1,16 +1,16 @@
 #include "fonctions.h"
 
-int             readline(int salle, t_player *player)
+int             readline(int salle)
 {
   char          *entree;
   int           result;
-  
+
   result = 0;
   while (result == 0)
     {
       my_putstr("Que dois-je faire : ");
       entree = readLine();
-      result = comparer(entree, salle, player);
+      result = comparer(entree, salle);
     }
   return (result);
 }

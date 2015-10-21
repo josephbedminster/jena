@@ -1,8 +1,11 @@
 #include "fonctions.h"
 
 extern t_map g_map[10][4];
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
-void            salle10(int salle, t_player *player)
+void            salle10(int salle)
 {
   int           action;
 
@@ -13,7 +16,7 @@ void            salle10(int salle, t_player *player)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle, player);
+      action = readline(salle);
       /*Traitement de laction :*/
       if (action == 1)
         {
@@ -22,8 +25,8 @@ void            salle10(int salle, t_player *player)
 	      my_putstr("\nJe quitte ce qui ressemble a un laboratoire d'experiences, pour retourner vers des cadavres. Super...\n");
 	      my_putstr("Vous n'avez pas une meilleure idée ? Vous donnez certes de bon conseils, mais des fois j'hesite vraiment.\n\n");
 	      g_map[3][2].content = 0;
-	      salle = 9;                                                   
-	      salle09(salle, player);                           
+	      salle = 9;
+	      salle09(salle);
 	    }
 	  else
 	    {
@@ -36,12 +39,12 @@ void            salle10(int salle, t_player *player)
 	  my_putstr("\nOh un endroit pour se reposer ? Apres tout se que je viens de decouvrir je ne dirais pas non a une petite sieste.\n");
 	  g_map[3][2].content = 0;
 	  salle = 7;
-	  salle07(salle, player);
+	  salle07(salle);
 	}
       /*Prendre*/
       if (action == 5)
         {
-          prendre(salle, player);
+          prendre(salle);
           action = 0;
         }
       /*fin prendre*/
