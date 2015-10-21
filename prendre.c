@@ -48,31 +48,44 @@ int		prendre(int salle)
     {
       if (strcmp(entree, "pistolet") == 0)
         {
-          if (jena.weaponTab[0].available == 0)
+          if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
             {
               my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
 	      my_putstr("Un Pistolet Laser flambant neuf ! Il est charge et pret a l'emploi !\n");
 	      my_putstr("Je me sens deja plus rassurée !\n");
-              jena.weaponTab[0].available = 1;
+              jena.weaponTab[1].available = 1;
+	      ARME_EQUIP = 1;
               SCORE = SCORE + 10;
             }
-          else
-            {
-              my_putstr("\nIl y a quelques armes et outils dont j'ignore la fonction.\n");
-	      my_putstr("Je ne vois rien d'autre d'immediatement utile a emmener avec moi.\n");
-            }
-        }
-      else
-        {
-          my_putstr("Je ne vois pas de ");
-          my_putstr(entree);
-          my_putstr(" dans cette salle !\n\n");
-        }
-      return (0);
+	  else if (strcmp(entree, "fusil") == 0)
+	    {
+	      if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
+		{
+		  my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
+		  my_putstr("Un Fusil plasma flambant neuf ! Il est chargé et pret a l'emploi !\n");
+		  my_putstr("Je me sens deja plus rassurée !\n");
+		  ARME_EQUIP = 2;
+		  jena.weaponTab[2].available = 1;
+		  SCORE = SCORE + 10;
+		}
+	      else
+		{
+		  my_putstr("\nIl y a quelques armes et outils dont j'ignore la fonction.\n");
+		  my_putstr("Je ne vois rien d'autre d'immediatement utile a emmener avec moi.\n");
+		}
+	    }
+	  else
+	    {
+	      my_putstr("Je ne vois pas de ");
+	      my_putstr(entree);
+	      my_putstr(" dans cette salle !\n\n");
+	    }
+	  return (0);
+	}
     }
-  /*FIN 04*/
+      /*FIN 04*/
 
-  /*DEBUT 08*/
+      /*DEBUT 08*/
   if(salle == 8)
     {
       if (strcmp(entree, "badge") == 0)
@@ -153,3 +166,5 @@ int		prendre(int salle)
   my_putstr("\nIl n'y a rien a prendre dans cette salle vous savez...\n\n");
   return (1);
 }
+
+

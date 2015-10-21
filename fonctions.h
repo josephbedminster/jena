@@ -3,7 +3,7 @@
 #define MAP_X 4
 #define MAP_Y 10
 #define NB_ATTACK 2
-#define NB_WEAPON 2
+#define NB_WEAPON 3
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -13,7 +13,7 @@
 /*USER*/
 char*		USER;
 int		SCORE;
-
+int		ARME_EQUIP;
 /*VARIABLES GLOBALES KEY*/
 int		COMBI;
 int		CARTE_ACCES;

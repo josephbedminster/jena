@@ -12,7 +12,7 @@ int		player_attack(t_enemy *e)
 
   commande = 0;
   my_putstr("Que souhaitez vous faire ?\n");
-  printf("1 : Utiliser %s\n2 : Prendre un médicament\n", jena.weaponTab[0].name);
+  printf("1 : Utiliser %s\n2 : Prendre un médicament\n", jena.weaponTab[ARME_EQUIP].name);
   while ((commande <= 0) || (commande > 2))
     {
       my_putstr("\nEntrez une action > ");
@@ -31,8 +31,8 @@ int		player_attack(t_enemy *e)
 
   if (commande == 1)
     {
-      printf("\nVous avez infligé %d dégats\n", jena.weaponTab[0].damage);
-      e->pv -= jena.weaponTab[0].damage;
+      printf("\nVous avez infligé %d dégats\n", jena.weaponTab[ARME_EQUIP].damage);
+      e->pv -= jena.weaponTab[ARME_EQUIP].damage;
     }
   else if (commande == 2)
     {

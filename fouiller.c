@@ -24,14 +24,15 @@ void		fouiller(int salle)
   /*SALLE 04*/
   if (salle == 4)
     {
-      if (jena.weaponTab[0].available == 0)
+      if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
         {
           my_putstr("\nJe pense que je peux récuperer :\n");
-          my_putstr(" - une <pistolet> laser \n\n");
+          my_putstr(" - un <pistolet> laser \n");
+	  my_putstr(" - un <fusil> plasma \n\n");
         }
       else
         {
-          my_putstr("\nJ'ai beau chercher, je vois rien a récuperer.\n\n");
+          my_putstr("\nJ'ai deja récupéré une arme ! Je ne peux pas en prendre plus pour l'instant.\n\n");
         }
       return;
     }
