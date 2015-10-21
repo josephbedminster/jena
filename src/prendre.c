@@ -66,33 +66,39 @@ int		prendre(int salle)
 	      ARME_EQUIP = 1;
               SCORE = SCORE + 10;
             }
-	  else if (strcmp(entree, "fusil") == 0)
+	  else
 	    {
-	      if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
-		{
-		  my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
-		  my_putstr("Un Fusil plasma flambant neuf ! Il est chargé et pret a l'emploi !\n");
-		  my_putstr("Je me sens deja plus rassurée !\n");
-		  my_putstr("Maintenant que j'ai une arme meilleur que mes simples poings, je dois plus être sur mes gardes...\n\n");
-		  ARME_EQUIP = 2;
-		  jena.weaponTab[2].available = 1;
-		  SCORE = SCORE + 10;
-		}
-	      else
-		{
-		  my_putstr("\nIl y a quelques armes et outils dont j'ignore la fonction.\n");
-		  my_putstr("Je ne vois rien d'autre d'immediatement utile a emmener avec moi.\n");
-		}
+	      my_putstr("\nIl y a quelques armes et outils dont j'ignore la fonction.\n");
+	      my_putstr("Je ne vois rien d'autre d'immediatement utile a emmener avec moi.\n");
+	    }
+	}
+      else if (strcmp(entree, "fusil") == 0)
+	{
+	  if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
+	    {
+	      my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
+	      my_putstr("Un Fusil plasma flambant neuf ! Il est chargé et pret a l'emploi !\n");
+	      my_putstr("Je me sens deja plus rassurée !\n");
+	      my_putstr("Maintenant que j'ai une arme meilleur que mes simples poings, je dois plus être sur mes gardes...\n\n");
+	      ARME_EQUIP = 2;
+	      jena.weaponTab[2].available = 1;
+	      SCORE = SCORE + 10;
 	    }
 	  else
 	    {
-	      my_putstr("Je ne vois pas de ");
-	      my_putstr(entree);
-	      my_putstr(" dans cette salle !\n\n");
+	      my_putstr("\nIl y a quelques armes et outils dont j'ignore la fonction.\n");
+	      my_putstr("Je ne vois rien d'autre d'immediatement utile a emmener avec moi.\n");
 	    }
-	  return (0);
 	}
+      else
+	{
+	  my_putstr("Je ne vois pas de ");
+	  my_putstr(entree);
+	  my_putstr(" dans cette salle !\n\n");
+	}
+      return (0);
     }
+
       /*FIN 04*/
 
       /*DEBUT 08*/
