@@ -17,5 +17,6 @@ clean:
 		rm *.o
 fclean:		clean
 		$(RM) $(NAME)
+		bash clean.sh
 re:		fclean
 		make

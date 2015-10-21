@@ -8,8 +8,9 @@ echo "###![image stats] (http://www.hostingpics.net/thumbs/91/27/86/mini_912786g
 echo "Developpé en C, le projet a vu le jour lors de notre 1ere année en Prep'ETNA." >> README.md
 echo "Le but étant de monter en compétence en relevant les défis liés à la création d'un jeu vidéo" >> README.md
 echo "(Narration, compétences de développement, utilisation de GitHub...)" >> README.md
+echo "***" >> README.md
 echo "###![image pc](http://www.hostingpics.net/thumbs/96/92/11/mini_969211webprogramming.png) Développeurs" >> README.md
-echo "  Rolland Thomas (ETNA)," >> README.md
+echo "  Rolland Thomas (ETNA),   " >> README.md
 echo "  Bedminster Joseph (ETNA)," >> README.md
 echo "***" >> README.md
 echo "###![image idee] (http://www.hostingpics.net/thumbs/91/22/54/mini_912254light105.png) Collaborateurs" >> README.md
@@ -21,7 +22,8 @@ echo "***" >> README.md
 echo "###INFOS" >> README.md
 date >> README.md
 echo "   " >> README.md
-echo "Nombre de lignes :   " >> README.md
+echo "Nombre de lignes : " >> README.md
 cat *.c *.h *.txt | wc -l >> README.md
-echo "Nombre de caracteres :   " >> README.md
+echo "   " >> README.md
+echo "Nombre de caracteres : " >> README.md
 cat *.c *.h *.txt | wc -c >> README.md

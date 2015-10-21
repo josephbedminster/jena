@@ -7,8 +7,9 @@ Projet libre - Ecole ETNA Alternance, France
 Developpé en C, le projet a vu le jour lors de notre 1ere année en Prep'ETNA.
 Le but étant de monter en compétence en relevant les défis liés à la création d'un jeu vidéo
 (Narration, compétences de développement, utilisation de GitHub...)
+***
 ###![image pc](http://www.hostingpics.net/thumbs/96/92/11/mini_969211webprogramming.png) Développeurs
-  Rolland Thomas (ETNA),
+  Rolland Thomas (ETNA),   
   Bedminster Joseph (ETNA),
 ***
 ###![image idee] (http://www.hostingpics.net/thumbs/91/22/54/mini_912254light105.png) Collaborateurs
@@ -18,9 +19,10 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
   Fraysse Christophe (EPITECH)
 ***
 ###INFOS
-Wed Oct 21 17:14:52 CEST 2015
+Wed Oct 21 17:17:09 CEST 2015
    
-Nombre de lignes :   
+Nombre de lignes : 
     2847
-Nombre de caracteres :   
+   
+Nombre de caracteres : 
    72426
