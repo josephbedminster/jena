@@ -12,7 +12,7 @@ echo "  KAUCH JONATHAN (EPITECH)" >> README.md
 echo "  FRAYSSE CHRISTOPHE (EPITECH)" >> README.md
 echo "###INFOS" >> README.md
 date >> README.md
-echo "Nombre de lignes : " >> README.md
+echo " | Nombre de lignes : " >> README.md
 cat *.c *.h *.txt | wc -l >> README.md
-echo "Nombre de caracteres : " >> README.md
+echo " | Nombre de caracteres : " >> README.md
 cat *.c *.h *.txt | wc -c >> README.md
