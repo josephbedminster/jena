@@ -1,0 +1,19 @@
+#\nPROJET --JENA--\n
+##DEVELOPEMENT OPEN SOURCE
+ECOLE PREP ETNA ALTERNANCE, FRANCE\n
+###DEVELOPEURS :
+- ROLLAND THOMAS (ETNA)
+- BEDMINSTER JOSEPH (ETNA)\n
+###COLLABORATEURS :\n
+- AZIS WINDA (ETNA)
+- COLAS GEOFFREY (ETNA)
+- KAUCH JONATHAN (EPITECH)
+- FRAYS CHRISTOPHE (EPITECH)\n
+=============================
+Wed Oct 21 16:34:27 CEST 2015
+=============================
+Nombre de lignes : 
+    2847
+Nombre de caracteres : 
+   72426
+\n
