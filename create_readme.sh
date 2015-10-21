@@ -1,3 +1,4 @@
+rm README.md
 echo "##PROJET : Les Aventures de Jena" >> README.md
 echo "###![img1] (http://www.hostingpics.net/thumbs/82/06/74/mini_820674spaceship2.png) Contexte" >> README.md
 echo "Developpement open-source" >> README.md
