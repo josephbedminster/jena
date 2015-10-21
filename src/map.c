@@ -108,11 +108,7 @@ void	print_walls(int y)
     }
   write(1, "\n", 1);
 }
-/*
-void	show_room()
-{
-}
-*/
+
 void	show_map()
 {
   int	y;
@@ -129,45 +125,7 @@ void	show_map()
 	{
 	  if (g_map[y][x].exist > 0)
 	    {
-	      //	      show_room(x, y);
 	    }
 	}
     }
 }
-/*
-void	fill_map()
-{
-  int	y;
-  int	x;
-
-  //  if ((g_map = malloc(sizeof(t_map *) * MAP_Y)) == 0)
-  // return;
-  for (y = 0; y < MAP_Y; ++y)
-    {
-      //      if ((g_map[y] = malloc(sizeof(t_map) * MAP_X)) == 0)
-      //return;      
-      for (x = 0; x < MAP_X; ++x)
-	{
-	  g_map[y][x].visited = 0;
-	  g_map[y][x].size_x = 4;
-	  if (y == 0 && x == 0)
-	    g_map[y][x].content = 1;
-	  else
-	    g_map[y][x].content = 0;
-	  // if (x % 2 == 0)
-	 g_map[y][x].exist = 1;
-	    // else
-	    //g_map[y][x].exist = 0;
-	}
-    }
-}
-*/
-/*
-int	main()
-{
-  //  fill_map();
-  if (g_map == 0)
-    return (0);
-  show_map();
-}
-*/

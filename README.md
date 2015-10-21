@@ -19,10 +19,10 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
   Fraysse Christophe (EPITECH)
 ***
 ###INFOS
-Wed Oct 21 18:22:56 CEST 2015
+Wed Oct 21 18:41:51 CEST 2015
    
 Nombre de lignes : 
-    2858
+    2759
    
 Nombre de caracteres : 
-   72722
+   68680
