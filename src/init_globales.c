@@ -1,19 +1,21 @@
 #include "fonctions.h"
 
 t_weapon weaponList[NB_WEAPON] = {
-  {1, "Mains", 1},
-  {0, "Pistolet Laser", 30},
-  {0, "Fusil a plasma", 40}
+  //Available, NAME, Attaque, Munition ulisee
+  {1, "Mains", 1, 0},
+  {0, "Pistolet Laser", 30, 1},
+  {0, "Fusil a plasma", 40, 2}
 };
 
 // idem ici pour l'enemi
 t_attack attackList[NB_ATTACK] = {
-  {"Charge", 20},
-  {"Melee", 35}
+  {"Charge", 5},
+  {"Melee", 7}
 };
 
 t_player jena[1]= {
-  {1, 100, 100, 0, weaponList}
+  //lvl, hp, hp max, medicaments, munitions, tab d'armes
+  {1, 100, 100, 0, 0, weaponList}
 };
 
 void	init_globales()
@@ -24,6 +26,7 @@ void	init_globales()
   CARTE_ACCES = 0;
   CARTE_COM = 0;
   MEDIC_RESE = 2;
+  MUNI_ARMU = 16;
   DIAG_S09A08 = 0;
   DIAG_S12A09 = 0;
   SCORE = 0;

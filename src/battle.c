@@ -85,7 +85,7 @@ int		enemy_attack(t_enemy *e)
   return (1);
 }
 
-int battle(t_enemy *e, int i)
+int		battle(t_enemy *e, int i)
 {
   char *buffer;
 
@@ -106,7 +106,7 @@ int battle(t_enemy *e, int i)
   return (0);
 }
 
-void init_e(t_enemy *e)
+void		init_e(t_enemy *e)
 {
   e->name = "Monstre";
   e->pv = 80;
@@ -114,7 +114,7 @@ void init_e(t_enemy *e)
   e->attack = &attackList;
 }
 
-int	start_battle()
+int		start_battle()
 {
   t_enemy e;
   int i;
