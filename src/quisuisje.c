@@ -4,9 +4,8 @@ void		quisuisje()
 {
   if (QUISUISJE == 0)
     {
-      my_putstr("\nSi seulement je savais qui je suis, je vous le dirai !\n");
-      my_putstr("Tout ce que je sais c'est que je suis une survivante perdue dans un vaisseau...\n");
-      my_putstr("Et j'attends les secours... S'ils viennent un jour !\n\n");
+      my_putstr("\nComme je vous l'ai dit, je m'apelle Jena !\n");
+      my_putstr("C'est tout ce qui me revient...\n\n");
     }
   else if (QUISUISJE == 1)
     {
