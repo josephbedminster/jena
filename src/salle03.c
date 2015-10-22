@@ -9,19 +9,12 @@ void            salle03(int salle)
 {
   int           action;
   char 		*entree;
-  int           b;
 
   entree = malloc(sizeof(char*));
   action = 0;
   g_map[1][1].visited = 1;
   g_map[1][1].content = 1;
   look(salle);
-  srand(time(NULL));
-  b = rand();
-  if ((b%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
-    {
-      start_battle();
-    }
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
@@ -34,15 +27,23 @@ void            salle03(int salle)
 	  entree = readLine_code();
 	  if ((strcmp(entree, "jena") == 0) || ((strcmp(entree, "JENA") == 0)))
 	    {
-	      my_putstr("Ca marche ! La porte se deverouille !\n");
-	      my_putstr("Une minute ! Le code est mon prenom ?...\n");
-	      my_putstr("Cela veut dire que ...\n");
-	      sleep(2);
-	      my_putstr("Je");
-	      sleep(2);
-	      my_putstr("\n...\n");
-	      sleep(2);
-	      my_putstr("Ce sont mes quartiers ?!\n\n");
+	      if (DIAG_S03A02 == 0)
+		{
+		  my_putstr("Ca marche ! La porte se deverouille !\n");
+		  my_putstr("Une minute ! Le code est mon prenom ?...\n");
+		  my_putstr("Cela veut dire que ...\n");
+		  sleep(2);
+		  my_putstr("Je");
+		  sleep(2);
+		  my_putstr("\n...\n");
+		  sleep(2);
+		  my_putstr("Ce sont mes quartiers ?!\n\n");
+		  DIAG_S03A02 = 1;
+		}
+	      else
+		{
+		  my_putstr("Je me dirige vers les quartiers du commandant.\nEnfin, vers MES quartiers.\n\n");
+		}
 	      g_map[1][1].content = 0;
 	      salle = 2;
 	      salle02(salle);

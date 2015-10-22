@@ -15,7 +15,7 @@ int		ERREUR_PROMPT;
 char*		USER;
 int		SCORE;
 int		ARME_EQUIP;
-
+int		QUISUISJE;
 /*VARIABLES GLOBALES KEY*/
 int		COMBI;
 int		CARTE_ACCES;
@@ -29,6 +29,7 @@ int		MUNI_ARMU;
 /*VARIABLES GLOBALES DE DIALOGUE*/
 int		DIAG_S12A09;
 int		DIAG_S09A08;
+int		DIAG_S03A02;
 
 typedef struct  s_attack
 {

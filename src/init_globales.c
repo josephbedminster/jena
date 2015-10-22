@@ -29,9 +29,11 @@ void	init_globales()
   MEDIC_RESE = 5;
   DIAG_S09A08 = 0;
   DIAG_S12A09 = 0;
+  DIAG_S03A02 = 0;
   SCORE = 0;
   ARME_EQUIP = 0;
   DOUCHE_TAKEN = 0;
+  QUISUISJE = 0;
 /*FIN*/
 }
 
