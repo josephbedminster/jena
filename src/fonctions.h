@@ -15,6 +15,7 @@ int		ERREUR_PROMPT;
 char*		USER;
 int		SCORE;
 int		ARME_EQUIP;
+
 /*VARIABLES GLOBALES KEY*/
 int		COMBI;
 int		CARTE_ACCES;
@@ -23,6 +24,8 @@ int		CARTE_COM;
 /*VARIABLES GLOBALES ITEMS DANS LA MAP*/
 int		MEDIC_RESE;
 int		DOUCHE_TAKEN;
+int		MUNI_ARMU;
+
 /*VARIABLES GLOBALES DE DIALOGUE*/
 int		DIAG_S12A09;
 int		DIAG_S09A08;
@@ -38,6 +41,7 @@ typedef struct  s_enemy
   char          *name;
   int           pv;
   int		pvmax;
+  int		strenght;
   t_attack      *attack;
 }               t_enemy;
 
@@ -47,6 +51,7 @@ typedef struct  s_weapon
   int           available;
   char          *name;
   int           damage;
+  int		munitions;
 }               t_weapon;
 
 // le joueur
@@ -56,6 +61,7 @@ typedef struct  s_player
   int           pv;
   int		pvmax;
   int		medicaments;
+  int		munitions;
   t_weapon      *weaponTab;
 }               t_player;
 

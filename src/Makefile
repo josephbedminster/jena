@@ -8,13 +8,13 @@ RM =            rm -rf
 
 $(NAME) :	$(OBJ)
 		$(CC) $(SRC) $(CFLAGS) -o ../$(NAME)
+		rm -rf *.o
 
 all:		$(NAME)
 clean:
 		$(RM) $(OBJ)
-
 fclean:		clean
-		$(RM) $(NAME)
 
 re:		fclean
 		make
+		

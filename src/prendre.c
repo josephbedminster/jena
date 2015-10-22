@@ -54,7 +54,26 @@ int		prendre(int salle)
   /*DEBUT 04*/
   if(salle == 4)
     {
-      if (strcmp(entree, "pistolet") == 0)
+      /*DEBUT MUNITIONS*/
+      if (strcmp(entree, "munitions") == 0)
+        {
+	  if (MUNI_ARMU > 0)
+	    {
+	      my_putstr("\nJ'ai trouvé quelques cartouches d'energie !\n");
+	      my_putstr("Je peux m'en servir pour recharger des armes ou des appareils.\n");
+	      jena.munitions = 16;
+	      MUNI_ARMU -= 16;
+	      SCORE = SCORE + 16;
+	    }
+	  else
+	    {
+	      my_putstr("J'ai deja pris toutes les munitions que j'ai pu trouver !\n");
+	    }
+	}
+      /*FIN MUNITIONS*/
+
+      /*DEBUT PRENDRE ARME*/
+      else if (strcmp(entree, "pistolet") == 0)
         {
           if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
             {
