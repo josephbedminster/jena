@@ -31,18 +31,18 @@ int		player_attack(t_enemy *e)
 
   if (commande == 1)
     {
-      sleep(2);
       printf("\n\033[1;31mVous avez infligé %d dégats\n\033[0m", jena.weaponTab[ARME_EQUIP].damage);
+      sleep(2);
       e->pv -= jena.weaponTab[ARME_EQUIP].damage;
     }
   else if (commande == 2)
     {
-      sleep(2);
       jena.pv += 50;
       if (jena.pv > jena.pvmax)
 	jena.pv = jena.pvmax;
       jena.medicaments -= 1;
       my_putstr("\n\033[1;32mVous prenez [1x] médicament. Vous regagnez 50 points de vie.\n\033[0m");
+      sleep(2);
       if (jena.medicaments > 0)
 	{
 	  my_putstr("Il vous reste [");
@@ -58,7 +58,7 @@ int		player_attack(t_enemy *e)
   if (e->pv <= 0)
     {
       printf("\n- JENA : [%d/%d] PV's.\n- %s : [0/%d] PV's", jena.pv, jena.pvmax, e->name, e->pvmax);
-      printf("\n\nVous avez tué le %s !\n", e->name);
+      printf("\n\n\033[1;34mVous avez tué le %s !\n\033[0m", e->name);
       return (0);
     }
   else

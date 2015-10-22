@@ -12,3 +12,4 @@ test random : 192 Pts.
 =======
 lo : 40 Pts.
 >>>>>>> c6d6a5758104f91e20170162bd899ded03b53493
+g : 60 Pts.
