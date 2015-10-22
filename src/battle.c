@@ -138,6 +138,7 @@ int		start_battle()
   int i;
   int res;
 
+  system("clear");
   srand(time(NULL));
   res = 1;
   i = 0;
