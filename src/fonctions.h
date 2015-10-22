@@ -32,7 +32,7 @@ int		DIAG_S09A08;
 int		DIAG_S03A02;
 
 /*TABLE EXP*/
-int		EXP[10];
+//static const int EXP[10];
 
 typedef struct  s_attack
 {
@@ -73,6 +73,7 @@ typedef struct  s_player
   t_weapon      *weaponTab;
 }               t_player;
 
+int		xpNeeded(int lvl);
 int             give_exp();
 void            stats_jena();
 void            stats_arme();

@@ -37,11 +37,14 @@ void		stats_arme()
 
 int		give_exp()
 {
+  int		xpneeded;
+
   jena.exp = jena.exp + 10;
-  if (jena.exp >= EXP[jena.lvl - 1])
+  xpneeded = xpNeeded(jena.lvl);
+  if (jena.exp >= xpneeded)
     {
       jena.lvl = jena.lvl + 1;
-      jena.exp = (jena.exp - EXP[jena.lvl]);
+      jena.exp = (jena.exp - xpneeded);
       jena.pvmax = jena.pvmax + 10;
       jena.pv = jena.pv + 10;
       return (1);

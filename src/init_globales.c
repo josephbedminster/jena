@@ -1,6 +1,11 @@
 #include "fonctions.h"
 
-//const	int
+int	xpNeeded(int lvl)
+{
+  const	int EXP[10] = {15,30,45,60,75,90,110,130,150,200};
+
+  return lvl < 10 ? EXP[lvl] : -1;
+}
 
 t_weapon weaponList[NB_WEAPON] = {
   //Available, NAME, Attaque, Munition ulisee
