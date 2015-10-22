@@ -31,16 +31,18 @@ int		player_attack(t_enemy *e)
 
   if (commande == 1)
     {
-      printf("\nVous avez infligé %d dégats\n", jena.weaponTab[ARME_EQUIP].damage);
+      sleep(2);
+      printf("\n\033[1;31mVous avez infligé %d dégats\n\033[0m", jena.weaponTab[ARME_EQUIP].damage);
       e->pv -= jena.weaponTab[ARME_EQUIP].damage;
     }
   else if (commande == 2)
     {
+      sleep(2);
       jena.pv += 50;
       if (jena.pv > jena.pvmax)
 	jena.pv = jena.pvmax;
       jena.medicaments -= 1;
-      my_putstr("\nVous prenez [1x] médicament. Vous regagnez 50 points de vie.\n");
+      my_putstr("\n\033[1;32mVous prenez [1x] médicament. Vous regagnez 50 points de vie.\n\033[0m");
       if (jena.medicaments > 0)
 	{
 	  my_putstr("Il vous reste [");
@@ -72,7 +74,7 @@ int		enemy_attack(t_enemy *e)
   if ((buffer = malloc(sizeof(char) * 1024)) == NULL)
     return -1;
   res = rand() % NB_ATTACK;
-  sprintf(buffer, "%s vous attaque !\nIl utilise : %s, et vous inflige %d dégats.", e->name, e->attack[res].name, e->attack[res].damage);
+  sprintf(buffer, "\033[1;31m%s vous attaque !\nIl utilise : %s, et vous inflige %d dégats.\033[0m", e->name, e->attack[res].name, e->attack[res].damage);
   puts(buffer);
   jena.pv -= e->attack[res].damage;
   if (jena.pv <= 0)
@@ -95,11 +97,13 @@ int battle(t_enemy *e, int i)
   puts(buffer);
   if (i % 2 == 0)
     {
+      sleep(3);
       my_putstr("\n----------------------- Votre tour ---------------------------\n\n");
       return (player_attack(e));
     }
   else
     {
+      sleep(3);
       my_putstr("\n\n------------------ Tour de l'adversaire ----------------------\n\n");
       return (enemy_attack(e));
     }

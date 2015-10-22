@@ -23,7 +23,7 @@ void	init_globales()
   COMBI = 0;
   CARTE_ACCES = 0;
   CARTE_COM = 0;
-  MEDIC_RESE = 2;
+  MEDIC_RESE = 5;
   DIAG_S09A08 = 0;
   DIAG_S12A09 = 0;
   SCORE = 0;
