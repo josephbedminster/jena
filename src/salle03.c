@@ -39,6 +39,7 @@ void            salle03(int salle)
 		  sleep(2);
 		  my_putstr("Ce sont mes quartiers ?!\n\n");
 		  DIAG_S03A02 = 1;
+		  QUISUISJE = 1;
 		}
 	      else
 		{
