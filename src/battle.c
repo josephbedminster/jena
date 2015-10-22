@@ -34,8 +34,8 @@ int		player_attack(t_enemy *e)
       if (jena.munitions < jena.weaponTab[ARME_EQUIP].munitions)
 	{
 	  my_putstr("Vous n'avez pas assez de munitions pour attaquer !\n");
-	  printf("Votre arme requiert [%d] munitions pour tirer. Il vous reste [%d] munitions.", jena.weaponTab[ARME_EQUIP].munitions, jena.munitions);
-	  my_putstr("Vous attaquez avec vos mains ! Vous infligez 1 point de dégat !");
+	  printf("Votre arme requiert [%d] munitions pour tirer. Il vous reste [%d] munitions.\n", jena.weaponTab[ARME_EQUIP].munitions, jena.munitions);
+	  my_putstr("\033[1;31mVous attaquez avec vos mains ! Vous infligez 1 point de dégat !\033[0m\n");
 	  e->pv -= 1;
 	}
       else
