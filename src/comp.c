@@ -1,6 +1,7 @@
 #include "fonctions.h"
-
-
+extern t_weapon weaponList;
+extern t_attack attackList;
+extern t_player jena;
 
 int             comparer(char* entree, int salle)
 {
