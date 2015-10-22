@@ -87,7 +87,7 @@ int		enemy_attack(t_enemy *e)
     return -1;
   res = rand() % NB_ATTACK;
   attack = (e->attack[res].damage * e->strenght);
-  sprintf(buffer, "\033[1;31m%s vous attaque !\nIl utilise : %s, et vous inflige %d dégats.\033[0m", e->name, e->attack[res].name, attack);
+  sprintf(buffer, "%s vous attaque !\n\033[1;31mIl utilise : %s, et vous inflige %d dégats.\033[0m", e->name, e->attack[res].name, attack);
   puts(buffer);
   jena.pv -= attack;
   if (jena.pv <= 0)

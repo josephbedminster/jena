@@ -15,6 +15,10 @@ void            salle03(int salle)
   g_map[1][1].visited = 1;
   g_map[1][1].content = 1;
   look(salle);
+  if(ARME_EQUIP != 0)
+    {
+      start_battle();
+    }
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/

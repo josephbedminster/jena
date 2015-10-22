@@ -20,7 +20,6 @@ void            salle04(int salle)
         {
 	  my_putstr("\nVous etes sur ? Je trouvais la presence de toutes ces armes presque rassurante !\n");
 	  g_map[1][2].content = 0;
-	  start_battle();
 	  salle = 3;
           salle03(salle);
         }
