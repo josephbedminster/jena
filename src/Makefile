@@ -8,6 +8,7 @@ RM =            rm -rf
 
 $(NAME) :	$(OBJ)
 		$(CC) $(SRC) $(CFLAGS) -o ../$(NAME)
+		rm *.o
 
 all:		$(NAME)
 clean:

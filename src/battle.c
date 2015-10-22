@@ -81,12 +81,13 @@ int		enemy_attack(t_enemy *e)
 {
   int		res;
   char		*buffer;
-  int		attack = (e->attack[res].damage * e->strenght);
+  int		attack;
 
   // 1024 parce que j'en ai rien a foutre
   if ((buffer = malloc(sizeof(char) * 1024)) == NULL)
     return -1;
   res = rand() % NB_ATTACK;
+  attack = (e->attack[res].damage * e->strenght);
   sprintf(buffer, "\033[1;31m%s vous attaque !\nIl utilise : %s, et vous inflige %d dégats.\033[0m", e->name, e->attack[res].name, attack);
   puts(buffer);
   jena.pv -= attack;
