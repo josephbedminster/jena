@@ -68,8 +68,8 @@ int		prendre(int salle)
             }
 	  else
 	    {
-	      my_putstr("\nIl y a quelques armes et outils dont j'ignore la fonction.\n");
-	      my_putstr("Je ne vois rien d'autre d'immediatement utile a emmener avec moi.\n");
+	      my_putstr("\nNon mais serieusement, vous croyais qui je n'y est pas penser de porter les deux armes ?");
+	      my_putstr("mais bon ces trop lourd pour moi et cela risquerais de plus m'handicaper\n\n");
 	    }
 	}
       else if (strcmp(entree, "fusil") == 0)
@@ -86,8 +86,8 @@ int		prendre(int salle)
 	    }
 	  else
 	    {
-	      my_putstr("\nIl y a quelques armes et outils dont j'ignore la fonction.\n");
-	      my_putstr("Je ne vois rien d'autre d'immediatement utile a emmener avec moi.\n");
+	      my_putstr("\nNon mais serieusement, vous croyais qui je n'y est pas penser de porter les deux armes ?");
+	      my_putstr("mais bon ces trop lourd pour moi et cela risquerais de plus m'handicaper\n\n");
 	    }
 	}
       else
