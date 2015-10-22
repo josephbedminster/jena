@@ -59,8 +59,9 @@ int		prendre(int salle)
         {
 	  if (MUNI_ARMU > 0)
 	    {
-	      my_putstr("\nJ'ai trouvé quelques cartouches d'energie !\n");
+	      my_putstr("\nJ'ai trouvé une cartouche d'energie !\n");
 	      my_putstr("Je peux m'en servir pour recharger des armes ou des appareils.\n");
+	      my_putstr("J'ai maintenant [16x] munitions.\n\n");
 	      jena.munitions = 16;
 	      MUNI_ARMU -= 16;
 	      SCORE = SCORE + 16;
