@@ -142,7 +142,7 @@ int		start_battle()
   res = 1;
   i = 0;
   init_e(&e);
-  puts("\nUn monstre vous attaque !\n");
+  puts("\n\033[5;31mUn monstre vous attaque !\033[0m\n");
   while (res != 0)
     {
       res = battle(&e, i);
