@@ -35,25 +35,25 @@ void            accueil()
   my_putstr("Depuis mon réveil, une alarme resonne dans la piece, merci pour mes migraines !\n");
   //sleep(3);
   my_putstr("Mais je vais bien, au cas ou vous demanderiez !\n");
-  //sleep(3);  
+  //sleep(3);
   my_putstr("Il y a du avoir un crash, c'est la seule explication logique.\n");
   my_putstr("La question qui perdure c'est : Qu'est ce que je faisais dans ce vaisseau ?\n");
   //sleep(5);
   my_putstr("Oh ! Mais je parle depuis tout a l'heure, je ne vous ai meme pas dit comment je m'apelle !\n");
-  //sleep(3);  
+  //sleep(3);
   my_putstr("Oui, j'ai perdu la tete, mais je me souviens encore de mon nom !\n\n");
-  //sleep(3);  
+  //sleep(3);
   my_putstr("Je m'apelle Jena ! Enchantée !\n\n");
-  //sleep(3);  
+  //sleep(3);
   my_putstr(USER);
   my_putstr(", ca vous derange si je vous demande des conseils en attendant les secours ?\n");
-  //sleep(3);  
+  //sleep(3);
   my_putstr("Juste un peu ? S'il vous plait !\n");
   my_putstr("Par exemple ! Je suis dans un couloir aux murs blancs -enfin- blancs plus quelques traces de sang...\n");
-  //sleep(5);  
+  //sleep(5);
   my_putstr("Et je vois deux couloirs : un qui part... disons vers le nord pour que ce soit compréhensible pour vous.\n");
   my_putstr("Et l'autre vers le sud. Aucune idée sur ce qu'il peut y avoir plus loin.\n");
-  //sleep(3);  
-  my_putstr("Que me conseillez-vous de faire ? Aller au nord ou au sud ?\n\n");
-
+  //sleep(3);
+  my_putstr("Que me conseillez-vous de faire ? Dans quelle direction dois-je aller ?\n\n");
+  my_putstr("-- Liste des commandes : aide --\n\n");
 }
