@@ -31,8 +31,19 @@ int		player_attack(t_enemy *e)
 
   if (commande == 1)
     {
-      printf("\nVous avez infligé %d dégats\n", jena.weaponTab[ARME_EQUIP].damage);
-      e->pv -= jena.weaponTab[ARME_EQUIP].damage;
+      if (jena.munitions < jena.weaponTab[ARME_EQUIP].munitions)
+	{
+	  my_putstr("Vous n'avez pas assez de munitions pour attaquer !\n");
+	  printf("Votre arme requiert [%d] munitions pour tirer. Il vous reste [%d] munitions.", jena.weaponTab[ARME_EQUIP].munitions, jena.munitions);
+	  my_putstr("Vous attaquez avec vos mains ! Vous infligez 1 point de dégat !");
+	  e->pv -= 1;
+	}
+      else
+	{
+	  printf("\nVous avez infligé %d dégats\n", jena.weaponTab[ARME_EQUIP].damage);
+	  e->pv -= jena.weaponTab[ARME_EQUIP].damage;
+	  printf("Votre arme requiert [%d] munitions pour tirer. Il vous reste [%d] munitions.", jena.weaponTab[ARME_EQUIP].munitions, jena.munitions);
+	}
     }
   else if (commande == 2)
     {
@@ -67,14 +78,15 @@ int		enemy_attack(t_enemy *e)
 {
   int		res;
   char		*buffer;
+  int		attack = (e->attack[res].damage * e->strenght)
 
   // 1024 parce que j'en ai rien a foutre
   if ((buffer = malloc(sizeof(char) * 1024)) == NULL)
     return -1;
   res = rand() % NB_ATTACK;
-  sprintf(buffer, "%s vous attaque !\nIl utilise : %s, et vous inflige %d dégats.", e->name, e->attack[res].name, e->attack[res].damage);
+  sprintf(buffer, "%s vous attaque !\nIl utilise : %s, et vous inflige %d dégats.", e->name, e->attack[res].name, attack);
   puts(buffer);
-  jena.pv -= e->attack[res].damage;
+  jena.pv -= attack;
   if (jena.pv <= 0)
     {
       memset(buffer, 0, strlen(buffer));
@@ -111,6 +123,7 @@ void		init_e(t_enemy *e)
   e->name = "Monstre";
   e->pv = 80;
   e->pvmax = 80;
+  e->strenght = 4;
   e->attack = &attackList;
 }
 

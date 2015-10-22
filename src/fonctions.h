@@ -41,6 +41,7 @@ typedef struct  s_enemy
   char          *name;
   int           pv;
   int		pvmax;
+  int		strenght;
   t_attack      *attack;
 }               t_enemy;
 
