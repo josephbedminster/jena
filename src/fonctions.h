@@ -64,7 +64,6 @@ typedef struct  s_player
 {
   int		lvl;
   int		exp;
-  int		expnext;
   int           pv;
   int		pvmax;
   int		medicaments;

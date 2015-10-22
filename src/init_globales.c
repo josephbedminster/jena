@@ -22,7 +22,7 @@ t_attack attackList[NB_ATTACK] = {
 
 t_player jena[1]= {
   //lvl, exp, exp next lvl,hp, hp max, medicaments, munitions, munitionsmax, tab d'armes
-  {1, 0, 100, 100, 100, 0, 0, 50, weaponList}
+  {1, 0, 100, 100, 0, 0, 50, weaponList}
 };
 
 void	init_globales()
