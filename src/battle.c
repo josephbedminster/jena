@@ -69,7 +69,7 @@ int		player_attack(t_enemy *e)
   if (e->pv <= 0)
     {
       printf("\n- JENA : [%d/%d] PV's.\n- %s : [0/%d] PV's", jena.pv, jena.pvmax, e->name, e->pvmax);
-      printf("\n\n\033[1;34mVous avez tué le %s !\n\033[0m", e->name);
+      printf("\n\n\033[1;34mVous avez tué le %s !\033[0m\n", e->name);
       return (0);
     }
   else
