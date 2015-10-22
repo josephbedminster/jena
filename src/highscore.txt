@@ -7,9 +7,3 @@ winda est nul elle a un score nul. : 112 Pts.
 nefast : 371 Pts.
 Jo : 0 Pts.
 j : 60 Pts.
-<<<<<<< HEAD
-test random : 192 Pts.
-=======
-lo : 40 Pts.
->>>>>>> c6d6a5758104f91e20170162bd899ded03b53493
-d : 10 Pts.
