@@ -63,8 +63,10 @@ int             comparer(char* entree, int salle)
   if (resultat == 0)
     {
       stats_arme();
-      printf("Munitions : %d/%d\n", jena.munitions, jena.munitionsmax);
-      printf("Médicaments : %d\n\n", jena.medicaments);
+      my_putstr("\n=========================\n");
+      my_putstr("      Médicaments");
+      my_putstr("\n=========================\n");
+      printf("Possédés : %d\n\n", jena.medicaments);
       return(0);
     }
 
