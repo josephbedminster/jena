@@ -8,16 +8,12 @@ void		fouiller(int salle)
   /*SALLE 2*/
   if (salle == 2)
     {
+      my_putstr("\nJe pense que je peux prendre :\n");
+      my_putstr(" - <du repos> dans le lit\n\n");
       if (CARTE_COM == 0)
         {
-          my_putstr("\nJe pense que je peux prendre :\n");
           my_putstr(" - une <carte> d'identification\n");
-	  my_putstr(" - <du repos> dans le lit\n\n");
-        }
-      else
-        {
-          my_putstr("\nJ'ai beau chercher, je vois rien a récuperer.\n\n");
-        }
+	}
       return;
     }
   /*FIN SALLE02*/
