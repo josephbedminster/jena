@@ -127,16 +127,23 @@ void		init_e(t_enemy *e)
 {
   e->name = "Monstre";
   e->pv = 80;
+  e->lvl = 1;
   e->pvmax = 80;
   e->strenght = 4;
   e->attack = &attackList;
+  my_putstr("\n================\n");
+  my_putstr(e->name);
+  my_putstr("\n================\n");
+  printf("Niveau : %d\n", e->lvl);
+  printf("PV's : [%d/%d]\n\n", e->pv, e->pvmax);
 }
 
 int		start_battle()
 {
-  t_enemy e;
-  int i;
-  int res;
+  t_enemy	e;
+  int		i;
+  int		res;
+  int		is_lvlup;
 
   srand(time(NULL));
   res = 1;
@@ -156,6 +163,8 @@ int		start_battle()
     }
   else
     {
+      is_lvlup = give_exp();
+      stats_jena(is_lvlup);
       SCORE = SCORE + 20;
       my_putstr("\nJ'ai eu chaud ! Merci pour votre aide !\n\n");
     }

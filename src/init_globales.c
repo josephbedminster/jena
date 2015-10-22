@@ -1,5 +1,7 @@
 #include "fonctions.h"
 
+//const	int
+
 t_weapon weaponList[NB_WEAPON] = {
   //Available, NAME, Attaque, Munition ulisee
   {1, "Mains", 1, 0},
@@ -14,8 +16,8 @@ t_attack attackList[NB_ATTACK] = {
 };
 
 t_player jena[1]= {
-  //lvl, hp, hp max, medicaments, munitions, tab d'armes
-  {1, 100, 100, 0, 0, weaponList}
+  //lvl, exp, exp next lvl,hp, hp max, medicaments, munitions, munitionsmax, tab d'armes
+  {1, 0, 100, 100, 100, 0, 0, 50, weaponList}
 };
 
 void	init_globales()

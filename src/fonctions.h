@@ -31,6 +31,9 @@ int		DIAG_S12A09;
 int		DIAG_S09A08;
 int		DIAG_S03A02;
 
+/*TABLE EXP*/
+int		EXP[10];
+
 typedef struct  s_attack
 {
   char          *name;
@@ -40,6 +43,7 @@ typedef struct  s_attack
 typedef struct  s_enemy
 {
   char          *name;
+  int		lvl;
   int           pv;
   int		pvmax;
   int		strenght;
@@ -59,13 +63,19 @@ typedef struct  s_weapon
 typedef struct  s_player
 {
   int		lvl;
+  int		exp;
+  int		expnext;
   int           pv;
   int		pvmax;
   int		medicaments;
   int		munitions;
+  int		munitionsmax;
   t_weapon      *weaponTab;
 }               t_player;
 
+int             give_exp();
+void            stats_jena();
+void            stats_arme();
 void		init_e(t_enemy *e);
 int		battle(t_enemy *e, int i);
 int		start_battle();
