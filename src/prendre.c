@@ -99,6 +99,7 @@ int		prendre(int salle)
 	      ARME_EQUIP = 2;
 	      jena.weaponTab[2].available = 1;
 	      jena.weaponTab[1].available = 1;
+	      stats_arme();
 	      my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
 	      my_putstr("Un Fusil plasma flambant neuf ! Il est chargé et pret a l'emploi !\n");
 	      my_putstr("Je me sens déjà plus rassurée !\n");
