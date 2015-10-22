@@ -8,9 +8,10 @@ extern t_player jena;
 void            salle14(int salle)
 {
   int           action;
-  int           b;
   char		*mort;
   int		choix;
+  int           randmob;
+  int           randmuni;
 
   choix = 0;
   mort = NULL;
@@ -19,10 +20,18 @@ void            salle14(int salle)
   g_map[5][0].content = 1;
   look(salle);
   srand(time(NULL));
-  b = rand();
-  if ((b%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
+  randmob = rand();
+  randmuni = rand();
+  MUNI_MAP = 0;
+
+
+  if ((randmob%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
     {
       start_battle();
+    }
+  if ((randmuni%4 == 0))
+    {
+      MUNI_MAP = 4;
     }
   while (action == 0)
     {

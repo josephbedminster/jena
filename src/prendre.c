@@ -15,7 +15,7 @@ int		prendre(int salle)
       if (strcmp(entree, "munitions") == 0)
       {
 	my_putstr("\nUne chance d'avoir trouver ces munitions.\n");
-	my_putstr("[JENA] : Munitions + 4");
+	my_putstr("[JENA] : Munitions + 4\n\n");
 	jena.munitions += 4;
 	MUNI_MAP = 0;
 	return (0);
@@ -52,6 +52,13 @@ int		prendre(int salle)
 	      CARTE_COM = 1;
 	      SCORE = SCORE + 5;
 	    }
+	  else if ((strcmp(entree, "munitions") == 0))
+	    {
+	      my_putstr("\nUne chance d'avoir trouver ces munitions.\n");
+	      my_putstr("[JENA] : Munitions + 4\n\n");
+	      jena.munitions += 4;
+	      MUNI_MAP = 0;
+	    }
 	  else
 	    {
 	      my_putstr("La radio doit dysfonctionner, je n'ai rien compris a votre précédent message !\n\n");
@@ -72,7 +79,7 @@ int		prendre(int salle)
 	      my_putstr("\nJ'ai trouvé une cartouche d'energie !\n");
 	      my_putstr("Je peux m'en servir pour recharger des armes ou des appareils.\n");
 	      my_putstr("J'ai maintenant [16x] munitions.\n\n");
-	      jena.munitions = 16;
+	      jena.munitions += 16;
 	      MUNI_ARMU -= 16;
 	      SCORE = SCORE + 16;
 	    }

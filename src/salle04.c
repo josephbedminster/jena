@@ -10,6 +10,7 @@ void            salle04(int salle)
   g_map[1][2].visited = 1;
   g_map[1][2].content = 1;
   look(salle);
+  MUNI_MAP = 0;
 
   while (action == 0)
     {

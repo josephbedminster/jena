@@ -8,17 +8,26 @@ extern t_player jena;
 void            salle09(int salle)
 {
   int           action;
-  int           b;
+  int           randmob;
+  int           randmuni;
 
   action = 0;
   g_map[3][1].visited = 1;
   g_map[3][1].content = 1;
   look(salle);
   srand(time(NULL));
-  b = rand();
-  if ((b%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
+  randmob = rand();
+  randmuni = rand();
+  MUNI_MAP = 0;
+
+
+  if ((randmob%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
     {
       start_battle();
+    }
+  if ((randmuni%4 == 0))
+    {
+      MUNI_MAP = 4;
     }
   while (action == 0)
     {
