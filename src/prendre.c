@@ -74,18 +74,19 @@ int		prendre(int salle)
       /*FIN MUNITIONS*/
 
       /*DEBUT PRENDRE ARME*/
-      else if (strcmp(entree, "pistolet") == 0)
-        {
-          if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
-            {
+      if (strcmp(entree, "pistolet") == 0)
+	{
+	  if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
+	    {
 	      ARME_EQUIP = 1;
+	      jena.weaponTab[1].available = 1;
 	      stats_arme();
-              my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
-	      my_putstr("Un Pistolet Laser flambant neuf ! Il est chargé et prêt à l'emploi !\n");
+	      my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
+	      my_putstr("Un Fusil plasma flambant neuf ! Il est chargé et pret a l'emploi !\n");
 	      my_putstr("Je me sens déjà plus rassurée !\n");
-	      my_putstr("Maintenant que j'ai une arme, je dois plus être sur mes gardes...\n\n");
+	      my_putstr("Maintenant que j'ai une arme meilleur que mes simples poings, je dois plus être sur mes gardes...\n\n");
 	      SCORE = SCORE + 10;
-            }
+	    }
 	  else
 	    {
 	      my_putstr("\nVous croyez vraiment que je n'aimerai pas emporter ces deux armes ?\n");
@@ -98,7 +99,7 @@ int		prendre(int salle)
 	    {
 	      ARME_EQUIP = 2;
 	      jena.weaponTab[2].available = 1;
-	      jena.weaponTab[1].available = 1;
+	      stats_arme();
 	      my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
 	      my_putstr("Un Fusil plasma flambant neuf ! Il est chargé et pret a l'emploi !\n");
 	      my_putstr("Je me sens déjà plus rassurée !\n");
@@ -177,14 +178,14 @@ int		prendre(int salle)
   /*DEBUT 11*/
   if(salle == 11)
     {
-      if (strcmp(entree, "medicament") == 0)
+      if (strcmp(entree, "medicaments") == 0)
 	{
 	  if (MEDIC_RESE > 0)
 	    {
-	      my_putstr("J'ai fouillé dans les armoires, et ai trouvé [x1] Médicament !\n\n");
-	      jena.medicaments += 1;
-	      MEDIC_RESE--;
-	      SCORE = SCORE + 1;
+	      my_putstr("J'ai fouillé dans les armoires, et ai trouvé [x5] médicaments !\n\n");
+	      jena.medicaments += 5;
+	      MEDIC_RESE -= 5;
+	      SCORE = SCORE + 5;
 	    }
 	  else
 	    {
