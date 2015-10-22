@@ -40,7 +40,7 @@ int		player_attack(t_enemy *e)
 	}
       else
 	{
-	  printf("\033[1;31mVous avez infligé %d dégats\n\033[0m", jena.weaponTab[ARME_EQUIP].damage);
+	  printf("\n\033[1;31mVous avez infligé %d dégats\n\033[0m", jena.weaponTab[ARME_EQUIP].damage);
 	  e->pv -= jena.weaponTab[ARME_EQUIP].damage;
 	  jena.munitions -= jena.weaponTab[ARME_EQUIP].munitions;
 	  printf("Votre arme requiert [%d] munitions pour tirer. Il vous reste [%d] munitions.\n", jena.weaponTab[ARME_EQUIP].munitions, jena.munitions);
