@@ -26,6 +26,7 @@ void            accueil()
   my_putstr(", vous me sauvez la vie !\n");
   my_putstr("Vous êtes la seule personne joignable dans tout le secteur !\n");
   //sleep(3);
+  my_putstr("Et dire que je pensais que cette radio était cassée...\n");
   my_putstr("Je ne sais absolument pas où je suis... On dirait l'intérieur d'un vaisseau...\n");
   //sleep(3);
   my_putstr("Aucune idée de ce que je fais ici... Vu la douleur qui me lance dans la tete, j'ai du m'evanouir...\n");

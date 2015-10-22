@@ -4,8 +4,7 @@ void		quisuisje()
 {
   if (QUISUISJE == 0)
     {
-      my_putstr("\nComme je vous l'ai dit, je m'apelle Jena !\n");
-      my_putstr("C'est tout ce qui me revient...\n\n");
+      my_putstr("\nComme je vous l'ai dit, je m'appelle Jena, mais c'est tout ce qui me revient...\n\n");
     }
   else if (QUISUISJE == 1)
     {
