@@ -51,7 +51,7 @@ int             comparer(char* entree, int salle)
       return (0);
     }
 
-  resultat = ny_strcmp(entree, "stats");
+  resultat = my_strcmp(entree, "stats");
   if (resultat == 0)
     {
       stats_jena(0);
