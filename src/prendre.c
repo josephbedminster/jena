@@ -19,8 +19,8 @@ int		prendre(int salle)
 	{
 	  system("cat src/douche.txt");
 	  my_putstr("\n\n");
-	  SCORE = SCORE + 20;
-	  DOUCHE_TAKEN = 1;
+	  if (DOUCHE_TAKEN == 0)
+	      SCORE = SCORE + 20;
 	  return (0);
 	}
       else if (strcmp(entree, "du repos") == 0)
@@ -42,9 +42,7 @@ int		prendre(int salle)
 	    }
 	  else
 	    {
-	      my_putstr("Je ne vois pas de ");
-	      my_putstr(entree);
-	      my_putstr(" dans cette salle !\n\n");
+	      my_putstr("La radio doit dysfonctionner, car je n'ai rien compris a votre précédent message !\n\n");
 	    }
 	  return (0);
 	}
@@ -80,9 +78,9 @@ int		prendre(int salle)
 	    {
 	      ARME_EQUIP = 1;
 	      jena.weaponTab[1].available = 1;
-	      stats_arme();
 	      my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
 	      my_putstr("Un Fusil plasma flambant neuf ! Il est chargé et pret a l'emploi !\n");
+	      stats_arme();
 	      my_putstr("Je me sens déjà plus rassurée !\n");
 	      my_putstr("Maintenant que j'ai une arme meilleur que mes simples poings, je dois plus être sur mes gardes...\n\n");
 	      SCORE = SCORE + 10;
@@ -99,9 +97,9 @@ int		prendre(int salle)
 	    {
 	      ARME_EQUIP = 2;
 	      jena.weaponTab[2].available = 1;
-	      stats_arme();
 	      my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
 	      my_putstr("Un Fusil plasma flambant neuf ! Il est chargé et pret a l'emploi !\n");
+	      stats_arme();
 	      my_putstr("Je me sens déjà plus rassurée !\n");
 	      my_putstr("Maintenant que j'ai une arme meilleur que mes simples poings, je dois plus être sur mes gardes...\n\n");
 	      SCORE = SCORE + 10;

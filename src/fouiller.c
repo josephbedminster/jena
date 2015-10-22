@@ -9,11 +9,10 @@ void		fouiller(int salle)
   if (salle == 2)
     {
       my_putstr("\nJe pense que je peux prendre :\n");
-      my_putstr(" - <du repos> dans le lit\n\n");
-      my_putstr("(<du repos> permet de récupérer toute sa vie [60secondes])\n");
+      my_putstr("(<du repos> (permet de récupérer toute sa vie [60secondes])\n");
       if (CARTE_COM == 0)
         {
-          my_putstr(" - une <carte> d'identification\n");
+          my_putstr(" - une <carte> d'identification\n\n");
 	}
       return;
     }

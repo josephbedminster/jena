@@ -27,9 +27,10 @@ void		stats_jena(int is_lvlup)
 
 void		stats_arme()
 {
-  my_putstr("\n====================\n");
-  printf("         %s", jena.weaponTab[ARME_EQUIP].name);
-  my_putstr("\n====================\n");
+  my_putstr("\n=========================\n");
+  my_putstr("     ");
+  my_putstr(jena.weaponTab[ARME_EQUIP].name);
+  my_putstr("\n=========================\n");
   printf("Dégats : %d par tir\n", jena.weaponTab[ARME_EQUIP].damage);
   printf("Cartouches : %d par tir\n", jena.weaponTab[ARME_EQUIP].munitions);
   printf("Munitions : %d/%d\n\n", jena.munitions, jena.munitionsmax);

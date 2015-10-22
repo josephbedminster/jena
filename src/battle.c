@@ -131,11 +131,12 @@ void		init_e(t_enemy *e)
   e->pvmax = 80;
   e->strenght = 4;
   e->attack = &attackList;
-  my_putstr("\n================\n");
+  my_putstr("\n==================\n");
+  my_putstr("      ");
   my_putstr(e->name);
-  my_putstr("\n================\n");
+  my_putstr("\n==================\n");
   printf("Niveau : %d\n", e->lvl);
-  printf("PV's : [%d/%d]\n\n", e->pv, e->pvmax);
+  printf("PV's : [%d/%d]\n", e->pv, e->pvmax);
 }
 
 int		start_battle()
@@ -149,8 +150,8 @@ int		start_battle()
   srand(time(NULL));
   res = 1;
   i = 0;
-  init_e(&e);
   puts("\n\033[5;31mUn monstre vous attaque !\033[0m\n");
+  init_e(&e);
   while (res != 0)
     {
       res = battle(&e, i);
