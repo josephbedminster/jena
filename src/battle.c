@@ -44,8 +44,6 @@ int		player_attack(t_enemy *e)
 	  e->pv -= jena.weaponTab[ARME_EQUIP].damage;
 	  printf("Votre arme requiert [%d] munitions pour tirer. Il vous reste [%d] munitions.", jena.weaponTab[ARME_EQUIP].munitions, jena.munitions);
 	}
-      sleep(2);
-      e->pv -= jena.weaponTab[ARME_EQUIP].damage;
     }
   else if (commande == 2)
     {
