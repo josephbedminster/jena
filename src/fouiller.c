@@ -30,7 +30,8 @@ void		fouiller(int salle)
           my_putstr("\nJe pense que je peux récuperer :\n");
           my_putstr(" - un <pistolet> laser \n");
 	  my_putstr(" - un <fusil> plasma \n\n");
-        }
+	  my_putstr(" - des <munitions> \n\n");
+	}
       else
         {
           my_putstr("\nJ'ai deja récupéré une arme ! Je ne peux pas en prendre plus pour l'instant.\n\n");
