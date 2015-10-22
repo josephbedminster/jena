@@ -25,32 +25,22 @@ void		fouiller(int salle)
   /*SALLE 04*/
   if (salle == 4)
     {
-      if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
-        {
-          my_putstr("\nJe pense que je peux récuperer :\n");
-          my_putstr(" - un <pistolet> laser \n");
-	  my_putstr(" - un <fusil> plasma \n\n");
-	}
-      else
-        {
-          my_putstr("\nJ'ai deja récupéré une arme ! Je ne peux pas en prendre plus pour l'instant.\n\n");
-        }
-      return;
-      if ((MUNI_ARMU > 0) && (ARME_EQUIP > 0))
-	{
-	  my_putstr("Je pense que je peux récuperer :\n");
-	  my_putstr(" - des <munitions> \n\n");
-	}
-      else if ((MUNI_ARMU > 0) && (ARME_EQUIP == 0))
+      if (((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0)) || (MUNI_ARMU > 0))
 	{
 	  my_putstr("\nJe pense que je peux récuperer :\n");
-          my_putstr(" - un <pistolet> laser \n");
-	  my_putstr(" - un <fusil> plasma \n\n");
-	  my_putstr(" - des <munitions> \n\n");
+	  if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
+	    {
+	      my_putstr(" - un <pistolet> laser \n");
+	      my_putstr(" - un <fusil> plasma \n");
+	    }
+	  if (MUNI_ARMU > 0)
+	    {
+	      my_putstr(" - des <munitions> \n\n");
+	    }
+	  else
+	    my_putstr("Je suis armée et prete au combat ! Je ne vois plus rien d'utile ici !");
+	  return;
 	}
-      else
-	my_putstr("Je suis armée et prete au combat ! Je ne vois plus rien d'utile ici !");
-      return;
     }
   /*FIN SALLE04*/
 

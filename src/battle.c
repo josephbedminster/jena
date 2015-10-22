@@ -110,13 +110,13 @@ int		battle(t_enemy *e, int i)
   puts(buffer);
   if (i % 2 == 0)
     {
-      sleep(3);
+      sleep(1);
       my_putstr("\n----------------------- Votre tour ---------------------------\n\n");
       return (player_attack(e));
     }
   else
     {
-      sleep(3);
+      sleep(1);
       my_putstr("\n\n------------------ Tour de l'adversaire ----------------------\n\n");
       return (enemy_attack(e));
     }

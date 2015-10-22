@@ -81,15 +81,15 @@ int		prendre(int salle)
               my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
 	      my_putstr("Un Pistolet Laser flambant neuf ! Il est charge et pret a l'emploi !\n");
 	      my_putstr("Je me sens deja plus rassurée !\n");
-	      my_putstr("Maintenant que j'ai une arme meilleur que mes simples poings, je dois plus être sur mes gardes...\n\n");
+	      my_putstr("Maintenant que j'ai une arme, je dois plus être sur mes gardes...\n\n");
               jena.weaponTab[1].available = 1;
 	      ARME_EQUIP = 1;
               SCORE = SCORE + 10;
             }
 	  else
 	    {
-	      my_putstr("\nNon mais serieusement, vous croyais qui je n'y est pas penser de porter les deux armes ?");
-	      my_putstr("mais bon ces trop lourd pour moi et cela risquerais de plus m'handicaper\n\n");
+	      my_putstr("\nVous croyez vraiment que je n'aimerai pas emporter ces deux armes ?\n");
+	      my_putstr("Malheureusement, tout cela est trop lourd pour moi !\n\n");
 	    }
 	}
       else if (strcmp(entree, "fusil") == 0)
@@ -106,8 +106,8 @@ int		prendre(int salle)
 	    }
 	  else
 	    {
-	      my_putstr("\nNon mais serieusement, vous croyais qui je n'y est pas penser de porter les deux armes ?");
-	      my_putstr("mais bon ces trop lourd pour moi et cela risquerais de plus m'handicaper\n\n");
+	      my_putstr("\nVous croyez vraiment que je n'aimerai pas emporter ces deux armes ?\n");
+	      my_putstr("Malheureusement, tout cela est trop lourd pour moi !\n\n");
 	    }
 	}
       else
