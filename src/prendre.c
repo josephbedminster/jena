@@ -81,8 +81,8 @@ int		prendre(int salle)
 	      ARME_EQUIP = 1;
 	      stats_arme();
               my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
-	      my_putstr("Un Pistolet Laser flambant neuf ! Il est charge et pret a l'emploi !\n");
-	      my_putstr("Je me sens deja plus rassurée !\n");
+	      my_putstr("Un Pistolet Laser flambant neuf ! Il est chargé et prêt à l'emploi !\n");
+	      my_putstr("Je me sens déjà plus rassurée !\n");
 	      my_putstr("Maintenant que j'ai une arme, je dois plus être sur mes gardes...\n\n");
 	      SCORE = SCORE + 10;
             }
@@ -101,7 +101,7 @@ int		prendre(int salle)
 	      jena.weaponTab[1].available = 1;
 	      my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
 	      my_putstr("Un Fusil plasma flambant neuf ! Il est chargé et pret a l'emploi !\n");
-	      my_putstr("Je me sens deja plus rassurée !\n");
+	      my_putstr("Je me sens déjà plus rassurée !\n");
 	      my_putstr("Maintenant que j'ai une arme meilleur que mes simples poings, je dois plus être sur mes gardes...\n\n");
 	      SCORE = SCORE + 10;
 	    }
