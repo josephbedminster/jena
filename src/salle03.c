@@ -9,12 +9,21 @@ void            salle03(int salle)
 {
   int           action;
   char 		*entree;
+  int           randmuni;
 
   entree = malloc(sizeof(char*));
   action = 0;
   g_map[1][1].visited = 1;
   g_map[1][1].content = 1;
   look(salle);
+  srand(time(NULL));
+  randmuni = rand();
+  MUNI_MAP = 0;
+
+  if ((randmuni%4 == 0))
+    {
+      MUNI_MAP = 4;
+    }
   if(ARME_EQUIP != 0)
     {
       start_battle();

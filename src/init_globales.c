@@ -28,6 +28,7 @@ t_player jena[1]= {
 void	init_globales()
 {
   /*VARIABLES GLOBALES*/
+  MUNI_MAP = 0;
   ERREUR_PROMPT = 0;
   COMBI = 0;
   CARTE_ACCES = 0;

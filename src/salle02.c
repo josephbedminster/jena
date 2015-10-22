@@ -9,13 +9,21 @@ void            salle02(int salle)
 {
   char		*entree;
   int           action;
+  int           randmuni;
 
   entree = malloc(sizeof(char*));
   action = 0;
   g_map[1][0].visited = 1;
   g_map[1][0].content = 1;
   look(salle);
+  srand(time(NULL));
+  randmuni = rand();
+  MUNI_MAP = 0;
 
+  if ((randmuni%4 == 0))
+    {
+      MUNI_MAP = 4;
+    }
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
