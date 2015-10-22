@@ -27,7 +27,9 @@ int		prendre(int salle)
 	{
 	  my_putstr("\n\n");
 	  jena.pv = jena.pvmax;
-	  my_putstr("\n\nJe me suis reposée un peu, j'ai récupéré toute ma forme !\n\n");
+	  my_putstr("\n\nJe me suis reposée un peu, j'ai récupéré toute ma forme !\n");
+	  printf("[JENA] : %d/%d PVs.", jena.pv, jena.pvmax);
+	  my_putstr("\n\n");
 	  return (0);
 	}
       else if (strcmp(entree, "carte") == 0)
@@ -42,7 +44,7 @@ int		prendre(int salle)
 	    }
 	  else
 	    {
-	      my_putstr("La radio doit dysfonctionner, car je n'ai rien compris a votre précédent message !\n\n");
+	      my_putstr("La radio doit dysfonctionner, je n'ai rien compris a votre précédent message !\n\n");
 	    }
 	  return (0);
 	}
