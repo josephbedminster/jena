@@ -9,12 +9,12 @@ void            accueil()
   system("clear");
   system("cat src/header.txt");
 
-  my_putstr("\n\n\n[Demande de communication entrante]\n");
-  //sleep(1);
+  my_putstr("\n\n\n\033[5;00m[Demande de communication entrante]\n");
+  sleep(1);
   my_putstr("[Connection...]\n");
-  //sleep(1);
-  my_putstr("[Communication établie]\n");
-  //sleep(2);
+  sleep(1);
+  my_putstr("[Communication établie]\n\033[0m");
+  sleep(2);
   my_putstr("\nEh oh ! Est-ce que quelqu'un m'entend ?\n\n");
   my_putstr(" > ");
   readLine();
