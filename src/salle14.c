@@ -9,7 +9,11 @@ void            salle14(int salle)
 {
   int           action;
   int           b;
+  char		*mort;
+  int		choix;
 
+  choix = 0;
+  mort = NULL;
   action = 0;
   g_map[5][0].visited = 1;
   g_map[5][0].content = 1;
@@ -34,21 +38,39 @@ void            salle14(int salle)
         }
       if (action == 4)
         {
-	  if (COMBI == 0)
+	  my_putstr("\nVous etes sur de vouloir aller par la ???\nL'air c'est extrement rafrechie ici... ce n'est pas un bon signe\n\n");
+	  my_putstr("Dois-je continuer ???\n");
+	  while (choix == 0)
 	    {
-	      my_putstr("J'entre dans le hangar !\nIl y a un enorme trou dans la coque !\n");
-	      my_putstr("Je me sens mal !...\n");
-	      sleep(3);
-	      my_putstr("Je...\n");
-	      gameover();
-	      score();
+	      mort = readLine();
+	      if (strcmp(mort, "oui") == 0)
+		choix = 1;
+	      else if (strcmp(mort, "non") == 0)
+		choix = 2;
+	    }
+	  if (choix == 1)
+	    {
+	      if (COMBI == 0)
+		{
+		  my_putstr("J'entre dans le hangar !\nIl y a un enorme trou dans la coque !\n");
+		  my_putstr("Je me sens mal !...\n");
+		  sleep(3);
+		  my_putstr("Je...\n");
+		  gameover();
+		  score();
+		}
+	      else
+		{
+		  my_putstr("\nPfiou!!! Heureusement que j'ai ma combinaison sinon je ne pense pas survivre.\n\n");
+		  g_map[5][0].content = 0;
+		  salle = 15;
+		  salle15(salle);
+		}
 	    }
 	  else
 	    {
-	      my_putstr("\nPfiou!!! Heureusement que j'ai ma combinaison sinon je ne pense pas survivre.\n\n");
-	      g_map[5][0].content = 0;
-	      salle = 15;
-	      salle15(salle);
+	      my_putstr("Vous avez suremet raison une foi de plus,je vais vous ecouter\n\n");
+	      action = 0;
 	    }
 	}
       /*Prendre*/
