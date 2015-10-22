@@ -39,7 +39,7 @@ void            salle14(int salle)
       if (action == 4)
         {
 	  my_putstr("\nVous etes sur de vouloir aller par la ???\nL'air c'est extrement rafrechie ici... ce n'est pas un bon signe\n\n");
-	  my_putstr("Dois-je continuer ???\n");
+	  my_putstr("Dois-je continuer ???\n   >");
 	  while (choix == 0)
 	    {
 	      mort = readLine();
@@ -65,11 +65,13 @@ void            salle14(int salle)
 		  g_map[5][0].content = 0;
 		  salle = 15;
 		  salle15(salle);
+		  choix = 0;
 		}
 	    }
 	  else
 	    {
-	      my_putstr("Vous avez suremet raison une foi de plus,je vais vous ecouter\n\n");
+	      my_putstr("\nVous avez surement raison une foi de plus,je vais vous ecouter\n\n");
+	      choix = 0;
 	      action = 0;
 	    }
 	}
