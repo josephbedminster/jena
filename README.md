@@ -42,3 +42,6 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
 Nombre de lignes : | Nombre de caracteres :
 -------- | ---
 3337 | 82221
+   
+   
+Vous pouvez maintenant donner votre avis via le formulaire suivant : http://goo.gl/forms/JT5qvC6Imy
