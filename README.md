@@ -30,7 +30,7 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
    
 ***
    
-###![image idee] (http://www.hostingpics.net/thumbs/82/18/61/mini_821861arrow68.png) Installation
+###![image idee] (http://www.hostingpics.net/thumbs/97/31/80/mini_973180cloudstorage3.png) Installation
 > **>** Telecharger : http://bedminster.fr/jena/install.sh
    
 > **>** sh install.sh
@@ -43,7 +43,7 @@ ou
    
 ***
    
-###![image idee] (http://www.hostingpics.net/thumbs/56/55/07/mini_565507magnifier12.png) Informations
+###![image idee] (http://www.hostingpics.net/thumbs/11/25/01/mini_112501computerscreen14.png) Informations
 Nombre de lignes : | Nombre de caracteres :
 -------- | ---
 3337 | 82221
