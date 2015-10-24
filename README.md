@@ -32,7 +32,7 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
    
 ###![image install] (http://www.hostingpics.net/thumbs/97/31/80/mini_973180cloudstorage3.png) Installation
    
-> **>** Telecharger [Save link as...]: https://github.com/nextjoey/jena/blob/master/install.sh
+> **>** Telecharger [Save link as...]: http://bedminster.fr/jena/install.sh
    
 > **>** sh install.sh
    
