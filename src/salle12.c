@@ -57,7 +57,7 @@ void            salle12(int salle)
       if (action == 4)
         {
 	  my_putstr("Je traverse un long couloir... Tout est silencieux ici, pas tres rassurant...\n");
-	  my_putstr("Je suis arrive dans une grande salle.");
+	  my_putstr("Je suis arrive dans une grande salle.\n");
 	  g_map[4][1].content = 0;
 	  salle = 13;
 	  salle13(salle);

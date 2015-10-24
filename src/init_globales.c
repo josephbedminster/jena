@@ -8,7 +8,7 @@ int	xpNeeded(int lvl)
 }
 
 t_weapon weaponList[NB_WEAPON] = {
-  //Available, NAME, Attaque, Munition ulisee
+  //Available, NAME, Attaque, Munition utilisee
   {1, "Mains", 1, 0},
   {0, "Pistolet Laser", 30, 1},
   {0, "Fusil a plasma", 40, 2}
@@ -28,21 +28,21 @@ t_player jena[1]= {
 void	init_globales()
 {
   /*VARIABLES GLOBALES*/
-  MUNI_MAP = 0;
-  ERREUR_PROMPT = 0;
+  ARME_EQUIP = 0;
   COMBI = 0;
   CARTE_ACCES = 0;
   CARTE_COM = 0;
-  MUNI_ARMU = 16;
-  MEDIC_RESE = 5;
+  DOUCHE_TAKEN = 0;
   DIAG_S09A08 = 0;
   DIAG_S12A09 = 0;
   DIAG_S03A02 = 0;
-  SCORE = 0;
-  ARME_EQUIP = 0;
-  DOUCHE_TAKEN = 0;
+  ERREUR_PROMPT = 0;
+  MUNI_ARMU = 16;
+  MUNI_MAP = 0;
+  MEDIC_RESE = 5;
   QUISUISJE = 0;
-/*FIN*/
+  SCORE = 0;
+  /*FIN*/
 }
 
 /*MAP*/

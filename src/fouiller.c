@@ -9,7 +9,7 @@ void		fouiller(int salle)
 
   is_muni = 0;
 
-  my_putstr("\nJe pense que je peux prendre :\n");
+  my_putstr("\nJ'ai fouillé la piece... Il y a...\n");
   if(MUNI_MAP > 0)
     {
       my_putstr(" - des <munitions>\n");
@@ -18,7 +18,7 @@ void		fouiller(int salle)
       /*SALLE 2*/
   if (salle == 2)
     {
-      my_putstr(" - <du repos> (permet de récupérer toute sa vie [60secondes])\n\n");
+      my_putstr(" - <du repos> (permet de récupérer toute sa vie [60secondes])\n");
       if (CARTE_COM == 0)
 	{
 	  my_putstr(" - une <carte> d'identification\n\n");
@@ -68,7 +68,7 @@ void		fouiller(int salle)
     {
       if (MEDIC_RESE != 0)
 	{
-	  my_putstr(" - des <medicaments>\n\n");
+	  my_putstr(" - des <médicaments>\n\n");
 	}
       else
 	{
@@ -94,7 +94,7 @@ void		fouiller(int salle)
   /*FIN SALLE24*/
 
   if (is_muni == 0)
-    my_putstr("\nHeu bah rien enfaite...\n\n");
+    my_putstr("\nRien.\n\n");
   else
     my_putstr("\n");
 }

@@ -9,7 +9,7 @@ int             readline(int salle)
   while (result == 0)
     {
       /*GESTION DU URANDOM*/
-      if (ERREUR_PROMPT == 10)
+      if (ERREUR_PROMPT == 50)
 	{
 	  my_putstr("\nVous ne m'etes plus d'aucune aide ! Je me debrouillerai seule !\n\n");
 	  gameover();

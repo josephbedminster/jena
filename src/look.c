@@ -4,31 +4,31 @@ void		look(int salle)
 {
   if(salle == 1)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 2)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 3)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 4)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 5)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 6)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 7)
     {
-      my_putstr("\nPas de look\n\n");
+      my_putstr("\n#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 8)
     {
@@ -48,7 +48,7 @@ void		look(int salle)
     }
   if(salle == 10)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 11)
     {
@@ -63,51 +63,51 @@ void		look(int salle)
     }
   if(salle == 13)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 14)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 15)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 16)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 17)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 18)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 19)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 20)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 21)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 22)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 23)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
   if(salle == 24)
     {
-      my_putstr("Pas de look\n\n");
+      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
     }
 }
 
