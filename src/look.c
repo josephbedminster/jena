@@ -57,8 +57,8 @@ void		look(int salle)
     }
   if(salle == 12)
     {
-      my_putstr("\nJe suis dans un grand couloir. il n' a rien a faire ici a part s'assoir et pleurer.");
-      my_putstr("\nMais ne vous inquietez pas je ne vais pas mettre a pleurer !... Pas tout de suite.\n");
+      my_putstr("\nJe suis dans un grand couloir. il n' a rien a faire ici a part s'assoir et pleurer...");
+      my_putstr("\nMais ne vous inquietez pas je ne vais pas mettre a pleurer... Pas tout de suite.\n");
       my_putstr("D'ici je peux aller dans toutes les directions.\n\n");
     }
   if(salle == 13)

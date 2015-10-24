@@ -50,8 +50,8 @@ void            salle08(int salle)
         }
       if (action == 3)
         {
-	  my_putstr("\nA travers la porte j'ai appercu un lit, c'est vrai que je manque de someil");
-	  my_putstr(" mais j'espere juste que c'est les quartiers des femmes.\n\n");
+	  my_putstr("\nLes souvenirs semblent me revenir petit à petit...\n");
+	  my_putstr("Je recconnais les quartiers des femmes. Je ne vois pas de cabine à mon nom, étrange...\n\n");
 	  g_map[3][0].content = 0;
 	  salle = 5;
           salle05(salle);
@@ -64,7 +64,7 @@ void            salle08(int salle)
           if ((strcmp(entree_code, "adn") == 0) || ((strcmp(entree_code, "ADN") == 0)))
             {
 	      my_putstr("\nCa marche, la porte est déverouillée !");
-	      my_putstr("\nHeureusement que vous etes la, je serai restée bloquée devant cette porte toute la journée sans vous !\n\n");
+	      my_putstr("\nHeureusement que vous êtes là, je serai resté bloquée devant cette porte toute la journée sans vous !\n\n");
 	      g_map[3][0].content = 0;
 	      salle = 11;
 	      salle11(salle);

@@ -45,15 +45,14 @@ void            salle09(int salle)
 	      //sleep(5);
 	      my_putstr("Il est ecrit -Sergent Colas- sur l'uniforme.\n");
 	      //sleep(5);
-	      my_putstr("Un objet semble depasser de la poche interieure de la veste.\nOn dirait un badge d'acces.\n");
-	      my_putstr("Bonne nouvelle, j'ai trouvée de quoi reparer ce qui me sert de tete !\n");
-	      my_putstr("Quand je vois le reste de l'equipage, je m'estime heureuse qu'elle tienne encore sur mes epaules !\n");
-	      my_putstr("Attendez un minute que je desinfecte la plaie et que je fasse un pansement.\n");
-	      //sleep(5);
-	      my_putstr("Voila ! Bad news/Good news :\n");
-	      my_putstr("Bad news : je n'aurai pas fait une bonne infirmiere ! Mon pansement ne tiendra pas une heure...\n");
-	      my_putstr("Good news : la plaie etait moins grave que prevue ! Je m'en sortirai !\n");
-	      my_putstr("(Mis a part mes 'petits' problemes de mémoire, tout va bien)");
+	      my_putstr("Un objet semble dépasser de la poche intèrieure de la veste.\nOn dirait un badge d'accés.\n");
+	      my_putstr("Bonne nouvelle, J’ai trouvé de quoi réparer ce qui me sert de tête !\n");
+        my_putstr("Attendez une minute.\n");
+        //sleep(5);
+        my_putstr("Ok ! vu l'aspect de mon pansement, je n'aurais pas fait une bonne infirmière...\n");
+        my_putstr("Mais au moins, je m'en sortirai.\n");
+        my_putstr("Espérons que ma mémoire arrête d'en faire qu'a sa tête...\nAi-je toujours été aussi drôle ?\nJe ne sais plus...\n");
+	      my_putstr("(Mis à part mes 'petits' problèmes de mémoire, tout va bien.)");
 	      DIAG_S09A08 = 1;
             }
           else
@@ -68,9 +67,9 @@ void            salle09(int salle)
         {
 	  if (CARTE_ACCES == 1)
 	    {
-	      my_putstr("\nYeah le bagde a fonctionner, j'ai acces a cette salle maintenant\n\n");
+	      my_putstr("\nC'est mon jour de chance, le bagde a fonctionné, allons voir de l'autre coté !\n\n");
 	      sleep(2);
-	      my_putstr("\nAh, enfin quelque chose d'interessant ! Il y a une grande baie vitrée de ce coté.\n");
+	      my_putstr("\nAh, enfin quelque chose d'intéressant ! Il y a une grande baie vitrée de ce coté.\n");
 	      my_putstr("Je pense que c'est un laboratoire !\n");
 	      my_putstr("Allez, ouvrons les paris ! Je parie que je vais trouver...\n");
 	      my_putstr("...");
@@ -82,13 +81,14 @@ void            salle09(int salle)
 	    }
 	  else
 	    {
-	      my_putstr("\nJe crois que cette baie vitrée va rester fermer\n\n");
+	      my_putstr("\nJe crois que cette porte vitrée va rester fermée\n");
+        my_putstr("Je pense qu'il faut une carte d'accès pour la déverouiller.\n\n");
 	      action = 0;
 	    }
         }
       if (action == 4)
         {
-	  my_putstr("\nJ'ai l'impression d'etre perdue, vous etes sur de ce que vous faites ?\n\n");
+	  my_putstr("\nJ'ai l'impression d'etre perdue... Etes-vous sur de ce que vous faites ?\n\n");
 	  g_map[3][1].content = 0;
 	  salle = 12;
 	  salle12(salle);

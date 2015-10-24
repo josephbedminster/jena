@@ -12,7 +12,7 @@ void		fouiller(int salle)
   my_putstr("\nJ'ai fouillé la piece... Il y a...\n");
   if(MUNI_MAP > 0)
     {
-      my_putstr(" - des <munitions>\n");
+      my_putstr(" - des <munitions>.\n");
       is_muni = 1;
     }
       /*SALLE 2*/
@@ -34,12 +34,12 @@ void		fouiller(int salle)
 	{
 	  if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
 	    {
-	      my_putstr(" - un <pistolet> laser \n");
-	      my_putstr(" - un <fusil> plasma \n");
+	      my_putstr(" - un <pistolet> laser.\n");
+	      my_putstr(" - un <fusil> plasma.\n");
 	    }
 	  if (MUNI_ARMU > 0)
 	    {
-	      my_putstr(" - des <munitions> \n\n");
+	      my_putstr(" - des <munitions>.\n\n");
 	    }
 	  else
 	    my_putstr("Je suis armée et prete au combat ! Je ne vois plus rien d'utile ici !");
@@ -53,7 +53,7 @@ void		fouiller(int salle)
     {
       if (CARTE_ACCES == 0)
 	{
-	  my_putstr(" - un <badge> d'acces\n\n");
+	  my_putstr(" - un <badge> d'acces.\n\n");
 	}
       else
 	{
@@ -68,7 +68,7 @@ void		fouiller(int salle)
     {
       if (MEDIC_RESE != 0)
 	{
-	  my_putstr(" - des <médicaments>\n\n");
+	  my_putstr(" - des <médicaments>.\n\n");
 	}
       else
 	{
@@ -83,7 +83,7 @@ void		fouiller(int salle)
     {
       if (COMBI == 0)
 	{
-	  my_putstr(" - une <combinaison> anti-radiation\n\n");
+	  my_putstr(" - une <combinaison> anti-radiation.\n\n");
 	}
       else
 	{
