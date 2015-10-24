@@ -43,7 +43,7 @@ ou
    
 ***
    
-###Informations
+###[image idee] (http://www.hostingpics.net/thumbs/56/55/07/mini_565507magnifier12.png) Informations
 Nombre de lignes : | Nombre de caracteres :
 -------- | ---
 3337 | 82221
