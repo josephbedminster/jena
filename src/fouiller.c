@@ -8,6 +8,7 @@ void		fouiller(int salle)
   int		is_muni;
   int   is_medic;
   is_muni = 0;
+  is_medic = 0;
 
   my_putstr("\nJ'ai fouillé la piece... Il y a...\n");
   if(MEDIC_MAP > 0)
@@ -25,9 +26,9 @@ void		fouiller(int salle)
     {
       my_putstr(" - <du repos> (permet de récupérer toute sa vie [60secondes])\n");
       if (CARTE_COM == 0)
-	{
-	  my_putstr(" - une <carte> d'identification\n\n");
-	}
+        {
+	         my_putstr(" - une <carte> d'identification\n\n");
+	      }
       return;
     }
   /*FIN SALLE02*/
@@ -36,8 +37,8 @@ void		fouiller(int salle)
   if (salle == 4)
     {
       if (((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0)) || (MUNI_ARMU > 0))
-	{
-	  if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
+	     {
+	     if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
 	    {
 	      my_putstr(" - un <pistolet> laser.\n");
 	      my_putstr(" - un <fusil> plasma.\n");
@@ -98,7 +99,7 @@ void		fouiller(int salle)
     }
   /*FIN SALLE24*/
 
-  if (is_muni == 0)
+  if (is_muni == 0 && is_medic == 0)
     my_putstr("\nRien.\n\n");
   else
     my_putstr("\n");

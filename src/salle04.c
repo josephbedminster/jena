@@ -5,13 +5,21 @@ extern t_map g_map[10][4];
 void            salle04(int salle)
 {
   int           action;
+  int           randmedic;
 
   action = 0;
   g_map[1][2].visited = 1;
   g_map[1][2].content = 1;
   look(salle);
   MUNI_MAP = 0;
-
+  MEDIC_MAP = 0;
+  srand(time(NULL));
+  randmedic = rand();
+  
+  if (randmedic%10 == 0)
+    {
+      MEDIC_MAP = 1;
+    }
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/

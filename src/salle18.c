@@ -10,17 +10,25 @@ void            salle18(int salle)
   int           action;
   int           randmob;
   int           randmuni;
+  int           randmedic;
+
 
   action = 0;
   g_map[7][1].visited = 1;
   g_map[7][1].content = 1;
   look(salle);
   srand(time(NULL));
+  srand(time(NULL));
   randmob = rand();
   randmuni = rand();
+  randmedic = rand();
   MUNI_MAP = 0;
+  MEDIC_MAP = 0;
 
-
+  if (randmedic%10 == 0)
+    {
+      MEDIC_MAP = 1;
+    }
   if ((randmob%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
     {
       start_battle();
