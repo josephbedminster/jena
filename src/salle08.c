@@ -64,14 +64,14 @@ void            salle08(int salle)
           if ((strcmp(entree_code, "adn") == 0) || ((strcmp(entree_code, "ADN") == 0)))
             {
 	      my_putstr("\nCa marche, la porte est déverouillée !");
-	      my_putstr("\nHeureusement que vous êtes là, je serai resté bloquée devant cette porte toute la journée sans vous !\n\n");
+	      my_putstr("\nHeureusement que vous êtes là, je serai restée bloquée devant cette porte toute la journée sans vous !\n\n");
 	      g_map[3][0].content = 0;
 	      salle = 11;
 	      salle11(salle);
 	    }
 	  else
 	    {
-	      my_putstr("J'ai l'impression qe ce n'est pas le bon code !\n");
+	      my_putstr("J'ai l'impression que ce n'est pas le bon code !\n");
 	      action = 0;
 	    }
 	}

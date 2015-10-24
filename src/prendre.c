@@ -201,7 +201,8 @@ int		prendre(int salle)
 	{
 	  if (MEDIC_RESE > 0)
 	    {
-	      my_putstr("J'ai fouillé dans les armoires, et ai trouvé [x5] médicaments !\n\n");
+	      my_putstr("J'ai fouillé dans les armoires, bonne nouvelle, j'ai trouvé des médicaments !\n\n");
+	      my_putstr("[JENA] : Médicaments + 5\n\n");
 	      jena.medicaments += 5;
 	      MEDIC_RESE -= 5;
 	      SCORE = SCORE + 5;

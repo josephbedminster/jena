@@ -38,7 +38,7 @@ void            salle11(int salle)
       /*Traitement de laction :*/
       if (action == 3)
         {
-	  my_putstr("\nJe pense tout avoir pris dans la reserve, alons-y !");
+	  my_putstr("\nVous avez raison, quittons vite cette réserve flippante !\n");
 	  g_map[4][0].content = 0;
 	  salle = 8;
           salle08(salle);
