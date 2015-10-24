@@ -34,7 +34,7 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
    
 > **>** git clone https://github.com/nextjoey/jena.git JENA
    
-> **>** /JENA/./jena
+> **>** cd JENA && ./jena
    
 ***
    
