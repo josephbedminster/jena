@@ -7,9 +7,25 @@ extern t_player jena;
 int		prendre(int salle)
 {
   char		*entree;
+  /* char		*temp;
+  int		i;
+
+  i = 0;*/
 
   entree = malloc(sizeof(char*));
   entree = readline_prendre();
+  /*  while (entree[i] != '\0')
+    {
+      temp = entree[i];
+      if (strcmp(temp," ") == 0)
+	{
+	  my_putstr("La radio fait encore des siennes, je n'ai rien entendu !\n");
+	  my_putstr("Que voulez-vous que je prenne exactement ?\n");
+	  my_putstr("(Commande -prendre- invalide.)\n\n");
+	  return (0);
+	}
+      i++;
+      }*/
   if(MUNI_MAP > 0)
     {
       if (strcmp(entree, "munitions") == 0)
