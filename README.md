@@ -1,7 +1,7 @@
-![test](http://img11.hostingpics.net/pics/594964large2.jpg)
+![spacegirljena](http://www.hostingpics.net/thumbs/96/80/78/mini_968078SpaceThegirlinasuit094800.jpg)
 Les Aventures de Jena
 ===================
-###![img1] (http://www.hostingpics.net/thumbs/82/06/74/mini_820674spaceship2.png) Contexte
+###![image contexte] (http://www.hostingpics.net/thumbs/82/06/74/mini_820674spaceship2.png) Contexte
 Developpement open-source
    
 Projet libre - Ecole ETNA Alternance, France
@@ -30,7 +30,7 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
    
 ***
    
-###![image idee] (http://www.hostingpics.net/thumbs/97/31/80/mini_973180cloudstorage3.png) Installation
+###![image install] (http://www.hostingpics.net/thumbs/97/31/80/mini_973180cloudstorage3.png) Installation
    
 > **>** git clone https://github.com/nextjoey/jena.git JENA
    
@@ -38,7 +38,7 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
    
 ***
    
-###![image idee] (http://www.hostingpics.net/thumbs/11/25/01/mini_112501computerscreen14.png) Informations
+###![image infos] (http://www.hostingpics.net/thumbs/11/25/01/mini_112501computerscreen14.png) Informations
 Nombre de lignes : | Nombre de caracteres :
 -------- | ---
 3337 | 82221
