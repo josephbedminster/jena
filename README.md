@@ -19,6 +19,7 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
 ###![image pc](http://www.hostingpics.net/thumbs/96/92/11/mini_969211webprogramming.png) Développeurs
  - Bedminster Joseph (bedmin_j@etna-alternance.net),
  - Rolland Thomas (rollan_t@etna-alternance.net)
+   
 ***
    
 ###![image idee] (http://www.hostingpics.net/thumbs/91/22/54/mini_912254light105.png) Collaborateurs
@@ -26,6 +27,7 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
   - Colas Geoffrey (colas_g@etna-alternance.net),
   - Fraysse Christophe,
   - Kauch Jonathan
+   
 ***
    
 ### Installation
@@ -35,9 +37,9 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
    
 ou
    
-> **>* git clone https://github.com/nextjoey/jena.git JENA
+> **>** git clone https://github.com/nextjoey/jena.git JENA
    
-> **>* /JENA/./jena
+> **>** /JENA/./jena
    
 ***
    
