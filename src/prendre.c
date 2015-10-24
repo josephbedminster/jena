@@ -7,6 +7,10 @@ extern t_player jena;
 int		prendre(int salle)
 {
   char		*entree;
+  /* char		*temp;
+  int		i;
+
+  i = 0;*/
 
   entree = malloc(sizeof(char*));
   entree = readline_prendre();
