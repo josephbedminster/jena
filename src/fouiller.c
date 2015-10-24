@@ -6,10 +6,15 @@ extern t_player jena;
 void		fouiller(int salle)
 {
   int		is_muni;
-
+  int   is_medic;
   is_muni = 0;
 
   my_putstr("\nJ'ai fouillé la piece... Il y a...\n");
+  if(MEDIC_MAP > 0)
+    {
+      my_putstr(" - un <medicament>.\n");
+      is_medic = 1;
+    }
   if(MUNI_MAP > 0)
     {
       my_putstr(" - des <munitions>.\n");

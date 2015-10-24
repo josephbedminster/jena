@@ -10,6 +10,17 @@ int		prendre(int salle)
 
   entree = malloc(sizeof(char*));
   entree = readline_prendre();
+  if(MEDIC_MAP > 0)
+    {
+      if (strcmp(entree, "medicament") == 0)
+      {
+	my_putstr("\nUne chance d'avoir trouver ce medicament.\n");
+	my_putstr("[JENA] : medicaments + 1\n\n");
+	jena.medicaments += 1;
+	MEDIC_MAP = 0;
+	return (0);
+      }
+	}
   if(MUNI_MAP > 0)
     {
       if (strcmp(entree, "munitions") == 0)

@@ -10,6 +10,8 @@ void            salle02(int salle)
   char		*entree;
   int           action;
   int           randmuni;
+  int           randmedic;
+
 
   entree = malloc(sizeof(char*));
   action = 0;
@@ -18,8 +20,14 @@ void            salle02(int salle)
   look(salle);
   srand(time(NULL));
   randmuni = rand();
+  randmedic = rand();
   MUNI_MAP = 0;
+  MEDIC_MAP = 0;
 
+  if (randmedic%10 == 0)
+    {
+      MEDIC_MAP = 1;
+    }
   if ((randmuni%4 == 0))
     {
       MUNI_MAP = 4;

@@ -39,6 +39,7 @@ void	init_globales()
   ERREUR_PROMPT = 0;
   MUNI_ARMU = 16;
   MUNI_MAP = 0;
+  MEDIC_MAP = 0;
   MEDIC_RESE = 5;
   QUISUISJE = 0;
   SCORE = 0;

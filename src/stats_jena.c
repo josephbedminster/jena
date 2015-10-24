@@ -20,7 +20,7 @@ void		stats_jena(int is_lvlup)
     printf("PV's : \033[1;32m[%d/%d]\033[0m (+ 10)\n", jena.pv, jena.pvmax);
   else
     printf("PV's : [%d/%d]\n", jena.pv, jena.pvmax);
-  printf("Equipé : %s\n > [%d dégats par tir]\n", jena.weaponTab[ARME_EQUIP].name, jena.weaponTab[ARME_EQUIP].damage);
+  printf("Equipé : %s\n > [%d dégats par coup]\n\n", jena.weaponTab[ARME_EQUIP].name, jena.weaponTab[ARME_EQUIP].damage);
   //printf("Munitions : %d/%d\n", jena.munitions, jena.munitionsmax);
   //printf("Médicaments : %d\n\n", jena.medicaments);
 }

@@ -10,7 +10,7 @@ void            salle11(int salle)
   int           action;
   char          *entree;
   int           randmob;
-  
+
 
   entree = malloc(sizeof(char*));
   action = 0;
@@ -19,7 +19,7 @@ void            salle11(int salle)
   look(salle);
   srand(time(NULL));
   randmob = rand();
-  
+
   if ((randmob%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
     {
       start_battle();
