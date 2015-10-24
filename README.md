@@ -31,11 +31,6 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
 ***
    
 ###![image idee] (http://www.hostingpics.net/thumbs/97/31/80/mini_973180cloudstorage3.png) Installation
-> **>** Telecharger : http://bedminster.fr/jena/install.sh
-   
-> **>** sh install.sh
-   
-ou
    
 > **>** git clone https://github.com/nextjoey/jena.git JENA
    
