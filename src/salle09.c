@@ -49,13 +49,13 @@ void            salle09(int salle)
 	      my_putstr("Il y a encore un homme mort sur la table d'operation... Le sol est recouvert de sang.\n");
 	      my_putstr("Il a du se trainer jusqu'ici et se hisser sur la table...\n");
 	      my_putstr("Je m'approche du corps...\n");
-	      suspens();
+	      //suspens();
 	      my_putstr("Il est ecrit -Sergent Colas- sur l'uniforme.\n");
-	      suspens();
+	      //suspens();
 	      my_putstr("Un objet semble dépasser de la poche intèrieure de la veste.\nOn dirait un badge d'accés.\n");
 	      my_putstr("Bonne nouvelle, J’ai trouvé de quoi réparer ce qui me sert de tête !\n");
         my_putstr("Attendez une minute.\n");
-        suspens();
+        //suspens();
         my_putstr("Ok ! vu l'aspect de mon pansement, je n'aurais pas fait une bonne infirmière...\n");
         my_putstr("Mais au moins, je m'en sortirai.\n");
         my_putstr("Espérons que ma mémoire arrête d'en faire qu'a sa tête...\nAi-je toujours été aussi drôle ?\nJe ne sais plus...\n");
@@ -75,12 +75,12 @@ void            salle09(int salle)
 	  if (CARTE_ACCES == 1)
 	    {
 	      my_putstr("\nC'est mon jour de chance, le bagde a fonctionné, allons voir de l'autre coté !\n\n");
-	      suspens();
+	      //suspens();
 	      my_putstr("\nAh, enfin quelque chose d'intéressant ! Il y a une grande baie vitrée de ce coté.\n");
 	      my_putstr("Je pense que c'est un laboratoire !\n");
 	      my_putstr("Allez, ouvrons les paris ! Je parie que je vais trouver...\n");
 	      my_putstr("...");
-	      suspens();
+	      //suspens();
 	      my_putstr("Un microscope ! Aha !\nEt vous ?\n");
 	      g_map[3][1].content = 0;
 	      salle = 10;

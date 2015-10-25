@@ -69,7 +69,7 @@ void            salle06(int salle)
           else
             {
 	      my_putstr("J'essaye le badge sur le boitier de la porte...\n");
-	      suspens();
+	      //suspens();
 	      my_putstr("Et... Ca marche, la porte s'est ouverte !\n");
               g_map[2][1].content = 0;
               salle = 3;

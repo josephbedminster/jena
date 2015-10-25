@@ -74,6 +74,8 @@ typedef struct  s_player
   t_weapon      *weaponTab;
 }               t_player;
 
+char            *my_strupcase(char *str);
+void            inventaire();
 void            show_items();
 int	        xpNeeded(int lvl);
 int             give_exp();
@@ -127,7 +129,6 @@ char             *readline_prendre();
 char		*readLine();
 int             my_strcmp(char *s1, char *s2);
 char            *my_strcpy(char *dest, char *src);
-void            suspens();
 void            accueil();
 void            help();
 void            gameover();
