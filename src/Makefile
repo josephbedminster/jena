@@ -1,5 +1,5 @@
 CC =            gcc
-NAME =          jena
+NAME =          jena-dev
 SRC =           *.c
 
 CFLAGS =        -W -Wall -Wextra -Werror
