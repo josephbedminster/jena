@@ -11,7 +11,7 @@ void		stats_jena(int is_lvlup)
   my_putstr("                           JENA");
   my_putstr("\n                =========================\n");
   if (is_lvlup)
-    printf("                Niveau : \033[1;32m%d\033[0m\n (+ 1)", jena.lvl);
+    printf("                Niveau : \033[1;32m%d\033[0m(+ 1)\n", jena.lvl);
   else
     printf("                Niveau : %d\n", jena.lvl);
   printf("                Experience : %d\n", jena.exp);
@@ -28,7 +28,7 @@ void		stats_jena(int is_lvlup)
 void		stats_arme()
 {
   my_putstr("\n                =========================\n");
-  my_putstr("                     ");
+  my_putstr("                                     ");
   my_putstr(jena.weaponTab[ARME_EQUIP].name);
   my_putstr("\n                =========================\n");
   printf("                Dégats : %d par coup\n", jena.weaponTab[ARME_EQUIP].damage);

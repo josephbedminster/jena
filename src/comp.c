@@ -67,6 +67,7 @@ int             comparer(char* entree, int salle)
       my_putstr("      Médicaments");
       my_putstr("\n=========================\n");
       printf("Possédés : %d\n\n", jena.medicaments);
+      show_items();
       return(0);
     }
 

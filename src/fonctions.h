@@ -12,7 +12,7 @@
 
 /*USER*/
 int		ERREUR_PROMPT;
-char*	USER;
+char*		USER;
 int		SCORE;
 int		ARME_EQUIP;
 int		QUISUISJE;
@@ -26,7 +26,7 @@ int		MEDIC_RESE;
 int		DOUCHE_TAKEN;
 int		MUNI_ARMU;
 int		MUNI_MAP;
-int  	MEDIC_MAP;
+int		MEDIC_MAP;
 
 /*VARIABLES GLOBALES DE DIALOGUE*/
 int		DIAG_S12A09;
@@ -74,16 +74,17 @@ typedef struct  s_player
   t_weapon      *weaponTab;
 }               t_player;
 
-int	          	xpNeeded(int lvl);
+void            show_items();
+int	        xpNeeded(int lvl);
 int             give_exp();
 void            stats_jena();
 void            stats_arme();
-void		        init_e(t_enemy *e);
-int	          	battle(t_enemy *e, int i);
-int		          start_battle();
+void		init_e(t_enemy *e);
+int	        battle(t_enemy *e, int i);
+int		start_battle();
 int             enemy_attack(t_enemy *e);
 int             player_attack(t_enemy *e);
-void		        init_globales();
+void		init_globales();
 char            *readLine_code();
 void            erreur_prendre();
 void            quisuisje();
