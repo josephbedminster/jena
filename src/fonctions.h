@@ -74,19 +74,20 @@ typedef struct  s_player
   t_weapon      *weaponTab;
 }               t_player;
 
-int		xpNeeded(int lvl);
+int	          	xpNeeded(int lvl);
 int             give_exp();
 void            stats_jena();
 void            stats_arme();
-void		init_e(t_enemy *e);
-int		battle(t_enemy *e, int i);
-int		start_battle();
+void		        init_e(t_enemy *e);
+int	          	battle(t_enemy *e, int i);
+int		          start_battle();
 int             enemy_attack(t_enemy *e);
 int             player_attack(t_enemy *e);
-void		init_globales();
+void		        init_globales();
 char            *readLine_code();
 void            erreur_prendre();
 void            quisuisje();
+void            suspens();
 
 void            salle01(int salle);
 void            salle02(int salle);
