@@ -9,10 +9,13 @@ RM =            rm -rf
 $(NAME) :	$(OBJ)
 		$(CC) $(SRC) $(CFLAGS) -o ../$(NAME)
 		rm -rf *.o
+		find ./ -name *.DS_Store
+		find ./ -name *.DS_Store -delete
 
 all:		$(NAME)
 clean:
 		$(RM) $(OBJ)
+
 fclean:		clean
 
 re:		fclean
