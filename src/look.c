@@ -4,27 +4,31 @@ void		look(int salle)
 {
   if(salle == 1)
     {
-      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
+      my_putstr("Et bien se vaisseaux me reserve de plus en plus de surprise, mais bon je doit trouver un moyen de refaire redemarer se grand coucou\n");
+      my_putstr("il y a des boutons partout devant moi, j'espere me souvenir de celui qui relance le moteur a fusion\n")
+      my_putstr("j'espere vraiment que le crash n'a pas trop endommager ICARUS ou alors il va faloir que je trouve comment le reparer...\n\n")
     }
   if(salle == 2)
     {
-      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
+      my_putstr("Oh !!! Heu hormis que se sont mes quartiers je n'en sais pas plus sur moi... Je devrais peut être fouiller ma cabine\n\n");
     }
   if(salle == 3)
     {
-      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
+      my_putstr("Je vois, Une porte a l'ouest fermée par un code d'acces.\nUne porte au nord fermée par un AUTRE code ...\n et pour finir une porte a l'est qui a besoin d'une carte on dirait\n");
+      my_putstr("Et bien beaucoup de choix s'offrent a moi on dirait.\n\n");
     }
   if(salle == 4)
     {
-      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
+      my_putstr("Des armes, Des munitions, je comprend maintenant pourquoi il fallait une carte d'acces de haut niveau pour rentrer ici.\n\n");
     }
   if(salle == 5)
     {
-      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
+      my_putstr("Cette salle est très grande, il y a des lits dans toute la piece, je pense même que c'est le quartiers des hommes car c'est pas du tout ranger.\n\n");
     }
   if(salle == 6)
     {
-      my_putstr("#Fonction manquante : texte en cours d'écriture.\n\n");
+      my_putstr("Cette salle renvoie sur deux salle avec des lits, dont une de la ou je vient et pour finir une porte blinder la ou on dirait qu'il faut un badge pour y penetrer,\n");
+      my_putstr("Je me demande bien ques qui si cache derriere.\n\n")
     }
   if(salle == 7)
     {
@@ -34,13 +38,13 @@ void		look(int salle)
     {
       my_putstr("\n\nJe suis dans l'infirmerie. Le sol est couvert de sang.\n");
       if(CARTE_ACCES == 0)
-	{
-	  my_putstr("Si je n'etais pas autant ecoeuree, je fouillerai peut etre le corps du Sergent Colas.\n\n");
-	}
+	    {
+	      my_putstr("Si je n'etais pas autant ecoeuree, je fouillerai peut etre le corps du Sergent Colas.\n\n");
+	    }
       else
-	{
-	  my_putstr("Il y a une porte la derriere, peut etre une sorte de reserve ?\n\n");
-	}
+	    {
+	      my_putstr("Il y a une porte la derriere, peut etre une sorte de reserve ?\n\n");
+	    }
     }
   if(salle == 9)
     {
