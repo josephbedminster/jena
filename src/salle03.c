@@ -52,11 +52,9 @@ void            salle03(int salle)
 		{
 		  my_putstr("Ca marche ! La porte se deverouille !\n");
 		  my_putstr("Une minute ! Le code est mon prenom ?...\n");
-		  my_putstr("Cela veut dire que ...\n");
+		  my_putstr("Cela veut dire que...\n");
 		  suspens();
-		  my_putstr("Je");
-		  suspens();
-		  my_putstr("\n...\n");
+		  my_putstr("Je...\n");
 		  suspens();
 		  my_putstr("Ce sont mes quartiers ?!\n\n");
 		  DIAG_S03A02 = 1;

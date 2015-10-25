@@ -13,7 +13,7 @@ void		fouiller(int salle)
   my_putstr("\nJ'ai fouillé la piece... Il y a...\n");
   if(MEDIC_MAP > 0)
     {
-      my_putstr(" - un <medicament>.\n");
+      my_putstr(" - un <medicament>\n");
       is_medic = 1;
     }
   if(MUNI_MAP > 0)
@@ -24,7 +24,7 @@ void		fouiller(int salle)
       /*SALLE 2*/
   if (salle == 2)
     {
-      my_putstr(" - <du repos> (permet de récupérer toute sa vie [60secondes])\n");
+      my_putstr(" - un lit, pour prendre <du repos> [60secondes]\n");
       if (CARTE_COM == 0)
         {
 	         my_putstr(" - une <carte> d'identification\n\n");
@@ -48,7 +48,7 @@ void		fouiller(int salle)
 	      my_putstr(" - des <munitions>.\n\n");
 	    }
 	  else
-	    my_putstr("Je suis armée et prete au combat ! Je ne vois plus rien d'utile ici !");
+	    my_putstr("C'est reparti ! Je vais peut etre finir par m'habituer a ce vaisseau glauque a l'atmosphere oppressante  !... Non ?\n");
 	  return;
 	}
     }

@@ -16,10 +16,10 @@ int		prendre(int salle)
   entree = readline_prendre();
   if(MEDIC_MAP > 0)
     {
-      if (strcmp(entree, "medicament") == 0)
+      if (strcmp(entree, "médicament") == 0)
       {
-	my_putstr("\nUne chance d'avoir trouver ce medicament.\n");
-	my_putstr("[JENA] : medicaments + 1\n\n");
+	my_putstr("\nUne chance d'avoir trouvé médicament.\n");
+	my_putstr("[JENA] : médicaments + 1\n\n");
 	jena.medicaments += 1;
 	MEDIC_MAP = 0;
 	return (0);
@@ -29,7 +29,7 @@ int		prendre(int salle)
     {
       if (strcmp(entree, "munitions") == 0)
       {
-	my_putstr("\nUne chance d'avoir trouver ces munitions.\n");
+	my_putstr("\nUne chance d'avoir trouvé ces munitions.\n");
 	my_putstr("[JENA] : Munitions + 4\n\n");
 	jena.munitions += 4;
 	MUNI_MAP = 0;
@@ -69,7 +69,7 @@ int		prendre(int salle)
 	    }
 	  else if ((strcmp(entree, "munitions") == 0))
 	    {
-	      my_putstr("\nUne chance d'avoir trouver ces munitions.\n");
+	      my_putstr("\nUne chance d'avoir trouvé ces munitions.\n");
 	      my_putstr("[JENA] : Munitions + 4\n\n");
 	      jena.munitions += 4;
 	      MUNI_MAP = 0;

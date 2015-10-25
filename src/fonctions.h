@@ -12,7 +12,7 @@
 
 /*USER*/
 int		ERREUR_PROMPT;
-char*		USER;
+char*	USER;
 int		SCORE;
 int		ARME_EQUIP;
 int		QUISUISJE;
@@ -26,7 +26,7 @@ int		MEDIC_RESE;
 int		DOUCHE_TAKEN;
 int		MUNI_ARMU;
 int		MUNI_MAP;
-int   MEDIC_MAP;
+int  	MEDIC_MAP;
 
 /*VARIABLES GLOBALES DE DIALOGUE*/
 int		DIAG_S12A09;
