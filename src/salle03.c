@@ -53,9 +53,9 @@ void            salle03(int salle)
 		  my_putstr("Ca marche ! La porte se deverouille !\n");
 		  my_putstr("Une minute ! Le code est mon prenom ?...\n");
 		  my_putstr("Cela veut dire que...\n");
-		  //suspens();
+		  //sleep(1);
 		  my_putstr("Je...\n");
-		  //suspens();
+		  //sleep(1);
 		  my_putstr("Ce sont mes quartiers ?!\n\n");
 		  DIAG_S03A02 = 1;
 		  QUISUISJE = 1;
@@ -84,7 +84,7 @@ void            salle03(int salle)
 	  else
 	    {
 	      my_putstr("\nTien c'ette porte un detecteur de carte magnetique, et si j'esayer la mienne...\n");
-	      //suspens();
+	      //sleep(1);
 	      my_putstr("\nMais c'ette carte me donne un grand acces on dirait.\n\n");
 	      g_map[1][1].content = 0;
 	      salle = 4;
