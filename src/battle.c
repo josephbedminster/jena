@@ -82,7 +82,7 @@ int		enemy_attack(t_enemy *e)
   char		*buffer;
   int		attack;
 
-  // 1024 parce que j'en ai rien a foutre
+  // 1024 taille max
   if ((buffer = malloc(sizeof(char) * 1024)) == NULL)
     return -1;
   res = rand() % NB_ATTACK;
