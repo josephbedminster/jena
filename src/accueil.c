@@ -11,14 +11,14 @@ void            accueil()
 
   my_putstr("\n\n\n\033[5m[Demande de communication entrante]\033[0m\n");
   //sleep(1);
-  my_putstr("\033[5m[Connection]\033[0m\n");
+  my_putstr("\033[5m[Connexion]\033[0m\n");
   //sleep(1);
   my_putstr("\033[5m[Communication établie]\n\033[0m");
   //sleep(1);
-  my_putstr("\nEh oh ! Est-ce que quelqu'un m'entend ?\n\n");
+  my_putstr("\nEh-oh ! Est-ce que quelqu'un m'entends ?\n\n");
   my_putstr(" > ");
   readLine();
-  my_putstr("\nJ'ai entendu quelque chose ! Il y a quelqu'un ? Qui êtes vous ?\n\n");
+  my_putstr("\nJ'ai entendu quelque chose ! Il y a quelqu'un ? Qui êtes-vous ?\n\n");
   my_putstr(" > Entrez votre nom : ");
   USER = readLine();
   my_putstr("\nOh mon dieu, enfin quelqu'un ! ");
