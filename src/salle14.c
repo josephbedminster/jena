@@ -70,7 +70,7 @@ void            salle14(int salle)
 		{
 		  my_putstr("J'entre dans le hangar !\nIl y a un enorme trou dans la coque !\n");
 		  my_putstr("Je me sens mal !...\n");
-		  suspens();
+		  sleep(2);
 		  my_putstr("Je...\n");
 		  gameover();
 		  score();

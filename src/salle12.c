@@ -44,9 +44,9 @@ void            salle12(int salle)
 	  if (DIAG_S12A09 == 0)
 	    {
 	      my_putstr("\nJ'arrive dans une grande salle. Oh mon dieu, il y a des hommes au sol...\n");
-	      suspens();
+	      sleep(2);
 	      my_putstr("J'en compte quatre. Il y a du sang partout... Ils s'en sont moins bien sortis que moi...\n");
-	      suspens();
+	      sleep(2);
 	      my_putstr("J'ai pris leurs pouls, tous morts.\n");
 	      sleep(7);
 	      my_putstr("Je ne peux rien faire pour eux, continuons.\n");

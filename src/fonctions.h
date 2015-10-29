@@ -88,7 +88,7 @@ void		init_globales();
 char            *readLine_code();
 void            erreur_prendre();
 void            quisuisje();
-void            suspens();
+void            suspence();
 
 void            salle01(int salle);
 void            salle02(int salle);
@@ -127,7 +127,7 @@ char             *readline_prendre();
 char		*readLine();
 int             my_strcmp(char *s1, char *s2);
 char            *my_strcpy(char *dest, char *src);
-void            suspens();
+void            suspence();
 void            accueil();
 void            help();
 void            gameover();
