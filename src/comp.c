@@ -62,12 +62,7 @@ int             comparer(char* entree, int salle)
   resultat = my_strcmp(entree, "inventaire");
   if (resultat == 0)
     {
-      stats_arme();
-      my_putstr("\n=========================\n");
-      my_putstr("      Médicaments");
-      my_putstr("\n=========================\n");
-      printf("Possédés : %d\n\n", jena.medicaments);
-      show_items();
+      inventaire();
       return(0);
     }
 

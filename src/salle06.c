@@ -69,7 +69,11 @@ void            salle06(int salle)
           else
             {
 	      my_putstr("J'essaye le badge sur le boitier de la porte...\n");
+<<<<<<< HEAD
 	      sleep(2);
+=======
+	      //sleep(1);
+>>>>>>> 139e24a72113aecfefca9e1146014f60375276ec
 	      my_putstr("Et... Ca marche, la porte s'est ouverte !\n");
               g_map[2][1].content = 0;
               salle = 3;

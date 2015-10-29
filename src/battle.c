@@ -53,7 +53,11 @@ int		player_attack(t_enemy *e)
 	jena.pv = jena.pvmax;
       jena.medicaments -= 1;
       my_putstr("\n\033[1;32mVous prenez [1x] médicament. Vous regagnez 50 points de vie.\n\033[0m");
+<<<<<<< HEAD
       sleep(2);
+=======
+      //sleep(1);
+>>>>>>> 139e24a72113aecfefca9e1146014f60375276ec
       if (jena.medicaments > 0)
 	{
 	  my_putstr("Il vous reste [");
@@ -82,7 +86,7 @@ int		enemy_attack(t_enemy *e)
   char		*buffer;
   int		attack;
 
-  // 1024 parce que j'en ai rien a foutre
+  // 1024 taille max
   if ((buffer = malloc(sizeof(char) * 1024)) == NULL)
     return -1;
   res = rand() % NB_ATTACK;
@@ -110,13 +114,21 @@ int		battle(t_enemy *e, int i)
   puts(buffer);
   if (i % 2 == 0)
     {
+<<<<<<< HEAD
       sleep(2);
+=======
+      //sleep(1);
+>>>>>>> 139e24a72113aecfefca9e1146014f60375276ec
       my_putstr("\n----------------------- Votre tour ---------------------------\n\n");
       return (player_attack(e));
     }
   else
     {
+<<<<<<< HEAD
       sleep(2);
+=======
+      //sleep(1);
+>>>>>>> 139e24a72113aecfefca9e1146014f60375276ec
       my_putstr("\n\n------------------ Tour de l'adversaire ----------------------\n\n");
       return (enemy_attack(e));
     }

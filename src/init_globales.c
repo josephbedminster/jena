@@ -9,9 +9,9 @@ int	xpNeeded(int lvl)
 
 t_weapon weaponList[NB_WEAPON] = {
   //Available, NAME, Attaque, Munition utilisee
-  {1, "Mains", 1, 0},
-  {0, "Pistolet Laser", 30, 1},
-  {0, "Fusil a plasma", 40, 2}
+  {1, "MAINS", 1, 0},
+  {0, "PISTOLET LASER", 30, 1},
+  {0, "FUSIL A PLASMA", 40, 2}
 };
 
 // idem ici pour l'enemi
