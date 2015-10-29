@@ -10,7 +10,7 @@ void            salle01(int salle)
   int		action;
   int		randmob;
   int		randmuni;
-  int   randmedic;
+  int		randmedic;
 
   action = 0;
   g_map[0][1].visited = 1;

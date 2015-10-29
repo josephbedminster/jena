@@ -163,7 +163,11 @@ int		prendre(int salle)
 	  if (CARTE_ACCES == 0)
 	    {
 	      my_putstr("\nEuh… Vous êtes vraiment sûr ? Ok…\nC’est dégoûtant…\n");
-	      //suspens();
+<<<<<<< HEAD
+	      sleep(2);
+=======
+	      //sleep(1);
+>>>>>>> 139e24a72113aecfefca9e1146014f60375276ec
 	      my_putstr("C’est bon, j’ai le badge d’accès du Sergent Colas.\n\n");
 	      CARTE_ACCES = 1;
 	      SCORE = SCORE + 5;

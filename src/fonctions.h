@@ -90,7 +90,7 @@ void		init_globales();
 char            *readLine_code();
 void            erreur_prendre();
 void            quisuisje();
-void            suspens();
+void            suspence();
 
 void            salle01(int salle);
 void            salle02(int salle);
@@ -129,6 +129,10 @@ char             *readline_prendre();
 char		*readLine();
 int             my_strcmp(char *s1, char *s2);
 char            *my_strcpy(char *dest, char *src);
+<<<<<<< HEAD
+void            suspence();
+=======
+>>>>>>> 139e24a72113aecfefca9e1146014f60375276ec
 void            accueil();
 void            help();
 void            gameover();

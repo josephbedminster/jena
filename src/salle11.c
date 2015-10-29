@@ -10,7 +10,6 @@ void            salle11(int salle)
   int           action;
   char          *entree;
   int           randmob;
-  int           randmedic;
 
 
   entree = malloc(sizeof(char*));
@@ -22,12 +21,7 @@ void            salle11(int salle)
   randmob = rand();
   randmedic = rand();
   MUNI_MAP = 0;
-  MEDIC_MAP = 0;
 
-  if (randmedic%10 == 0)
-    {
-      MEDIC_MAP = 1;
-    }
   if ((randmob%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
     {
       start_battle();
