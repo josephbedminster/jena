@@ -1,5 +1,4 @@
 #include "fonctions.h"
-#include "fonctions.h"
 extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
@@ -16,7 +15,7 @@ int		prendre(int salle)
   entree = readline_prendre();
   if(MEDIC_MAP > 0)
     {
-      if (strcmp(entree, "médicament") == 0)
+      if (strcmp(entree, "medicament") == 0)
       {
 	my_putstr("\nUne chance d'avoir trouvé médicament.\n");
 	my_putstr("[JENA] : médicaments + 1\n\n");
@@ -93,10 +92,8 @@ int		prendre(int salle)
 	    {
 	      my_putstr("\nJ'ai trouvé une cartouche d'energie !\n");
 	      my_putstr("Je peux m'en servir pour recharger des armes ou des appareils.\n");
-	      my_putstr("J'ai maintenant ");
-	      my_putnbr(jena.munitions);
-	      my_putstr("munitions.\n\n");
 	      jena.munitions += 16;
+	      printf("J'ai maintenant %d munitions.\n\n", jena.munitions);
 	      MUNI_ARMU -= 16;
 	      SCORE = SCORE + 16;
 	    }
@@ -117,7 +114,7 @@ int		prendre(int salle)
 	      my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
 	      my_putstr("Un pistolet laser flambant neuf ! Il est chargé et pret a l'emploi !\n");
 	      stats_arme();
-	      my_putstr("Je me sens déjà plus rassurée !\n");
+	      my_putstr("\nJe me sens déjà plus rassurée !\n");
 	      my_putstr("Maintenant que j'ai une arme meilleur que mes simples poings, je dois être d'avantage sur mes gardes...\n\n");
 	      SCORE = SCORE + 10;
 	    }
@@ -136,7 +133,7 @@ int		prendre(int salle)
 	      my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
 	      my_putstr("Un fusil plasma flambant neuf ! Il est chargé et pret a l'emploi !\n");
 	      stats_arme();
-	      my_putstr("Je me sens déjà plus rassurée !\n");
+	      my_putstr("\nJe me sens déjà plus rassurée !\n");
 	      my_putstr("Maintenant que j'ai une arme meilleur que mes simples poings, je dois être d'avantage sur mes gardes...\n\n");
 	      SCORE = SCORE + 10;
 	    }
@@ -144,6 +141,33 @@ int		prendre(int salle)
 	    {
 	      my_putstr("\nVous croyez vraiment que je n'aimerai pas emporter ces deux armes ?\n");
 	      my_putstr("Malheureusement, tout cela est trop lourd pour moi !\n\n");
+	    }
+	}
+      /*else
+	{
+	  my_putstr("Je ne vois pas de ");
+	  my_putstr(entree);
+	  my_putstr(" dans cette salle !\n\n");
+	}*/
+      return (0);
+    }
+
+  /*FIN 04*/
+
+  /*DEBUT 07*/
+  if(salle == 7)
+    {
+      if (strcmp(entree, "bottes") == 0)
+	{
+	  if (BOTTES == 0)
+	    {
+	      my_putstr("\nJ'ai trouvé de supeeeerbes bottes en cuirs ! A ma taille en plus !\nJe n'ai jamais été chanceuse pendant les soldes pourtant...\nMa mere me disait que j'avais de trop grands pieds...\n\n");
+	      jena.armure += 4;
+	      BOTTES = 1;
+	    }
+	  else
+	    {
+	      my_putstr("\nJ'ai déja pris les bottes, a part des sandalles trop petites, il n'y a plus rien ici.\n\n");
 	    }
 	}
       else
@@ -154,9 +178,6 @@ int		prendre(int salle)
 	}
       return (0);
     }
-
-      /*FIN 04*/
-
       /*DEBUT 08*/
   if(salle == 8)
     {
@@ -185,32 +206,6 @@ int		prendre(int salle)
     }
   /*FIN 08*/
 
-  /*DEBUT 24*/
-  if(salle == 24)
-    {
-      if (strcmp(entree, "combinaison") == 0)
-	{
-	  if (COMBI == 0)
-	    {
-	      my_putstr("Bonne idee, une combinaison anti-radiation ne pourra que m'etre utile !\n\n");
-	      COMBI = 1;
-	      SCORE = SCORE + 10;
-	    }
-	  else
-	    {
-	      my_putstr("J'ai deja pris la combinaison !\n\n");
-	    }
-	}
-      else
-	{
-	  my_putstr("Je ne vois pas de ");
-	  my_putstr(entree);
-	  my_putstr(" dans cette salle !\n\n");
-	}
-      return (0);
-    }
-  /*FIN 24*/
-
   /*DEBUT 11*/
   if(salle == 11)
     {
@@ -238,6 +233,33 @@ int		prendre(int salle)
       return (0);
     }
   /*FIN 11*/
+
+  /*DEBUT 24*/
+  if(salle == 24)
+    {
+      if (strcmp(entree, "combinaison") == 0)
+	{
+	  if (COMBI == 0)
+	    {
+	      my_putstr("Bonne idee, une combinaison anti-radiation ne pourra que m'etre utile !\n\n");
+	      COMBI = 1;
+	      SCORE = SCORE + 10;
+	    }
+	  else
+	    {
+	      my_putstr("J'ai deja pris la combinaison !\n\n");
+	    }
+	}
+      else
+	{
+	  my_putstr("Je ne vois pas de ");
+	  my_putstr(entree);
+	  my_putstr(" dans cette salle !\n\n");
+	}
+      return (0);
+    }
+  /*FIN 24*/
+
   my_putstr("\nIl n'y a rien a prendre dans cette salle vous savez...\n\n");
   return (1);
 }

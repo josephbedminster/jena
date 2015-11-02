@@ -8,16 +8,18 @@ static t_attack attackList[NB_ATTACK] = {
   {"Melee", 7}
 };
 static t_enemy enemyList[NBCREA] = {
-  {"Cadavre rampant", 1, 80, 80, 4, attackList},
-  {"Rat mutant", 1, 50, 50, 5, attackList},
-  {"Chien mutant", 1, 100, 100, 5, attackList}
+  {"Cadavre rampant", 1, 80, 80, 4, attackList, 10},
+  {"Rat mutant", 1, 50, 50, 5, attackList, 10},
+  {"Chien mutant", 1, 100, 100, 5, attackList, 15}
 };
-// A utiliser pour les boss
+      // A utiliser pour les boss
 /*
 static t_enemy BossList[NBCREA] = {
   {"Enorme rat mutant", 1, 300, 300, 5, attackList}
 };
 */
+
+
 int		player_attack(t_enemy *e)
 {
   int		commande;
@@ -96,10 +98,11 @@ int		enemy_attack(t_enemy *e)
   int		attack;
 
   // 1024 taille max
+  srand(time(NULL));
   if ((buffer = malloc(sizeof(char) * 1024)) == NULL)
     return -1;
   res = rand() % NB_ATTACK;
-  attack = (e->attack[res].damage * e->strenght);
+  attack = (e->attack[res].damage * e->strenght - jena.armure);
   sprintf(buffer, "%s vous attaque !\n\033[1;31mIl utilise : %s, et vous inflige %d dégats.\033[0m", e->name, e->attack[res].name, attack);
   puts(buffer);
   jena.pv -= attack;
@@ -141,6 +144,7 @@ t_enemy		*init_e()
   int           rnd;
   t_enemy	*e;
 
+  srand(time(NULL));
   e = malloc(sizeof(t_enemy));
   rnd = rand() % NBCREA;
   e->name = enemyList[rnd].name;
@@ -148,6 +152,7 @@ t_enemy		*init_e()
   e->pvmax = enemyList[rnd].pvmax;
   e->strenght = enemyList[rnd].strenght;
   e->attack = enemyList[rnd].attack;
+  e->exp = enemyList[rnd].exp;
   return (e);
 }
 
@@ -177,7 +182,7 @@ int		start_battle()
     }
   else
     {
-      is_lvlup = give_exp();
+      is_lvlup = give_exp(e.exp);
       stats_jena(is_lvlup);
       SCORE = SCORE + 20;
       my_putstr("\nJ'ai eu chaud ! Merci pour votre aide !\n\n");

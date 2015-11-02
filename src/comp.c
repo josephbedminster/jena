@@ -102,6 +102,11 @@ int             comparer(char* entree, int salle)
       exit(0);
     }
 
-
+  resultat = my_strcmp(entree, "utiliser");
+  if (resultat == 0)
+    {
+      utiliser();
+      return (0);
+    } 
   return (0);
 }

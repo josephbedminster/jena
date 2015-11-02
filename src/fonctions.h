@@ -18,6 +18,9 @@ int		SCORE;
 int		ARME_EQUIP;
 int		QUISUISJE;
 
+/*VARIABLES GLOBALES ITEM*/
+int		BOTTES;
+
 /*VARIABLES GLOBALES KEY*/
 int		COMBI;
 int		CARTE_ACCES;
@@ -50,6 +53,7 @@ typedef struct  s_enemy
   int		pvmax;
   int		strenght;
   t_attack      *attack;
+  int		exp;
 }               t_enemy;
 
 // arme du joueur
@@ -68,6 +72,7 @@ typedef struct  s_player
   int		exp;
   int           pv;
   int		pvmax;
+  int		armure;
   int		medicaments;
   int		munitions;
   int		munitionsmax;
@@ -90,7 +95,9 @@ void		init_globales();
 char            *readLine_code();
 void            erreur_prendre();
 void            quisuisje();
-void            suspence();
+void            show_equip();
+void		utiliser();
+char            *readline_utiliser();
 
 void            salle01(int salle);
 void            salle02(int salle);

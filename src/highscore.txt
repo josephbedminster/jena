@@ -10,3 +10,4 @@ Jena : 151 Pts.
 slim : 171 Pts.
 je suis Philipp : 0 Pts.
 e : 36 Pts.
+g : 56 Pts.

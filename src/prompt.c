@@ -1,4 +1,5 @@
 #include "fonctions.h"
+extern t_player jena;
 
 int             readline(int salle)
 {
@@ -29,6 +30,15 @@ char             *readline_prendre()
 {
   char          *entree;
   my_putstr("   Que dois-je prendre ? > ");
+  entree = readLine();
+  return (entree);
+}
+
+char             *readline_utiliser()
+{
+  char          *entree;
+  printf("J'ai : - %d medicaments\n\n", jena.medicaments);
+  my_putstr("   Que dois-je utiliser ? > ");
   entree = readLine();
   return (entree);
 }

@@ -16,13 +16,14 @@ t_weapon weaponList[NB_WEAPON] = {
 
 t_player jena[1]= {
   //lvl, exp, exp next lvl,hp, hp max, medicaments, munitions, munitionsmax, tab d'armes
-  {1, 0, 100, 100, 0, 0, 50, weaponList}
+  {1, 0, 100, 100, 0, 0, 0, 50, weaponList}
 };
 
 void	init_globales()
 {
   /*VARIABLES GLOBALES*/
   ARME_EQUIP = 0;
+  BOTTES = 0;
   COMBI = 0;
   CARTE_ACCES = 0;
   CARTE_COM = 0;

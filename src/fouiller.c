@@ -24,7 +24,7 @@ void		fouiller(int salle)
       /*SALLE 2*/
   if (salle == 2)
     {
-      my_putstr(" - un lit, pour prendre <du repos> [60secondes]\n");
+      my_putstr("\n - un lit, pour prendre <du repos> [60secondes]\n\n");
       if (CARTE_COM == 0)
         {
 	         my_putstr(" - une <carte> d'identification\n\n");
@@ -37,22 +37,36 @@ void		fouiller(int salle)
   if (salle == 4)
     {
       if (((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0)) || (MUNI_ARMU > 0))
-	     {
-	     if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
+	{
+	  if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
 	    {
-	      my_putstr(" - un <pistolet> laser.\n");
+	      my_putstr("\n - un <pistolet> laser.\n");
 	      my_putstr(" - un <fusil> plasma.\n");
 	    }
 	  if (MUNI_ARMU > 0)
 	    {
 	      my_putstr(" - des <munitions>.\n\n");
 	    }
-	  else
-	    my_putstr("C'est reparti ! Je vais peut etre finir par m'habituer a ce vaisseau glauque a l'atmosphere oppressante  !... Non ?\n");
-	  return;
 	}
+      else
+	my_putstr("\nC'est reparti ! Je vais peut etre finir par m'habituer a ce vaisseau glauque a l'atmosphere oppressante  !... Non ?\n\n");
+      return;
     }
   /*FIN SALLE04*/
+
+  /*DEBUT SALLE07*/
+  if (salle == 7)
+    {
+      if (BOTTES == 0)
+	{
+	  my_putstr(" - des <bottes> en cuir.\n\n");
+	}
+      else
+	{
+	  my_putstr("\nJ'ai beau chercher, je vois rien a récuperer.\n\n");
+	}
+      return;
+    }
 
   /*SALLE 08*/
   if (salle == 8)
@@ -61,7 +75,7 @@ void		fouiller(int salle)
 	{
 	  my_putstr(" - un <badge> d'acces.\n\n");
 	}
-      else
+      else if (MUNI_MAP == 0)
 	{
 	  my_putstr("\nJ'ai beau chercher, je vois rien a récuperer.\n\n");
 	}
@@ -76,7 +90,7 @@ void		fouiller(int salle)
 	{
 	  my_putstr(" - des <médicaments>.\n\n");
 	}
-      else
+      else if (MUNI_MAP == 0)
 	{
 	  my_putstr("\nJ'ai beau chercher, je vois rien a récuperer.\n\n");
 	}
