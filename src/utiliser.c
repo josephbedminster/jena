@@ -17,7 +17,7 @@ void             utiliser()
 	}
       else if (jena.medicaments < 1)
 	{
-	  my_putstr("\nVous n'avez pas de médicaments !\n");
+	  my_putstr("\nJe n'ai pas de médicaments !\n\n");
   	}
       else
   	{
@@ -25,16 +25,16 @@ void             utiliser()
 	  if (jena.pv > jena.pvmax)
 		jena.pv = jena.pvmax;
 	  jena.medicaments -= 1;
-	  my_putstr("\n\033[1;32mVous prenez [1x] médicament. Vous regagnez 50 points de vie.\n\033[0m");
+	  my_putstr("\n\033[1;32mJ'ai pris [1x] médicament. J'ai regagné 50 points de vie.\n\033[0m");
 	  if (jena.medicaments > 0)
 	    {
-	      my_putstr("Il vous reste [");
+	      my_putstr("Il me reste [");
 	      my_putnbr(jena.medicaments);
 	      my_putstr("x] médicaments !\n\n");
 	    }
 	  else
 	    {
-	      my_putstr("Vous n'avez plus de médicaments !\n");
+	      my_putstr("Il va falloir que je fasse plus attention, je n'ai plus de médicaments !\n\n");
 	    }
   	}
     }
