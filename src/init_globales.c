@@ -14,22 +14,9 @@ t_weapon weaponList[NB_WEAPON] = {
   {0, "FUSIL A PLASMA", 40, 2}
 };
 
-// idem ici pour l'enemi
-t_attack attackList[NB_ATTACK] = {
-  {"Charge", 3},
-  {"Morsure", 5},
-  {"Melee", 7}
-};
-
 t_player jena[1]= {
   //lvl, exp, exp next lvl,hp, hp max, medicaments, munitions, munitionsmax, tab d'armes
   {1, 0, 100, 100, 0, 0, 50, weaponList}
-};
-
-static t_enemy enemyList[NBCREA] = {
-  {"Cadavre rampant", 1, 80, 80, 4, attackList},
-  {"Rat mutant", 1, 50, 50, 5, attackList},
-  {"Enorme rat mutant", 1, 300, 300, 5, attackList}
 };
 
 void	init_globales()
