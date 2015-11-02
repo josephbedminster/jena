@@ -1,11 +1,21 @@
 #include "fonctions.h"
 
-void		score()
+void		score(char *cause)
 {
   my_putstr("Votre score est de : ");
   my_putnbr(SCORE);
   my_putstr("\n");
-
+  if (strcmp(cause, "Suicide") == 0)
+    {
+      my_putstr("Jena est morte par suicide.\n");
+      cause = "suicide";
+   }
+  else
+    {
+      my_putstr("Jena s'est fait massacrer par : ");
+      my_putstr(cause);
+      my_putstr(".\n");
+    }
  FILE *f = fopen("src/highscore.txt", "a+");
  if (f == NULL)
    {
@@ -13,7 +23,7 @@ void		score()
      exit(1);
    }
 
- fprintf(f,"%s : %d Pts.\n", USER, SCORE);
+ fprintf(f,"%s : %d Pts. (Cause la mort : %s)\n", USER, SCORE, cause);
  fclose(f);
  system("cat src/highscore.txt");
  exit(0);

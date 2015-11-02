@@ -97,7 +97,7 @@ int             comparer(char* entree, int salle)
   if (resultat == 0)
     {
       my_putstr("Vous vous etes suicide avec vos mains.\n");
-      score();
+      score("Suicide");
       gameover();
       exit(0);
     }

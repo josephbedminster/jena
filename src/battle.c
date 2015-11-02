@@ -178,7 +178,7 @@ int		start_battle()
   if (jena.pv < 0)
     {
       gameover();
-      score();
+      score(e.name);
     }
   else
     {
