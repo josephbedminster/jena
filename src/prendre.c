@@ -93,7 +93,9 @@ int		prendre(int salle)
 	    {
 	      my_putstr("\nJ'ai trouvé une cartouche d'energie !\n");
 	      my_putstr("Je peux m'en servir pour recharger des armes ou des appareils.\n");
-	      my_putstr("J'ai maintenant [16x] munitions.\n\n");
+	      my_putstr("J'ai maintenant ");
+	      my_putnbr(jena.munitions);
+	      my_putstr("munitions.\n\n");
 	      jena.munitions += 16;
 	      MUNI_ARMU -= 16;
 	      SCORE = SCORE + 16;
@@ -163,11 +165,7 @@ int		prendre(int salle)
 	  if (CARTE_ACCES == 0)
 	    {
 	      my_putstr("\nEuh… Vous êtes vraiment sûr ? Ok…\nC’est dégoûtant…\n");
-<<<<<<< HEAD
-	      sleep(2);
-=======
-	      //sleep(1);
->>>>>>> 139e24a72113aecfefca9e1146014f60375276ec
+	      //sleep(2);
 	      my_putstr("C’est bon, j’ai le badge d’accès du Sergent Colas.\n\n");
 	      CARTE_ACCES = 1;
 	      SCORE = SCORE + 5;

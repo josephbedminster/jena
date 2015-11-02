@@ -2,8 +2,9 @@
 #define __HERO_H__
 #define MAP_X 4
 #define MAP_Y 10
-#define NB_ATTACK 2
+#define NB_ATTACK 3
 #define NB_WEAPON 3
+#define NBCREA 3
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
@@ -16,6 +17,7 @@ char*		USER;
 int		SCORE;
 int		ARME_EQUIP;
 int		QUISUISJE;
+
 /*VARIABLES GLOBALES KEY*/
 int		COMBI;
 int		CARTE_ACCES;
@@ -33,8 +35,6 @@ int		DIAG_S12A09;
 int		DIAG_S09A08;
 int		DIAG_S03A02;
 
-/*TABLE EXP*/
-//static const int EXP[10];
 
 typedef struct  s_attack
 {
@@ -81,7 +81,7 @@ int	        xpNeeded(int lvl);
 int             give_exp();
 void            stats_jena();
 void            stats_arme();
-void		init_e(t_enemy *e);
+t_enemy		*init_e();
 int	        battle(t_enemy *e, int i);
 int		start_battle();
 int             enemy_attack(t_enemy *e);
@@ -129,10 +129,7 @@ char             *readline_prendre();
 char		*readLine();
 int             my_strcmp(char *s1, char *s2);
 char            *my_strcpy(char *dest, char *src);
-<<<<<<< HEAD
 void            suspence();
-=======
->>>>>>> 139e24a72113aecfefca9e1146014f60375276ec
 void            accueil();
 void            help();
 void            gameover();

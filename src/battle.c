@@ -3,6 +3,7 @@
 extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
+extern t_enemy enemyList;
 
 
 int		player_attack(t_enemy *e)
@@ -123,27 +124,55 @@ int		battle(t_enemy *e, int i)
   return (0);
 }
 
-void		init_e(t_enemy *e)
+t_enemy		*init_e()
 {
+  int           rnd;
+  t_enemy	*e;
 
+  //  rand(time(NULL));
+  rnd = rand() % NBCREA;
+  if ((e = malloc(sizeof(t_enemy))) == NULL)
+    return (NULL);
+  e->name = strdup(enemyList[rnd].name);
+  e->lvl = enemyList[rnd].lvl;
+  e->pv = enemyList[rnd].pv;
+  e->pvmax = enemyList[rnd].pvmax;
+  e->strenght = enemyList[rnd].strenght;
+  e->attack = enemyList[rnd]->attackList;
+  /*
+  e = enemyList[randommob];
+  */
+  //e->name = g_enemy[rnd].name;
+  //my_putnbr(randommob);
+  //e->name = enemyList[randommob].name;
+  //my_putstr(e.name);
+  /*
 
-  e->name = "Monstre";
-  e->pv = 80;
-  e->lvl = 1;
-  e->pvmax = 80;
-  e->strenght = 4;
-  e->attack = &attackList;
-  my_putstr("\n==================\n");
-  my_putstr("      ");
+  if ((e = malloc(sizeof(t_enemy))) == NULL)
+    return (NULL);
+  e->name = strdup(g_enemy[rnd]->name);
+  if (!e->name)
+    return (NULL);
+  e->lvl = g_enemy[rnd]->lvl;
+  e->pv = g_enemy[rnd]->pv;
+  e->pvmax = g_enemy[rnd]->pvmax;
+  e->strenght = g_enemy[rnd]->strenght;
+  // e->attack = g_creatures[rnd].&attackList;
+  e->attack = g_enemy[rnd]->attackList;
+  */
+  /*
+  my_putstr("         =====================\n");
   my_putstr(e->name);
-  my_putstr("\n==================\n");
+  my_putstr("         =====================\n");
   printf("Niveau : %d\n", e->lvl);
   printf("PV's : [%d/%d]\n", e->pv, e->pvmax);
+  */
+  return (e);
 }
 
 int		start_battle()
 {
-  t_enemy	e;
+  t_enemy	*e;
   int		i;
   int		res;
   int		is_lvlup;
@@ -153,7 +182,7 @@ int		start_battle()
   res = 1;
   i = 0;
   puts("\n\033[5;31mUn monstre vous attaque !\033[0m\n");
-  init_e(&e);
+  e = init_e();
   while (res != 0)
     {
       res = battle(&e, i);
