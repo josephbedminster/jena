@@ -96,8 +96,8 @@ void		look()
     my_putstr("A travers la baie vitrée je peux voir en contrebas un immense hangar, et quelques petits vaisseaux en piteux état...\n");
     my_putstr("L'un d'eux a surement dû exploser vu les traces noires au sol tout autour...\n");
  my_putstr("Mais ce n'est pas ça qui m'a interpellé ! Il y a une énorme brèche dans la coque !\n");
- my_putstr("Le trou est de la taille... d'un rhinocéros. Au moins.\n");
- my_putstr("Esperons qu'un rhinocéros de l'espace ne pointe pas le bout de sa corne par ce trou !\n");
+ my_putstr("Le trou fait au moins 3 mètres de diamètre ! Au moins.\n");
+ my_putstr("J'aperçois aussi la porte de sortie du hangar : fermée.\n");
  my_putstr("Que dois-je faire, passer la porte blindée et descendre voir les dégats au hangar, ou faire demi-tour ?\n\n");
     }
   if(SALLE == 15)
@@ -109,8 +109,18 @@ void		look()
   if(SALLE == 16)
     {
       my_putstr("Je suis au fond du hangar, au niveau de la brèche dans la coque. Ce n'est pas beau à voir.\n");
-      my_putstr("Je ne suis pas mécanicienne (enfin, je crois ?), mais à moins de tomber par hasard\nsur une énorme plaque de métal, et de trouver quelqu'un capable de colmater la faille, impossible de faire decoller le vaisseau sans risquer une dépréssurisation...\n");
-    my_putstr("Ou alors... Il suffirait de condamner hermetiquement le hangar. Mais j'ignore encore comment faire. Il faudrait trouver un ordinateur de bord.\n\n");
+      my_putstr("Le trou est bien trop haut pour que j'y accède.\n");
+      my_putstr("Oh oh. OH, OH !\n");
+      my_putstr("Méga problème droit devant ! Du genre : énorme monstre-gluant-dangereux à douze heures !\n");
+      my_putstr("Et surtout du genre qui bloque la sortie du hangar !\n");
+      my_putstr("Berk, on dirait une grosse larve mutante qui... Oh là là !\n");
+      my_putstr("Qui pond des petites créatures qui grouillent dans toutes les directions !\n");
+      my_putstr("Ils ont grignotté des parties de la coque, des tuyaux...\n");
+      my_putstr("J'en vois qui s'engouffrent dans les tuyaux et les canalisations du vaisseau !\n");
+      my_putstr("Si je veux sortir par la porte du hangar, il va falloir se débarrasser de la larve géante et trouver un moyen d'ouvrir la porte.\n");
+      my_putstr("Ou alors, je fais VITE demi-tour et je trouve un autre moyen de sortir de ce vaisseau !\n");
+      my_putstr("Je vous avoue que j'ai une préférence pour la seconde option !\n\n");
+      
   }
   if(SALLE == 17)
     {
@@ -130,7 +140,7 @@ void		look()
   if(SALLE == 19)
     {
       my_putstr("J'avais raison, je vois le réacteur d'ici ! Plusieurs petits hublots donnent une vue imprenable sur le coeur du vaisseau.\n");
-      my_putstr("Ce n'est pas du tout comme je me l'immaginai...\n");
+      my_putstr("Ce n'est pas du tout comme je l'immaginai...\n");
       my_putstr("Pour vous décrire ça simplement, tous les tuyaux que j'ai rencontré sur ma route passent à travers le mur et se rejoignent au centre de la salle du réacteur.\n");
       my_putstr("Au-dessus ces cables se forme une gigantesque boule d'énergie... C'est magnifique. Et potentiellement meurtrier s'il y a une défaillance !\n\n");
     }

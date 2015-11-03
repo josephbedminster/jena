@@ -3,21 +3,23 @@
 extern t_weapon weaponList;
 extern t_player jena;
 static t_attack attackList[NB_ATTACK] = {
-  {"Charge", 3},
-  {"Morsure", 5},
-  {"Melee", 7}
+  {"Filet", 3},
+  {"Charge", 5},
+  {"Jet d'acide", 7}
 };
+static t_enemy BossList[1] = {
+  {"Larve géante", 1, 300, 300, 6, attackList, 50}
+};
+
+
 static t_enemy enemyList[NBCREA] = {
-  {"Cadavre rampant", 1, 80, 80, 4, attackList, 10},
-  {"Rat mutant", 1, 50, 50, 5, attackList, 10},
-  {"Chien mutant", 1, 100, 100, 5, attackList, 15}
+  {"Larve ouvrière", 1, 80, 80, 3, attackList, 10},
+  {"Petite larve", 1, 50, 50, 4, attackList, 10},
+  {"Larve guerrière", 1, 100, 100, 5, attackList, 15}
 };
-      // A utiliser pour les boss
-/*
-static t_enemy BossList[NBCREA] = {
-  {"Enorme rat mutant", 1, 300, 300, 5, attackList}
-};
-*/
+   // A utiliser pour les boss
+
+
 
 
 int		player_attack(t_enemy *e)
@@ -144,16 +146,32 @@ t_enemy		*init_e()
   int           rnd;
   t_enemy	*e;
 
-  srand(time(NULL));
-  e = malloc(sizeof(t_enemy));
-  rnd = rand() % NBCREA;
-  e->name = enemyList[rnd].name;
-  e->pv = enemyList[rnd].pv;
-  e->pvmax = enemyList[rnd].pvmax;
-  e->strenght = enemyList[rnd].strenght;
-  e->attack = enemyList[rnd].attack;
-  e->exp = enemyList[rnd].exp;
-  return (e);
+  /*MOB BOSS*/
+  if (SALLE == 16)
+    {
+      e = malloc(sizeof(t_enemy));
+      e->name = BossList[0].name;
+      e->pv = BossList[0].pv;
+      e->pvmax = BossList[0].pvmax;
+      e->strenght = BossList[0].strenght;
+      e->attack = BossList[0].attack;
+      e->exp = BossList[0].exp;
+      return (e);
+    }
+  /*MOB STANDARD*/ 
+  else
+    {
+      srand(time(NULL));
+      e = malloc(sizeof(t_enemy));
+      rnd = rand() % NBCREA;
+      e->name = enemyList[rnd].name;
+      e->pv = enemyList[rnd].pv;
+      e->pvmax = enemyList[rnd].pvmax;
+      e->strenght = enemyList[rnd].strenght;
+      e->attack = enemyList[rnd].attack;
+      e->exp = enemyList[rnd].exp;
+      return (e);
+    }
 }
 
 int		start_battle()
@@ -182,6 +200,8 @@ int		start_battle()
     }
   else
     {
+      if (SALLE == 16)
+	BOSS_BATTU = 1;
       is_lvlup = give_exp(e.exp);
       stats_jena(is_lvlup);
       SCORE = SCORE + 20;

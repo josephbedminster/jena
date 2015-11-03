@@ -7,12 +7,17 @@ extern t_player jena;
 
 void            salle18()
 {
+
+  char      *mort;
+  int     choix;
   int           action;
   int           randmob;
   int           randmuni;
   int           randmedic;
 
 
+  choix = 0;
+  mort = NULL;
   action = 0;
   g_map[7][1].visited = 1;
   g_map[7][1].content = 1;
@@ -49,10 +54,43 @@ void            salle18()
 	  salle17();
 	}
       if (action == 4)
-        {
-	  g_map[7][1].content = 0;
-	  SALLE = 19;
-	  salle19();
+	{
+	  my_putstr("\nVous etes sur de vouloir aller par la ???\nL'air c'est extrement rafrechie ici... ce n'est pas un bon signe\n\n");
+	  my_putstr("Dois-je continuer ???\n   >");
+	  while (choix == 0)
+	    {
+	      mort = readLine();
+	      if (strcmp(mort, "oui") == 0)
+		choix = 1;
+	      else if (strcmp(mort, "non") == 0)
+		choix = 2;
+	    }
+	  if (choix == 1)
+	    {
+	      if (COMBI == 0)
+		{
+		  my_putstr("J'entre dans le hangar !\nIl y a un enorme trou dans la coque !\n");
+		  my_putstr("Je me sens mal !...\n");
+		  ////sleep(2);
+		  my_putstr("Je...\n");
+		  gameover();
+		  score("radiations");
+		}
+	      else
+		{
+		  my_putstr("\nPfiou!!! Heureusement que j'ai ma combinaison sinon je ne pense pas survivre.\n\n");
+		  g_map[7][1].content = 0;
+		  SALLE = 19;
+		  salle19();
+		  choix = 0;
+		}
+	    }
+	  else
+	    {
+	      my_putstr("\nVous avez surement raison une foi de plus,je vais vous ecouter\n\n");
+	      choix = 0;
+	      action = 0;
+	    }
 	}
       /*Prendre*/
       if (action == 5)

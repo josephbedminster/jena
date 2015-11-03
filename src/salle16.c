@@ -8,7 +8,6 @@ extern t_player jena;
 void            salle16()
 {
   int           action;
-  int           randmob;
   int           randmuni;
   int           randmedic;
 
@@ -18,7 +17,6 @@ void            salle16()
   g_map[7][0].content = 1;
   look();
   srand(time(NULL));
-  randmob = rand();
   randmuni = rand();
   randmedic = rand();
   MUNI_MAP = 0;
@@ -27,10 +25,6 @@ void            salle16()
   if (randmedic%10 == 0)
     {
       MEDIC_MAP = 1;
-    }
-  if ((randmob%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
-    {
-      start_battle();
     }
   if ((randmuni%4 == 0))
     {
@@ -49,6 +43,16 @@ void            salle16()
 	  SALLE = 15;
           salle15();
         }
+      if (action == 4)
+        {
+	  if (BOSS_BATTU == 0)
+	    {
+	      start_battle();
+	    }
+	  else
+	    my_putstr("message a coder");
+	  action = 0;
+        }
       /*Prendre*/
       if (action == 5)
         {
@@ -56,7 +60,7 @@ void            salle16()
           action = 0;
         }
       /*fin prendre*/
-      if ((action == 4) || ((action >= 1) && (action <= 2)))
+      if ((action >= 1) && (action <= 2))
         {
           erreur_depla();
           action = 0;

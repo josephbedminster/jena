@@ -18,9 +18,19 @@ void		fouiller()
     }
   if(MUNI_MAP > 0)
     {
-      my_putstr(" - des <munitions>.\n");
+      my_putstr(" - des <munitions>\n");
       is_muni = 1;
     }
+
+/*SALLE 01*/
+if (SALLE == 1)
+  {
+    my_putstr("\n- une <console> centrale.\n\n");
+          return;
+  }
+
+  /*FIN SALLE04*/
+
       /*SALLE 2*/
   if (SALLE == 2)
     {
@@ -32,6 +42,7 @@ void		fouiller()
       return;
     }
   /*FIN SALLE02*/
+
 
   /*SALLE 04*/
   if (SALLE == 4)
@@ -63,7 +74,7 @@ void		fouiller()
 	}
       else
 	{
-	  my_putstr("\nJ'ai beau chercher, je vois rien a récuperer.\n\n");
+	  my_putstr("\nJ'ai beau chercher, je ne vois rien a récuperer.\n\n");
 	}
       return;
     }
@@ -77,7 +88,7 @@ void		fouiller()
 	}
       else if (MUNI_MAP == 0)
 	{
-	  my_putstr("\nJ'ai beau chercher, je vois rien a récuperer.\n\n");
+	  my_putstr("\nJ'ai beau chercher, je ne vois rien a récuperer.\n\n");
 	}
       return;
     }
@@ -92,7 +103,7 @@ void		fouiller()
 	}
       else if (MUNI_MAP == 0)
 	{
-	  my_putstr("\nJ'ai beau chercher, je vois rien a récuperer.\n\n");
+	  my_putstr("\nJ'ai beau chercher, je ne vois rien a récuperer.\n\n");
 	}
       return;
     }
@@ -107,7 +118,7 @@ void		fouiller()
 	}
       else
 	{
-	  my_putstr("\nJ'ai beau chercher, je vois rien a récuperer.\n\n");
+	  my_putstr("\nJ'ai beau chercher, je ne vois rien a récuperer.\n\n");
 	}
       return;
     }

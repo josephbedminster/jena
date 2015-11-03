@@ -24,6 +24,7 @@ void	init_globales()
   /*VARIABLES GLOBALES*/
   ARME_EQUIP = 0;
   BOTTES = 0;
+  BOSS_BATTU = 0;
   COMBI = 0;
   CARTE_ACCES = 0;
   CARTE_COM = 0;

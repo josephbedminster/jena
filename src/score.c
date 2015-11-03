@@ -10,6 +10,11 @@ void		score(char *cause)
       my_putstr("Jena est morte par suicide.\n");
       cause = "suicide";
    }
+  if (strcmp(cause, "radiations") == 0)
+    {
+      my_putstr("Jena est morte irradiée.\n");
+      cause = "radiations";
+   }
   else
     {
       my_putstr("Jena s'est fait massacrer par : ");
