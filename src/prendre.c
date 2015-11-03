@@ -21,6 +21,7 @@ int		prendre(int salle)
 	my_putstr("[JENA] : médicaments + 1\n\n");
 	jena.medicaments += 1;
 	MEDIC_MAP = 0;
+	SCORE += 1;
 	return (0);
       }
 	}
@@ -32,6 +33,7 @@ int		prendre(int salle)
 	my_putstr("[JENA] : Munitions + 4\n\n");
 	jena.munitions += 4;
 	MUNI_MAP = 0;
+	SCORE += 4;
 	return (0);
       }
     }

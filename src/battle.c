@@ -175,7 +175,7 @@ int		start_battle()
       i++;
     }
   /*Traitement de la fin de combat 1 : defaite, 0 : victoire*/
-  if (jena.pv < 0)
+  if (jena.pv <= 0)
     {
       gameover();
       score(e.name);
