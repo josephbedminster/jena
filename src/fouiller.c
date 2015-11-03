@@ -3,7 +3,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-void		fouiller(int salle)
+void		fouiller()
 {
   int		is_muni;
   int   is_medic;
@@ -22,7 +22,7 @@ void		fouiller(int salle)
       is_muni = 1;
     }
       /*SALLE 2*/
-  if (salle == 2)
+  if (SALLE == 2)
     {
       my_putstr("\n - un lit, pour prendre <du repos> [60secondes]\n\n");
       if (CARTE_COM == 0)
@@ -34,7 +34,7 @@ void		fouiller(int salle)
   /*FIN SALLE02*/
 
   /*SALLE 04*/
-  if (salle == 4)
+  if (SALLE == 4)
     {
       if (((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0)) || (MUNI_ARMU > 0))
 	{
@@ -55,7 +55,7 @@ void		fouiller(int salle)
   /*FIN SALLE04*/
 
   /*DEBUT SALLE07*/
-  if (salle == 7)
+  if (SALLE == 7)
     {
       if (BOTTES == 0)
 	{
@@ -69,7 +69,7 @@ void		fouiller(int salle)
     }
 
   /*SALLE 08*/
-  if (salle == 8)
+  if (SALLE == 8)
     {
       if (CARTE_ACCES == 0)
 	{
@@ -84,7 +84,7 @@ void		fouiller(int salle)
   /*SALLE08*/
 
   /*SALLE 11 RESERVE*/
-  else if (salle == 11)
+  else if (SALLE == 11)
     {
       if (MEDIC_RESE != 0)
 	{
@@ -99,7 +99,7 @@ void		fouiller(int salle)
       /*FIN SALLE11*/
 
       /*SALLE 24*/
-  else if (salle == 24)
+  else if (SALLE == 24)
     {
       if (COMBI == 0)
 	{

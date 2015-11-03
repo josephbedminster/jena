@@ -5,7 +5,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-void            salle17(int salle)
+void            salle17()
 {
   int           action;
   int           randmob;
@@ -16,7 +16,7 @@ void            salle17(int salle)
   action = 0;
   g_map[6][1].visited = 1;
   g_map[6][1].content = 1;
-  look(salle);
+  look();
   srand(time(NULL));
   randmob = rand();
   randmuni = rand();
@@ -39,13 +39,13 @@ void            salle17(int salle)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle);
+      action = readline();
       /*Traitement de laction :*/
       if (action == 3)
         {
 	  g_map[6][1].content = 0;
-	  salle = 13;
-          salle13(salle);
+	  SALLE = 13;
+          salle13();
         }
       if (action == 4)
         {
@@ -57,20 +57,20 @@ void            salle17(int salle)
 	  else
 	    {
 	      g_map[6][1].content = 0;
-	      salle = 18;
-	      salle18(salle);
+	      SALLE = 18;
+	      salle18();
 	    }
 	}
       /*Prendre*/
       if (action == 5)
         {
-          prendre(salle);
+          prendre();
           action = 0;
         }
       /*fin prendre*/
       if ((action == 1) || (action == 2))
 	{
-	  erreur_depla(salle);
+	  erreur_depla();
 	  action = 0;
 	}
     }

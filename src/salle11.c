@@ -5,7 +5,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-void            salle11(int salle)
+void            salle11()
 {
   int           action;
   char          *entree;
@@ -15,7 +15,7 @@ void            salle11(int salle)
   action = 0;
   g_map[4][0].visited = 1;
   g_map[4][0].content = 1;
-  look(salle);
+  look();
   srand(time(NULL));
   randmob = rand();
   MUNI_MAP = 0;
@@ -28,27 +28,27 @@ void            salle11(int salle)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle);
+      action = readline();
       /*Traitement de laction :*/
       if (action == 3)
         {
 	  my_putstr("\nVous avez raison, quittons vite cette réserve flippante !\n");
 	  g_map[4][0].content = 0;
-	  salle = 8;
-          salle08(salle);
+	  SALLE = 8;
+          salle08();
         }
 
       /*Prendre*/
       if (action == 5)
         {
-          prendre(salle);
+          prendre();
           action = 0;
         }
       /*fin prendre*/
 
       if ((action == 1) || (action == 2) || (action == 4))
 	{
-	  erreur_depla(salle);
+	  erreur_depla();
 	  action = 0;
 	}
     }

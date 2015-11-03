@@ -5,7 +5,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-void            salle09(int salle)
+void            salle09()
 {
   int           action;
   int           randmob;
@@ -16,7 +16,7 @@ void            salle09(int salle)
   action = 0;
   g_map[3][1].visited = 1;
   g_map[3][1].content = 1;
-  look(salle);
+  look();
   srand(time(NULL));
   randmob = rand();
   randmuni = rand();
@@ -39,7 +39,7 @@ void            salle09(int salle)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle);
+      action = readline();
       /*Traitement de laction :*/
       if (action == 1)
         {
@@ -67,8 +67,8 @@ void            salle09(int salle)
               my_putstr("\nJe retourne vers l'infirmerie.\n");
             }
 	  g_map[3][1].content = 0;
-	  salle = 8;
-          salle08(salle);
+	  SALLE = 8;
+          salle08();
         }
       if (action == 2)
         {
@@ -83,8 +83,8 @@ void            salle09(int salle)
 	      //sleep(2);
 	      my_putstr("Un microscope ! Aha !\nEt vous ?\n");
 	      g_map[3][1].content = 0;
-	      salle = 10;
-	      salle10(salle);
+	      SALLE = 10;
+	      salle10();
 	    }
 	  else
 	    {
@@ -97,19 +97,19 @@ void            salle09(int salle)
         {
 	  my_putstr("\nJ'ai l'impression d'etre perdue... Etes-vous sur de ce que vous faites ?\n\n");
 	  g_map[3][1].content = 0;
-	  salle = 12;
-	  salle12(salle);
+	  SALLE = 12;
+	  salle12();
         }
       /*Prendre*/
       if (action == 5)
         {
-          prendre(salle);
+          prendre();
           action = 0;
         }
       /*fin prendre*/
       if (action == 3)
         {
-          erreur_depla(salle);
+          erreur_depla();
           action = 0;
         }
     }

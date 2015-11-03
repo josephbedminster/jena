@@ -5,7 +5,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-void            salle08(int salle)
+void            salle08()
 {
   int           action;
   char	      	*entree_code;
@@ -18,7 +18,7 @@ void            salle08(int salle)
   action = 0;
   g_map[3][0].visited = 1;
   g_map[3][0].content = 1;
-  look(salle);
+  look();
     srand(time(NULL));
   randmob = rand();
   randmuni = rand();
@@ -41,27 +41,27 @@ void            salle08(int salle)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle);
+      action = readline();
       /*Traitement de laction :*/
       if (action == 1)
 	{
-	  erreur_depla(salle);
+	  erreur_depla();
 	  action = 0;
 	}
       if (action == 2)
 	{
 	  my_putstr("\nJ'espere que tout le vaisseau n'est pas que remplis de cadavres.\n\n");
 	  g_map[3][0].content = 0;
-	  salle = 9;
-          salle09(salle);
+	  SALLE = 9;
+          salle09();
         }
       if (action == 3)
         {
 	  my_putstr("\nLes souvenirs semblent me revenir petit à petit...\n");
 	  my_putstr("Je recconnais les quartiers des femmes. Je ne vois pas de cabine à mon nom, étrange...\n\n");
 	  g_map[3][0].content = 0;
-	  salle = 5;
-          salle05(salle);
+	  SALLE = 5;
+          salle05();
         }
       if (action == 4)
 	{
@@ -73,8 +73,8 @@ void            salle08(int salle)
 	      my_putstr("\nCa marche, la porte est déverouillée !");
 	      my_putstr("\nHeureusement que vous êtes là, je serai restée bloquée devant cette porte toute la journée sans vous !\n");
 	      g_map[3][0].content = 0;
-	      salle = 11;
-	      salle11(salle);
+	      SALLE = 11;
+	      salle11();
 	    }
 	  else
 	    {
@@ -85,7 +85,7 @@ void            salle08(int salle)
       /*Prendre*/
       if (action == 5)
         {
-	  prendre(salle);
+	  prendre();
           action = 0;
         }
       /*fin prendre*/

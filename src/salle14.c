@@ -5,7 +5,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-void            salle14(int salle)
+void            salle14()
 {
   int           action;
   char			*mort;
@@ -20,7 +20,7 @@ void            salle14(int salle)
   action = 0;
   g_map[5][0].visited = 1;
   g_map[5][0].content = 1;
-  look(salle);
+  look();
   srand(time(NULL));
   randmob = rand();
   randmuni = rand();
@@ -43,14 +43,14 @@ void            salle14(int salle)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle);
+      action = readline();
       /*Traitement de laction :*/
       if (action == 2)
         {
 	  my_putstr("\nCe hangard ne m'inspire vraiment pas,je prefere faire demi-tour.\n\n");
 	  g_map[5][0].content = 0;
-	  salle = 13;
-          salle13(salle);
+	  SALLE = 13;
+          salle13();
         }
       if (action == 4)
         {
@@ -79,8 +79,8 @@ void            salle14(int salle)
 		{
 		  my_putstr("\nPfiou!!! Heureusement que j'ai ma combinaison sinon je ne pense pas survivre.\n\n");
 		  g_map[5][0].content = 0;
-		  salle = 15;
-		  salle15(salle);
+		  SALLE = 15;
+		  salle15();
 		  choix = 0;
 		}
 	    }
@@ -94,13 +94,13 @@ void            salle14(int salle)
       /*Prendre*/
       if (action == 5)
         {
-          prendre(salle);
+          prendre();
           action = 0;
         }
       /*fin prendre*/
       if ((action == 1) || (action == 3))
 	{
-	  erreur_depla(salle);
+	  erreur_depla();
 	  action = 0;
 	}
     }

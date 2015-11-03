@@ -3,7 +3,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-int		prendre(int salle)
+int		prendre()
 {
   char		*entree;
   /* char		*temp;
@@ -39,7 +39,7 @@ int		prendre(int salle)
     }
   /*debut des salles*/
   /*DEBUT 02*/
-  if(salle == 02)
+  if(SALLE == 02)
     {
       if (strcmp(entree, "douche") == 0)
 	{
@@ -85,7 +85,7 @@ int		prendre(int salle)
   /*FIN 02*/
 
   /*DEBUT 04*/
-  if(salle == 4)
+  if(SALLE == 4)
     {
       /*DEBUT MUNITIONS*/
       if (strcmp(entree, "munitions") == 0)
@@ -157,7 +157,7 @@ int		prendre(int salle)
   /*FIN 04*/
 
   /*DEBUT 07*/
-  if(salle == 7)
+  if(SALLE == 7)
     {
       if (strcmp(entree, "bottes") == 0)
 	{
@@ -181,7 +181,7 @@ int		prendre(int salle)
       return (0);
     }
       /*DEBUT 08*/
-  if(salle == 8)
+  if(SALLE == 8)
     {
       if (strcmp(entree, "badge") == 0)
 	{
@@ -209,7 +209,7 @@ int		prendre(int salle)
   /*FIN 08*/
 
   /*DEBUT 11*/
-  if(salle == 11)
+  if(SALLE == 11)
     {
       if (strcmp(entree, "medicaments") == 0)
 	{
@@ -237,7 +237,7 @@ int		prendre(int salle)
   /*FIN 11*/
 
   /*DEBUT 24*/
-  if(salle == 24)
+  if(SALLE == 24)
     {
       if (strcmp(entree, "combinaison") == 0)
 	{

@@ -1,7 +1,7 @@
 #include "fonctions.h"
 extern t_player jena;
 
-int             readline(int salle)
+int             readline()
 {
   char          *entree;
   int           result;
@@ -20,7 +20,7 @@ int             readline(int salle)
       ERREUR_PROMPT = ERREUR_PROMPT + 1;
       my_putstr("Que dois-je faire : ");
       entree = readLine();
-      result = comparer(entree, salle);
+      result = comparer(entree);
     }
   ERREUR_PROMPT = 0;
   return (result);
