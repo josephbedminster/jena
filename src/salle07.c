@@ -5,7 +5,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-void            salle07(int salle)
+void            salle07()
 {
   int           action;
   int           randmob;
@@ -16,7 +16,7 @@ void            salle07(int salle)
   action = 0;
   g_map[2][2].visited = 1;
   g_map[2][2].content = 1;
-  look(salle);
+  look();
   srand(time(NULL));
   randmob = rand();
   randmuni = rand();
@@ -39,30 +39,30 @@ void            salle07(int salle)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle);
+      action = readline();
       /*Traitement de laction :*/
       if (action == 1)
         {
 	  my_putstr("\nApres une bonne sieste, je peux aller ou vous voulez.\n\n");
 	  g_map[2][2].content = 0;
-	  salle = 6;
-	  salle06(salle);
+	  SALLE = 6;
+	  salle06();
 	}
       if (action == 4)
         {
 	  my_putstr("\nLe temps defile et pourtant je me promene dans se vaiseau encore et toujour,et pourquoi ne pas dormir ?\n\n");
 	  g_map[2][2].content = 0;
-	  salle = 10;
-	  salle10(salle);
+	  SALLE = 10;
+	  salle10();
 	}
       if (action == 5)
         {
-          prendre(salle);
+          prendre();
 	  action = 0;
         }
       if ((action >= 2) && (action <= 3))
         {
-	  erreur_depla(salle);
+	  erreur_depla();
 	  action = 0;
         }
     }

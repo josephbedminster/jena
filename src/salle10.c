@@ -5,7 +5,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-void            salle10(int salle)
+void            salle10()
 {
   int           action;
   int           randmob;
@@ -16,7 +16,7 @@ void            salle10(int salle)
   action = 0;
   g_map[3][2].visited = 1;
   g_map[3][2].content = 1;
-  look(salle);
+  look();
   srand(time(NULL));
   randmob = rand();
   randmuni = rand();
@@ -39,7 +39,7 @@ void            salle10(int salle)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle);
+      action = readline();
       /*Traitement de laction :*/
       if (action == 1)
         {
@@ -48,8 +48,8 @@ void            salle10(int salle)
 	      my_putstr("\nJe quitte ce qui ressemble a un laboratoire d'experiences, pour retourner vers des cadavres. Super...\n");
 	      my_putstr("Vous n'avez pas une meilleure idée ? Vous donnez certes de bon conseils, mais des fois j'hesite vraiment.\n\n");
 	      g_map[3][2].content = 0;
-	      salle = 9;
-	      salle09(salle);
+	      SALLE = 9;
+	      salle09();
 	    }
 	  else
 	    {
@@ -61,19 +61,19 @@ void            salle10(int salle)
         {
 	  my_putstr("\nOh un endroit pour se reposer ? Apres tout se que je viens de decouvrir je ne dirais pas non a une petite sieste.\n");
 	  g_map[3][2].content = 0;
-	  salle = 7;
-	  salle07(salle);
+	  SALLE = 7;
+	  salle07();
 	}
       /*Prendre*/
       if (action == 5)
         {
-          prendre(salle);
+          prendre();
           action = 0;
         }
       /*fin prendre*/
       if ((action == 2) || (action == 4))
         {
-          erreur_depla(salle);
+          erreur_depla();
           action = 0;
         }
     }

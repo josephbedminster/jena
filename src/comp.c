@@ -3,7 +3,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-int             comparer(char* entree, int salle)
+int             comparer(char* entree)
 {
   int           resultat;
 
@@ -11,7 +11,7 @@ int             comparer(char* entree, int salle)
   resultat = my_strcmp(entree, "regarder");
   if (resultat == 0)
     {
-      look(salle);
+      look();
       return (0);
     }
 
@@ -69,7 +69,7 @@ int             comparer(char* entree, int salle)
   resultat = my_strcmp(entree, "fouiller");
   if (resultat == 0)
     {
-      fouiller(salle);
+      fouiller();
     }
 
   resultat = my_strcmp(entree, "prendre");

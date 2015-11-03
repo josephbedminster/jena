@@ -2,11 +2,9 @@
 
 int		main()
 {
-  int		salle;
-
-  salle = 12;
+  SALLE = 12;
   init_globales();
   accueil();
-  salle12(salle);
+  salle12();
   return (0);
 }

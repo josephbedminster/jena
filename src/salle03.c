@@ -5,7 +5,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-void            salle03(int salle)
+void            salle03()
 {
   int           action;
   char  	*entree;
@@ -17,7 +17,7 @@ void            salle03(int salle)
   action = 0;
   g_map[1][1].visited = 1;
   g_map[1][1].content = 1;
-  look(salle);
+  look();
   srand(time(NULL));
   randmuni = rand();
   randmedic = rand();
@@ -40,7 +40,7 @@ void            salle03(int salle)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle);
+      action = readline();
       /*Traitement de laction :*/
       if (action == 1)
         {
@@ -66,8 +66,8 @@ void            salle03(int salle)
 		  my_putstr("Je me dirige vers les quartiers du commandant.\nEnfin, vers MES quartiers.\n\n");
 		}
 	      g_map[1][1].content = 0;
-	      salle = 2;
-	      salle02(salle);
+	      SALLE = 2;
+	      salle02();
 	    }
 	  else
 	    {
@@ -88,8 +88,8 @@ void            salle03(int salle)
 	      //sleep(2);
 	      my_putstr("\nMais c'ette carte me donne un grand acces on dirait.\n\n");
 	      g_map[1][1].content = 0;
-	      salle = 4;
-	      salle04(salle);
+	      SALLE = 4;
+	      salle04();
 	    }
 	}
       if (action == 3)
@@ -101,8 +101,8 @@ void            salle03(int salle)
 	    {
 	      my_putstr("\nICARUS, le nom du vaisseau, logique !\nEsperons que la cabine de pilotage ne sois pas trop endommagee !\n\n");
 	      g_map[1][1].content = 0;
-	      salle = 1;
-	      salle01(salle);
+	      SALLE = 1;
+	      salle01();
 	    }
 	  else
 	    {
@@ -114,12 +114,12 @@ void            salle03(int salle)
 	{
 	  my_putstr("\nTres bien, rebroussons chemin pour l'instant !\n\n");
 	  g_map[1][1].content = 0;
-	  salle = 6;
-	  salle06(salle);
+	  SALLE = 6;
+	  salle06();
 	}
       if (action == 5)
 	{
-	  prendre(salle);
+	  prendre();
 	  action = 0;
 	}
     }

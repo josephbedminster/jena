@@ -5,7 +5,7 @@ extern t_weapon weaponList;
 extern t_attack attackList;
 extern t_player jena;
 
-void            salle23(int salle)
+void            salle23()
 {
   int           action;
   int           randmob;
@@ -16,7 +16,7 @@ void            salle23(int salle)
   action = 0;
   g_map[5][2].visited = 1;
   g_map[5][2].content = 1;
-  look(salle);
+  look();
   srand(time(NULL));
   randmob = rand();
   randmuni = rand();
@@ -39,34 +39,34 @@ void            salle23(int salle)
   while (action == 0)
     {
       /*On propose ici le prompt au joueur*/
-      action = readline(salle);
+      action = readline();
       /*Traitement de laction :*/
       if (action == 1)
         {
 	  my_putstr("\nC'est dommage de quitter cette reserve j'en suis sur que d'autre chose qui pourrait mettre utile se cache dedant.\n\n");
 	  g_map[5][2].content = 0;
-	  salle = 13;
-	  salle13(salle);
+	  SALLE = 13;
+	  salle13();
 	}
       if (action == 4)
         {
 	  my_putstr("\nDes etageres remplie de cartons a ne plus savoir quoi en faire apparament, j'espere en tirer profit");
 	  my_putstr(" pour tout le temp que je met a chercher dans chaque carton...\n\n");
 	  g_map[5][2].content = 0;
-	  salle = 24;
-	  salle24(salle);
+	  SALLE = 24;
+	  salle24();
 	}
 
       /*Prendre*/
       if (action == 5)
         {
-          prendre(salle);
+          prendre();
           action = 0;
         }
       /*fin prendre*/
       if ((action >= 2) && (action <= 3))
         {
-	  erreur_depla(salle);
+	  erreur_depla();
 	  action = 0;
         }
     }
