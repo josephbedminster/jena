@@ -112,7 +112,7 @@ void		look()
       my_putstr("Je ne suis pas mécanicienne (enfin, je crois ?), mais à moins de tomber par hasard\nsur une énorme plaque de métal, et de trouver quelqu'un capable de colmater la faille, impossible de faire decoller le vaisseau sans risquer une dépréssurisation...\n");
     my_putstr("Ou alors... Il suffirait de condamner hermetiquement le hangar. Mais j'ignore encore comment faire. Il faudrait trouver un ordinateur de bord.\n\n");
   }
-  if(salle == 17)
+  if(SALLE == 17)
     {
       my_putstr("Encore un couloir... Il n'y a donc pas d'ascensceur ou de téléporteur à bord ?\n");
       if (DIAG_S03A02 == 0)
