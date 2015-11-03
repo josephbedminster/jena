@@ -98,7 +98,7 @@ void            quisuisje();
 void            show_equip();
 void		utiliser();
 char            *readline_utiliser();
-char             *readline_console();
+char            *readline_console();
 
 void            salle01();
 void            salle02();
