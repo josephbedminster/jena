@@ -111,7 +111,7 @@ int		prendre()
 	  if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
 	    {
 	      ARME_EQUIP = 1;
-	      jena.weaponTab[1].available = 1;
+	      jena.weaponTab[ARME_EQUIP].available = 1;
 	      my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
 	      my_putstr("Un pistolet laser flambant neuf ! Il est chargé et pret a l'emploi !\n");
 	      stats_arme();
@@ -130,7 +130,7 @@ int		prendre()
 	  if ((jena.weaponTab[1].available == 0) && (jena.weaponTab[2].available == 0))
 	    {
 	      ARME_EQUIP = 2;
-	      jena.weaponTab[2].available = 1;
+	      jena.weaponTab[ARME_EQUIP].available = 1;
 	      my_putstr("\nJ'ai fouillé l'armurerie, et devinez ce que j'ai trouvé ?\n");
 	      my_putstr("Un fusil plasma flambant neuf ! Il est chargé et pret a l'emploi !\n");
 	      stats_arme();
@@ -162,9 +162,10 @@ int		prendre()
 	{
 	  if (BOTTES == 0)
 	    {
-	      my_putstr("\nJ'ai trouvé de supeeeerbes bottes en cuirs ! A ma taille en plus !\nJe n'ai jamais été chanceuse pendant les soldes pourtant...\nMa mere me disait que j'avais de trop grands pieds...\n\n");
-	      jena.armure += 4;
-	      BOTTES = 1;
+	      JAMBES_EQUIP = 1;
+	      jena.equip_jambes[JAMBES_EQUIP].possede = 1;
+	      jena.equip_jambes[JAMBES_EQUIP].equipe = 1;
+	      printf("\nJ'ai trouvé de supeeeerbes %s ! A ma taille en plus !\nJe n'ai jamais été chanceuse pendant les soldes pourtant...\nMa mere me disait que j'avais de trop grands pieds...\n\n", jena.equip_jambes[JAMBES_EQUIP].nom_obj);
 	    }
 	  else
 	    {

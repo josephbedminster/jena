@@ -21,7 +21,7 @@ void            salle11()
   MUNI_MAP = 0;
   MEDIC_MAP = 0;
 
-  if ((randmob%4 == 0) && ((jena.weaponTab[1].available == 1) || (jena.weaponTab[2].available == 1)))
+  if ((randmob%4 == 0) && (ARME_EQUIP > 0))
     {
       start_battle();
     }

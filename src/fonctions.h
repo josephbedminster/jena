@@ -3,7 +3,7 @@
 #define MAP_X 4
 #define MAP_Y 10
 #define NB_ATTACK 3
-#define NB_WEAPON 3
+#define NB_WEAPON 4
 #define NBCREA 3
 #include <unistd.h>
 #include <stdlib.h>
@@ -16,6 +16,11 @@ int		ERREUR_PROMPT;
 char*		USER;
 int		SCORE;
 int		ARME_EQUIP;
+int		TETE_EQUIP;
+int		MAINS_EQUIP;
+int		CORPS_EQUIP;
+int		JAMBES_EQUIP;
+
 int		QUISUISJE;
 int		SALLE;
 
@@ -40,11 +45,52 @@ int		DIAG_S09A08;
 int		DIAG_S03A02;
 
 
+/*Modif pour item structures*/
+typedef struct s_tete
+{
+  int	possede;
+  int	equipe;
+  char	*nom_obj;
+  int	armure;
+}	t_tete;
+
+typedef struct s_mains
+{
+  int	possede;
+  int	equipe;
+  char *nom_obj;
+  int armure;
+} t_mains;
+
+typedef struct s_jambes
+{
+  int	possede;
+  int	equipe;
+  char *nom_obj;
+  int armure;
+} t_jambes;
+
+typedef struct s_corps
+{
+  int	possede;
+  int	equipe;
+  char *nom_obj;
+  int armure;
+} t_corps;
+/*fin*/
+
 typedef struct  s_attack
 {
   char          *name;
   int           damage;
 }               t_attack;
+
+typedef struct  s_drop
+{
+  char          *name;
+  int           rate;
+  int		nombre;
+}               t_drop;
 
 typedef struct  s_enemy
 {
@@ -63,7 +109,8 @@ typedef struct  s_weapon
   int           available;
   char          *name;
   int           damage;
-  int		munitions;
+  int		        munitions;
+  int           nb_coup;
 }               t_weapon;
 
 // le joueur
@@ -74,6 +121,10 @@ typedef struct  s_player
   int           pv;
   int		pvmax;
   int		armure;
+  t_mains	*equip_mains;
+  t_jambes	*equip_jambes;
+  t_tete	*equip_tete;
+  t_corps	*equip_corps;
   int		medicaments;
   int		munitions;
   int		munitionsmax;
@@ -149,29 +200,6 @@ void            fouiller();
 int		prendre();
 void            score();
 
-typedef struct s_tete
-{
-  char nom_obj;
-  int def;
-} t_tete;
-
-typedef struct s_corps
-{
-  char nom_obj;
-  int def;
-} t_corps;
-
-typedef struct s_jambes
-{
-  char nom_obj;
-  int def;
-} t_jambes;
-
-typedef struct s_pied
-{
-  char nom_obj;
-  int def;
-} t_pied;
 
 typedef struct s_inventaire
 {
