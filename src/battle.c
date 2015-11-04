@@ -17,7 +17,6 @@ static t_enemy enemyList[NBCREA] = {
   {"Petite larve", 1, 50, 50, 4, attackList, 10},
   {"Larve guerrière", 1, 100, 100, 5, attackList, 15}
 };
-   // A utiliser pour les boss
 
 
 
@@ -180,6 +179,7 @@ int		start_battle()
   int		i;
   int		res;
   int		is_lvlup;
+  int	        drop;
 
   system("clear");
   srand(time(NULL));
@@ -201,7 +201,27 @@ int		start_battle()
   else
     {
       if (SALLE == 16)
-	BOSS_BATTU = 1;
+	{
+	  BOSS_BATTU = 1;
+	  srand(time(NULL));
+	  drop = 1 + rand() % 99;
+	  if ((drop < 50) && (drop >= 0))
+	    {
+	      my_putstr("Oh la larve geante a lacher un armure");
+	    }
+	  if ((drop >= 50) && (drop < 75))
+	    {
+	      my_putstr("Oh la larve geante a lacher un des gants et un casque");;
+	    }
+	  if ((drop >= 75) && (drop < 95))
+	    {
+	      my_putstr("He bien battre cette ennorme larve pour trouver des medicaments et des munitions, je pense que cela vallait vraiment le coup");
+	    }
+	  if ((drop >= 95) && (drop <= 100))
+	    {
+	      my_putstr("Oh la larve geante a lacher un arme !!!!!");
+	    }
+	}
       is_lvlup = give_exp(e.exp);
       stats_jena(is_lvlup);
       SCORE = SCORE + 20;
