@@ -18,7 +18,7 @@ void		fouiller()
     }
   if(MUNI_MAP > 0)
     {
-      my_putstr(" - des <munitions>\n");
+      my_putstr(" - des <munitions>\n\n");
       is_muni = 1;
     }
 

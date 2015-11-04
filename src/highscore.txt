@@ -1,3 +1,2 @@
-e : 116 Pts. (Cause la mort : radiations)
-e : 101 Pts. (Cause la mort : Larve géante)
-f : 0 Pts. (Cause la mort : Larve géante)
+Curlly (Niv. 4) : 301 Pts. (Cause la mort : Larve guerrière)
+Joey (Niv. 1): 0 Pts. (Cause la mort : suicide)

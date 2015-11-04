@@ -53,9 +53,8 @@ int		prendre()
 	{
 	  my_putstr("\n\n");
 	  jena.pv = jena.pvmax;
-	  my_putstr("\n\nJe me suis reposée un peu, j'ai récupéré toute ma forme !\n");
-	  printf("[JENA] : %d/%d PVs.", jena.pv, jena.pvmax);
-	  my_putstr("\n\n");
+	  my_putstr("Je me suis reposée un peu, j'ai récupéré toute ma forme !\n");
+	  my_putstr("\n");
 	  return (0);
 	}
       else if (strcmp(entree, "carte") == 0)

@@ -1,4 +1,5 @@
 #include "fonctions.h"
+extern t_player jena;
 
 void		score(char *cause)
 {
@@ -9,12 +10,12 @@ void		score(char *cause)
     {
       my_putstr("Jena est morte par suicide.\n");
       cause = "suicide";
-   }
-  if (strcmp(cause, "radiations") == 0)
+    }
+  else if (strcmp(cause, "radiations") == 0)
     {
       my_putstr("Jena est morte irradiée.\n");
       cause = "radiations";
-   }
+    }
   else
     {
       my_putstr("Jena s'est fait massacrer par : ");
@@ -28,7 +29,7 @@ void		score(char *cause)
      exit(1);
    }
 
- fprintf(f,"%s : %d Pts. (Cause la mort : %s)\n", USER, SCORE, cause);
+ fprintf(f,"%s (Niv. %d) : %d Pts. (Cause la mort : %s)\n", USER, jena.lvl, SCORE, cause);
  fclose(f);
  system("cat src/highscore.txt");
  exit(0);

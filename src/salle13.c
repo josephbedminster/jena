@@ -80,7 +80,7 @@ void            salle13()
 	}
       if (action == 5)
         {
-          erreur_prendre();
+          prendre();
 	  action = 0;
 	}
     }

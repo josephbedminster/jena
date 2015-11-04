@@ -50,11 +50,11 @@ void            salle14()
         }
       if (action == 4)
         {
-	    g_map[5][0].content = 0;
-		  SALLE = 15;
-		  salle15();
-				}
-	  
+	  g_map[5][0].content = 0;
+	  SALLE = 15;
+	  salle15();
+	}
+
       /*Prendre*/
       if (action == 5)
         {
@@ -63,7 +63,7 @@ void            salle14()
         }
         /*fin prendre*/
        if ((action == 1) || (action == 3))
-	 {  
+	 {
 	   erreur_depla();
 	   action = 0;
   	}
