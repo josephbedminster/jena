@@ -41,7 +41,7 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
 ###![image infos] (http://www.hostingpics.net/thumbs/11/25/01/mini_112501computerscreen14.png) Informations
 Nombre de lignes : | Nombre de caracteres :
 -------- | ---
-3337 | 82221
+3702 | 90397
    
    
 Vous pouvez maintenant donner votre avis via le formulaire suivant : http://goo.gl/forms/JT5qvC6Imy
