@@ -31,6 +31,10 @@ void		stats_arme()
 {
   my_putstr("\n                =========================\n");
   my_putstr("                    ");
+  if (ARME_EQUIP == 0)
+    my_putstr("     ");
+  else if ((ARME_EQUIP == 1) || (ARME_EQUIP == 2))
+  my_putstr(" ");
   my_putstr(jena.weaponTab[ARME_EQUIP].name);
   my_putstr("\n                =========================\n");
   printf("                Dégats : %d par coup\n", jena.weaponTab[ARME_EQUIP].damage);
@@ -75,10 +79,10 @@ void		show_equip()
   int armure;
 
   armure = jena.equip_tete[TETE_EQUIP].armure +jena.equip_mains[MAINS_EQUIP].armure + jena.equip_corps[CORPS_EQUIP].armure + jena.equip_jambes[JAMBES_EQUIP].armure;
-  printf("                - Tête : %s (Armure +%d)\n", jena.equip_tete[TETE_EQUIP].nom_obj, jena.equip_tete[TETE_EQUIP].armure);
-  printf("                - Corps : %s (Armure +%d)\n", jena.equip_corps[CORPS_EQUIP].nom_obj, jena.equip_corps[CORPS_EQUIP].armure);
-  printf("                - Mains : %s (Armure +%d)\n", jena.equip_mains[MAINS_EQUIP].nom_obj, jena.equip_mains[MAINS_EQUIP].armure);
-  printf("                - Jambes : %s (Armure +%d)\n", jena.equip_jambes[JAMBES_EQUIP].nom_obj, jena.equip_jambes[JAMBES_EQUIP].armure);
+  printf("                - Tête : %s (+%d)\n", jena.equip_tete[TETE_EQUIP].nom_obj, jena.equip_tete[TETE_EQUIP].armure);
+  printf("                - Corps : %s (+%d)\n", jena.equip_corps[CORPS_EQUIP].nom_obj, jena.equip_corps[CORPS_EQUIP].armure);
+  printf("                - Mains : %s (+%d)\n", jena.equip_mains[MAINS_EQUIP].nom_obj, jena.equip_mains[MAINS_EQUIP].armure);
+  printf("                - Jambes : %s (+%d)\n", jena.equip_jambes[JAMBES_EQUIP].nom_obj, jena.equip_jambes[JAMBES_EQUIP].armure);
 }
 
 int		give_exp(int exp)

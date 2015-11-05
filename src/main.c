@@ -2,6 +2,7 @@
 
 int		main()
 {
+  warning();
   SALLE = 12;
   init_globales();
   accueil();

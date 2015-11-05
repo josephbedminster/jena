@@ -39,15 +39,17 @@ char             *readline_utiliser()
   char          *entree;
   if (SALLE == 1)
     {
-      printf("\nJ'ai : - %d medicaments\n\n", jena.medicaments);
       my_putstr("Je peux aussi utiliser la <console> du vaisseau\n\n");
       my_putstr("   Que dois-je utiliser ? > ");
-  entree = readLine();
-  return (entree);
+      entree = readLine();
+      return (entree);
     }
   else
     {
-      printf("J'ai : - %d medicaments\n\n", jena.medicaments);
+      if (jena.medicaments >= 1)
+	{
+	  printf("\nJ'ai : - %d medicaments\n\n", jena.medicaments);
+	}
       my_putstr("   Que dois-je utiliser ? > ");
       entree = readLine();
       return (entree);

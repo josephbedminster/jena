@@ -131,6 +131,7 @@ typedef struct  s_player
   t_weapon      *weaponTab;
 }               t_player;
 
+void		warning();
 char            *my_strupcase(char *str);
 void            inventaire();
 void            show_items();
