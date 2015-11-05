@@ -96,7 +96,7 @@ int             comparer(char* entree)
   resultat = my_strcmp(entree, "kill myself with hands");
   if (resultat == 0)
     {
-      my_putstr("Vous vous etes suicide avec vos mains.\n");
+      my_putstr("\nJena, désespérée, serre ses mains autour de sa gorge...\n");
       score("Suicide");
       gameover();
       exit(0);
@@ -107,6 +107,6 @@ int             comparer(char* entree)
     {
       utiliser();
       return (0);
-    } 
+    }
   return (0);
 }
