@@ -38,7 +38,7 @@ void             utiliser()
 	    }
   	}
     }
-  if (strcmp(entree, "console") == 0)
+  else if (strcmp(entree, "console") == 0)
     {
       if (SALLE == 1)
 	{

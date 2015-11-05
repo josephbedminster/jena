@@ -69,7 +69,7 @@ void		show_items()
   if (CARTE_COM == 1)
     my_putstr("                - Carte du commandant\n");
   if (COMBI == 1)
-    my_putstr("                - Combinaison\n\n");
+    my_putstr("                - Combinaison\n");
 
 }
 

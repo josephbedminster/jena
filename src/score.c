@@ -23,9 +23,9 @@ void		score(char *cause)
       my_putstr(".\n");
     }
   my_putstr("\n");
-  my_putstr("                     ==========================\n");
-  my_putstr("                               SCORES\n");
-  my_putstr("                     ==========================\n");
+  my_putstr("                       ==========================\n\n");
+  my_putstr("                                 SCORES\n\n");
+  my_putstr("                       ==========================\n");
  FILE *f = fopen("src/highscore.txt", "a+");
  if (f == NULL)
    {
