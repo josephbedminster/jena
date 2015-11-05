@@ -37,8 +37,7 @@ void            salle16()
       /*Traitement de laction :*/
       if (action == 3)
         {
-	  my_putstr("\nEt bien atteindre le fond de se hangard etait long,mais bon j'ai trouver de petit");
-	  my_putstr(" chose interessante mais se trou dans la coque m'inquiette.\n\n");
+	  my_putstr("\nVous avez raison, je ferai mieux de ne pas rester dans le coin trop longtemps !\n");
 	  g_map[7][0].content = 0;
 	  SALLE = 15;
           salle15();
@@ -50,7 +49,10 @@ void            salle16()
 	      start_battle();
 	    }
 	  else
-	    my_putstr("message a coder");
+	    {
+	      my_putstr("Le cadavre de la larve géante gît au sol... C'est répugnant !\n");
+	      my_putstr("Je ne vois rien à faire pour le moment, à moins que vous ne sachiez comment combler le trou béant dans la coque ?\n");
+	    }
 	  action = 0;
         }
       /*Prendre*/

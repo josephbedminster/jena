@@ -115,13 +115,13 @@ void		look()
       my_putstr("Et surtout du genre qui bloque la sortie du hangar !\n");
       my_putstr("Berk, on dirait une grosse larve mutante qui... Oh là là !\n");
       my_putstr("Qui pond des petites créatures qui grouillent dans toutes les directions !\n");
-      my_putstr("Ils ont grignotté des parties de la coque, des tuyaux...\n");
+      my_putstr("Ils ont grignotté une partie de la coque, des tuyaux...\n");
       my_putstr("J'en vois qui s'engouffrent dans les tuyaux et les canalisations du vaisseau !\n");
       my_putstr("Si je veux sortir par la porte du hangar, il va falloir se débarrasser de la larve géante et trouver un moyen d'ouvrir la porte.\n");
       my_putstr("Ou alors, je fais VITE demi-tour et je trouve un autre moyen de sortir de ce vaisseau !\n");
-      my_putstr("Je vous avoue que j'ai une préférence pour la seconde option !\n\n");
-      
-  }
+      my_putstr("Je vous avoue que j'ai une préférence pour la seconde option !\n");
+      my_putstr("A vous de choisir : au sud, combat en perpective, au nord, je prends mes jambes à mon cou !\n\n");
+    }
   if(SALLE == 17)
     {
       my_putstr("Encore un couloir... Il n'y a donc pas d'ascensceur ou de téléporteur à bord ?\n");
