@@ -18,7 +18,7 @@ int             readline()
 	}
       /*FIN*/
       ERREUR_PROMPT = ERREUR_PROMPT + 1;
-      my_putstr("\n   Que dois-je faire : ");
+      my_putstr("   Que dois-je faire : ");
       entree = readLine();
       result = comparer(entree);
     }
@@ -29,7 +29,7 @@ int             readline()
 char             *readline_prendre()
 {
   char          *entree;
-  my_putstr("\n   Que dois-je prendre ? > ");
+  my_putstr("\n       Que dois-je prendre ? > ");
   entree = readLine();
   return (entree);
 }
@@ -40,7 +40,7 @@ char             *readline_utiliser()
   if (SALLE == 1)
     {
       my_putstr("Je peux aussi utiliser la <console> du vaisseau\n");
-      my_putstr("\n   Que dois-je utiliser ? > ");
+      my_putstr("\n       Que dois-je utiliser ? > ");
       entree = readLine();
       return (entree);
     }
@@ -50,7 +50,7 @@ char             *readline_utiliser()
 	{
 	  printf("\nJ'ai : - %d medicaments\n", jena.medicaments);
 	}
-      my_putstr("\n   Que dois-je utiliser ? > ");
+      my_putstr("\n       Que dois-je utiliser ? > ");
       entree = readLine();
       return (entree);
     }
@@ -59,7 +59,7 @@ char             *readline_utiliser()
 char             *readLine_code()
 {
   char          *entree;
-  my_putstr("\n   CODE > ");
+  my_putstr("\n       CODE > ");
   entree = readLine();
   return (entree);
 }
