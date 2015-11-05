@@ -6,7 +6,7 @@ extern t_player jena;
 void             utiliser()
 {
   char          *entree;
-  
+
   entree = malloc(sizeof(char*));
   entree = readline_utiliser();
   if ((strcmp(entree, "medicament") == 0) || (strcmp(entree, "medicaments") == 0))
@@ -96,5 +96,9 @@ void             utiliser()
 	      my_putstr("blabla4\n");
 	      }
 	}
+    }
+  else
+    {
+      my_putstr("\nRien à utiliser ici. \n\n");
     }
 }
