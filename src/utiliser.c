@@ -59,7 +59,7 @@ void             utiliser()
 	  my_putstr("|                                                |\n");
 	  my_putstr("|                                                |\n");
 	  my_putstr(" ------------------------------------------------ \n");
-	  sleep(2);
+	  //sleep(2);
 	  system("clear");
 	  my_putstr("\nLa console me donne accées a plusieur option du vaisseaux\n\n");
 	  my_putstr(" ------------------------------------------------\n");

@@ -48,7 +48,7 @@ void            salle12()
 	      my_putstr("J'en compte quatre. Il y a du sang partout... Ils s'en sont moins bien sortis que moi...\n");
 	      //sleep(2);
 	      my_putstr("J'ai pris leurs pouls, tous morts.\n");
-	      sleep(7);
+	      //sleep(7);
 	      my_putstr("Je ne peux rien faire pour eux, continuons.\n");
 	      DIAG_S12A09 = 1;
 	    }

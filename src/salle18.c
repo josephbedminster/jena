@@ -71,7 +71,7 @@ void            salle18()
 		{
 		  my_putstr("J'entre dans le hangar !\nIl y a un enorme trou dans la coque !\n");
 		  my_putstr("Je me sens mal !...\n");
-		  ////sleep(2);
+		  //sleep(2);
 		  my_putstr("Je...\n");
 		  gameover();
 		  score("radiations");
