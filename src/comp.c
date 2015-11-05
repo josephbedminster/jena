@@ -89,7 +89,7 @@ int             comparer(char* entree)
   resultat = my_strcmp(entree, "quitter");
   if (resultat == 0)
     {
-      score();
+      score("Quitter");
       exit(0);
     }
 
