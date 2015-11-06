@@ -38,6 +38,20 @@ int		prendre()
       }
     }
   /*debut des salles*/
+  /*DEBUT SALLE 01*/
+
+ if(SALLE == 01)
+    {
+      if (strcmp(entree, "console") == 0)
+	{
+	  my_putstr("Je ne peux pas prendre la console ! Il faut que je trouve le moyen de m'en servir !\n\n");
+	}
+      else
+	{
+	  my_putstr("Il n'y a rien de tel a prendre ici !\n\n");
+	}
+    }
+
   /*DEBUT 02*/
   if(SALLE == 02)
     {
@@ -48,6 +62,11 @@ int		prendre()
 	  if (DOUCHE_TAKEN == 0)
 	      SCORE = SCORE + 20;
 	  return (0);
+	}
+     
+      else if (strcmp(entree, "lit") == 0)
+	{
+	  my_putstr("Je ne peux pas prendre la lit voyons ! Mais je peux l'utiliser pour me reposer !\n\n");
 	}
       else if (strcmp(entree, "carte") == 0)
 	{
@@ -86,9 +105,10 @@ int		prendre()
 	      my_putstr("\nJ'ai trouvé une cartouche d'energie !\n");
 	      my_putstr("Je peux m'en servir pour recharger des armes ou des appareils.\n");
 	      jena.munitions += 16;
+	      my_putstr("[JENA] : Munitions + 20\n");
 	      printf("J'ai maintenant %d munitions.\n\n", jena.munitions);
-	      MUNI_ARMU -= 16;
-	      SCORE = SCORE + 16;
+	      MUNI_ARMU -= 20;
+	      SCORE = SCORE + 20;
 	    }
 	  else
 	    {

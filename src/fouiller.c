@@ -34,13 +34,10 @@ if (SALLE == 1)
       /*SALLE 2*/
   if (SALLE == 2)
     {
+      my_putstr(" - un <lit> pour se reposer\n");
       if (CARTE_COM == 0)
         {
 	  my_putstr(" - une <carte> d'identification\n\n");
-	}
-      else
-	{
-	  my_putstr("Rien.\n\n");
 	}
       return;
     }

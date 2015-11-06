@@ -4,106 +4,98 @@ extern t_attack attackList;
 extern t_player jena;
 
 int             comparer(char* entree)
-{
-  int           resultat;
-
-  resultat = 0;
-  resultat = my_strcmp(entree, "regarder");
-  if (resultat == 0)
+{ 
+  if ((my_strcmp(entree, "regarder") == 0) || (atoi(entree) == 5))
     {
       look();
       return (0);
     }
-
-  resultat = my_strcmp(entree, "ouest");
-  if (resultat == 0)
-    return (1);
-
-  resultat = my_strcmp(entree, "est");
-  if (resultat == 0)
-    return (2);
-
-  resultat = my_strcmp(entree, "nord");
-  if (resultat == 0)
-    return (3);
-
-  resultat = my_strcmp(entree, "sud");
-  if (resultat == 0)
-    return (4);
-
-  resultat = my_strcmp(entree, "aide");
-  if (resultat == 0)
+  
+  if ((my_strcmp(entree, "ouest") == 0) || (atoi(entree) == 4))
+    {
+      return (1);
+    }
+  
+  if ((my_strcmp(entree, "est") == 0) || (atoi(entree) == 2))
+    {
+      return (2);
+    }
+  
+  if ((my_strcmp(entree, "nord") == 0) || (atoi(entree) == 1))
+    {
+      return (3);
+    }
+  
+  if ((my_strcmp(entree, "sud") == 0) || (atoi(entree) == 3))
+    {
+      return (4);
+    }
+  
+  
+  if ((my_strcmp(entree, "aide") == 0) || (atoi(entree) == 0))
     {
       help();
       return (0);
     }
-
-  resultat = my_strcmp(entree, "qui suis-je ?");
-  if (resultat == 0)
+  
+  
+  if ((my_strcmp(entree, "qui suis-je ?") == 0) || (atoi(entree) == 12))
     {
       quisuisje();
       return (0);
     }
-
-  resultat = my_strcmp(entree, "carte");
-  if (resultat == 0)
+  
+  if ((my_strcmp(entree, "carte") == 0) || (atoi(entree) == 9))
     {
       show_map();
       return (0);
     }
-
-  resultat = my_strcmp(entree, "stats");
-  if (resultat == 0)
+  
+  if ((my_strcmp(entree, "stats") == 0) || (atoi(entree) == 10))
     {
       stats_jena(0);
       return (0);
     }
-
-  resultat = my_strcmp(entree, "inventaire");
-  if (resultat == 0)
+  
+  if ((my_strcmp(entree, "inventaire") == 0) || (atoi(entree) == 11))
     {
       inventaire();
       return(0);
     }
 
-  resultat = my_strcmp(entree, "fouiller");
-  if (resultat == 0)
+  if ((my_strcmp(entree, "fouiller") == 0) || (atoi(entree) == 6))
     {
       fouiller();
+      return(0);
     }
-
-  resultat = my_strcmp(entree, "prendre");
-  if (resultat == 0)
+  
+  if ((my_strcmp(entree, "prendre") == 0) || (atoi(entree) == 7))
     {
       return (5);
     }
-
-  resultat = my_strcmp(entree, "va te pendre");
-  if (resultat == 0)
-    {
-      my_putstr("Me pendre ? Des que j'aurai une corde, avec plaisir !\n");
-      my_putstr("En attendant, vouz allez devoir m'aider !\n");
-      return (0);
-    }
-
-  resultat = my_strcmp(entree, "quitter");
-  if (resultat == 0)
+  
+  if (my_strcmp(entree, "va te pendre") == 0)
+  {
+    my_putstr("Me pendre ? Des que j'aurai une corde, avec plaisir !\n");
+    my_putstr("En attendant, vouz allez devoir m'aider !\n");
+    return (0);
+  }
+  
+  if ((my_strcmp(entree, "quitter") == 0) || (atoi(entree) == 13))
     {
       score("Quitter");
       exit(0);
     }
-
-  resultat = my_strcmp(entree, "kill myself with hands");
-  if (resultat == 0)
+  
+  if (my_strcmp(entree, "kill myself with hands") == 0)
     {
       my_putstr("\nJena, désespérée, serre ses mains autour de sa gorge...\n");
       score("Suicide");
       gameover();
       exit(0);
     }
-
-  resultat = my_strcmp(entree, "utiliser");
-  if (resultat == 0)
+  
+  if ((my_strcmp(entree, "utiliser") == 0) || (atoi(entree) == 8))
     {
       utiliser();
       return (0);

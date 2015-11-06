@@ -45,7 +45,7 @@ void            salle09()
         {
 	  if (DIAG_S09A08 == 0)
 	    {
-	      my_putstr("\n\nJ'entre dans l'infirmierie. Esperons que j'y trouve de quoi me soigner.\n");
+	      my_putstr("\n\nJ'entre dans l'infirmerie. Esperons que j'y trouve de quoi me soigner.\n");
 	      my_putstr("Il y a encore un homme mort sur la table d'operation... Le sol est recouvert de sang.\n");
 	      my_putstr("Il a du se trainer jusqu'ici et se hisser sur la table...\n");
 	      my_putstr("Je m'approche du corps...\n");

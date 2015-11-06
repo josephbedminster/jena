@@ -17,8 +17,7 @@ void		stats_jena(int is_lvlup)
     printf("                Niveau : \033[1;32m%d\033[0m (+1)\n", jena.lvl);
   else
     printf("                Niveau : %d\n", jena.lvl);
-  printf("                Experience : %d\n", jena.exp);
-  printf("                Prochain niveau : %d\n", xpNeeded(jena.lvl));
+  printf("                Experience : [%d/%d]\n", jena.exp, xpNeeded(jena.lvl));
   if (is_lvlup)
     printf("                PV's : \033[1;32m[%d/%d]\033[0m (+ 10)\n", jena.pv, jena.pvmax);
   else

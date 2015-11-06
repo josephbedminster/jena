@@ -11,12 +11,6 @@ static t_attack attackList[NB_ATTACK] = {
   {"Jet d'acide", 7}
 };
 
-/*static t_drop dropList[2] = {
-  {"Munitions", 5},
-  {"Bandage", 1}
-};
-*/
-
 /*TABLE DES MONSTRES*/
 /*NAME, LVL, PV, PVMAX, STRENGHT, Liste d'attaque structure, EXP donne, items drop*/
 static t_enemy BossList[1] = {
@@ -37,7 +31,7 @@ int		player_attack(t_enemy *e)
 {
   int		commande;
   int           player_attack(t_enemy *e);
-  int coups_arme;
+  int		coups_arme;
 
   commande = 0;
   my_putstr("Que souhaitez vous faire ?\n");
@@ -64,8 +58,8 @@ int		player_attack(t_enemy *e)
 	{
 	  my_putstr("Vous n'avez pas assez de munitions pour attaquer !\n");
 	  printf("Votre arme requiert [%d] munitions pour tirer. Il vous reste [%d] munitions.\n", jena.weaponTab[ARME_EQUIP].munitions, jena.munitions);
-	  my_putstr("\033[1;31mVous attaquez avec vos mains ! Vous infligez 1 point de dégat !\033[0m\n");
-	  e->pv -= 1;
+	  my_putstr("\033[1;31mVous attaquez avec vos poings ! Vous infligez 5 point de dégats !\033[0m\n");
+	  e->pv -= 5;
 	}
       else
 	{
@@ -199,7 +193,6 @@ int		start_battle()
   int		i;
   int		res;
   int		is_lvlup;
-  int	        drop;
 
   system("clear");
   srand(time(NULL));
@@ -220,44 +213,14 @@ int		start_battle()
     }
   else
     {
-      if (SALLE == 16)
-	{
-	  BOSS_BATTU = 1;
-	  SCORE += 20;
-	  srand(time(NULL));
-	  drop = 1 + rand() % 99;
-	  if ((drop >= 0) && (drop <= 44))
-	    {
-	      MAINS_EQUIP = 1;
-	      jena.equip_mains[MAINS_EQUIP].possede = 1;
-	      printf("J'ai trouvé : %s (Armure + %d) près du cadavre de la larve géante !\nJe l'équipe tout de suite !\n", jena.equip_mains[MAINS_EQUIP].nom_obj, jena.equip_mains[MAINS_EQUIP].armure);
-	    }
-	  if ((drop >= 45) && (drop <= 69))
-	    {
-	      CORPS_EQUIP = 1;
-	      jena.equip_corps[CORPS_EQUIP].possede = 1;
-	      printf("J'ai trouvé : %s (Armure + %d) près du cadavre de la larve géante !\nJe l'équipe tout de suite !\n", jena.equip_corps[CORPS_EQUIP].nom_obj, jena.equip_corps[CORPS_EQUIP].armure);
-	    }
-	  if ((drop >= 70) && (drop <= 89))
-	    {
-	      jena.munitions += 12;
-	      jena.medicaments += 4;
-	      my_putstr("J'ai trouvé des munitions et des bandages derrière le cadavre de la larve géante.\n");
-	      my_putstr("[JENA] : Munitions + 12\n");
-	      my_putstr("[JENA] : Médicaments + 4\n\n");
-	    }
-	  if ((drop >= 90) && (drop <= 100))
-	    {
-	      ARME_EQUIP = 3;
-	      jena.weaponTab[ARME_EQUIP].available = 1;
-	      printf("J'ai trouvé : %s (Dégats : %d) près du cadavre de la larve géante !\nJe l'équipe tout de suite !\n", jena.weaponTab[ARME_EQUIP].name, jena.weaponTab[ARME_EQUIP].damage);
-	      stats_arme();
-	    }
-	}
-      is_lvlup = give_exp(e.exp);
-      stats_jena(is_lvlup);
-      SCORE = SCORE + 20;
-      my_putstr("\nJ'ai eu chaud ! Merci pour votre aide !\n\n");
+      drop_item();
     }
-  return (0);
+  /*FIN MOB DROP*/
+  
+  /*LVLUP*/
+  is_lvlup = give_exp(e.exp);
+  stats_jena(is_lvlup);
+  SCORE = SCORE + 20;
+  my_putstr("\nJ'ai eu chaud ! Merci pour votre aide !\n\n");
+return (0);
 }

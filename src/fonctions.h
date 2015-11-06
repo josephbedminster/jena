@@ -88,7 +88,6 @@ typedef struct  s_attack
 typedef struct  s_drop
 {
   char          *name;
-  int           rate;
   int		nombre;
 }               t_drop;
 
@@ -131,6 +130,7 @@ typedef struct  s_player
   t_weapon      *weaponTab;
 }               t_player;
 
+void		drop_item();
 void		warning();
 char            *my_strupcase(char *str);
 void            inventaire();

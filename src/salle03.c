@@ -71,7 +71,8 @@ void            salle03()
 	    }
 	  else
 	    {
-	      my_putstr("\nMAUVAIS CODE.\nOups, on dirait que ce n'est pas demain la veille que l'ont trouvera le code!\n\n");
+	      my_putstr("\nJ'essaye le code....\nOups, on dirait que ce n'est pas demain la veille qu'on entrera dans la piece suivante...\n");
+	      my_putstr("Le pavé tactile de la machine ne contient que des lettres, je me demande quel peut-etre le code...\n\n");
 	      action = 0;
 	    }
 	}
@@ -84,9 +85,9 @@ void            salle03()
 	    }
 	  else
 	    {
-	      my_putstr("\nTien c'ette porte un detecteur de carte magnetique, et si j'esayer la mienne...\n");
+	      my_putstr("\nCette porte ne s'ouvre qu'avec une carte magnetique... Essayons celle que j'ai trouvé dans ma cabine...\n");
 	      //sleep(2);
-	      my_putstr("\nMais c'ette carte me donne un grand acces on dirait.\n\n");
+	      my_putstr("\nParfait, ca marche ! La porte s'ouvre !\n\n");
 	      g_map[1][1].content = 0;
 	      SALLE = 4;
 	      salle04();
@@ -97,7 +98,7 @@ void            salle03()
 	  system("cat src/code_pil.txt");
 	  my_putstr("\n");
 	  entree = readLine_code();
-	  if ((strcmp(entree, "ICARUS") == 0))
+	  if ((strcmp(entree, "ICARUS") == 0) || (strcmp(entree, "icarus") == 0))
 	    {
 	      my_putstr("\nICARUS, le nom du vaisseau, logique !\nEsperons que la cabine de pilotage ne sois pas trop endommagee !\n\n");
 	      g_map[1][1].content = 0;
