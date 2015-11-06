@@ -92,19 +92,19 @@ void             utiliser()
 	  entree = readline_console();
 	  if (strcmp(entree, "1") == 0)
 	    {
-	      my_putstr("blabla\n");
+	      my_putstr("du bon shit sa mere blabla\n");
 	    }
 	  if (strcmp(entree, "2") == 0)
 	    {
-	      my_putstr("blabla2\n");
+	      my_putstr("du bon shit sa mere blabla2\n");
 	    }
 	  if (strcmp(entree, "3") == 0)
 	    {
-	      my_putstr("blabla3\n");
+	      my_putstr("du bon shit sa mere blabla3\n");
 	    }
 	  if (strcmp(entree, "4") == 0)
 	    {
-	      my_putstr("blabla4\n");
+	      my_putstr("du bon shit sa mere blabla4\n");
 	      }
 	}
     }
