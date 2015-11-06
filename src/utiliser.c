@@ -13,7 +13,7 @@ void             utiliser()
     {
       if ((jena.medicaments > 0) && (jena.pv == jena.pvmax))
 	{
-	  printf("\nInutile de vous soigner maintenant, vous avez %d points de vie sur %d !\n", jena.pv, jena.pvmax);
+	  my_putstr("\nInutile de me soigner maintenant, je me sens parfaitement bien !");
 	}
       else if (jena.medicaments < 1)
 	{
@@ -38,6 +38,17 @@ void             utiliser()
 	    }
   	}
     }
+
+  else if (strcmp(entree, "lit") == 0)
+    {
+      if (SALLE == 2)
+	{
+	  jena.pv = jena.pvmax;
+	  my_putstr("\nJe me suis reposée un peu, j'ai récupéré toute ma forme !\n");
+	  printf("[JENQ] PV's : \033[1;32m[%d/%d]\033[0m\n\n", jena.pv, jena.pvmax);
+	}
+    }
+
   else if (strcmp(entree, "console") == 0)
     {
       if (SALLE == 1)
@@ -99,6 +110,6 @@ void             utiliser()
     }
   else
     {
-      my_putstr("\nRien à utiliser ici. \n\n");
+      my_putstr("\nIl n' a rien à utiliser ici. \n\n");
     }
 }

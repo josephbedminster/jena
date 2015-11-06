@@ -37,23 +37,23 @@ char             *readline_prendre()
 char             *readline_utiliser()
 {
   char          *entree;
+
+  if (jena.medicaments >= 1)
+    {
+      printf("\nJ'ai : - %d medicaments.\n", jena.medicaments);
+    }
+
   if (SALLE == 1)
     {
-      my_putstr("Je peux aussi utiliser la <console> du vaisseau\n");
-      my_putstr("\n       Que dois-je utiliser ? > ");
-      entree = readLine();
-      return (entree);
+      my_putstr("\nJe peux utiliser la <console> du vaisseau\n");
     }
-  else
+  if (SALLE == 2)
     {
-      if (jena.medicaments >= 1)
-	{
-	  printf("\nJ'ai : - %d medicaments\n", jena.medicaments);
-	}
-      my_putstr("\n       Que dois-je utiliser ? > ");
-      entree = readLine();
-      return (entree);
+      my_putstr("\nJe peux utiliser le <lit> pour me reposer\n");
     }
+  my_putstr("\n       Que dois-je utiliser ? > ");
+  entree = readLine();
+  return (entree);
 }
 
 char             *readLine_code()

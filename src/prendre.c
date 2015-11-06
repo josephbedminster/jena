@@ -15,9 +15,9 @@ int		prendre()
   entree = readline_prendre();
   if(MEDIC_MAP > 0)
     {
-      if (strcmp(entree, "medicament") == 0)
+      if ((strcmp(entree, "medicament") == 0) || strcmp(entree, "medicaments") == 0)
       {
-	my_putstr("\nUne chance d'avoir trouvé médicament.\n");
+	my_putstr("\nUne chance d'avoir trouvé un médicament.\n");
 	my_putstr("[JENA] : médicaments + 1\n\n");
 	jena.medicaments += 1;
 	MEDIC_MAP = 0;
@@ -49,14 +49,6 @@ int		prendre()
 	      SCORE = SCORE + 20;
 	  return (0);
 	}
-      else if (strcmp(entree, "du repos") == 0)
-	{
-	  my_putstr("\n\n");
-	  jena.pv = jena.pvmax;
-	  my_putstr("Je me suis reposée un peu, j'ai récupéré toute ma forme !\n");
-	  my_putstr("\n");
-	  return (0);
-	}
       else if (strcmp(entree, "carte") == 0)
 	{
 	  if (CARTE_COM == 0)
@@ -76,7 +68,7 @@ int		prendre()
 	    }
 	  else
 	    {
-	      my_putstr("La radio doit dysfonctionner, je n'ai rien compris a votre précédent message !\n\n");
+	      my_putstr("\nJe n'ai rien trouvé de tel ici !\n\n");
 	    }
 	  return (0);
 	}
@@ -100,7 +92,7 @@ int		prendre()
 	    }
 	  else
 	    {
-	      my_putstr("J'ai deja pris toutes les munitions que j'ai pu trouver !\n");
+	      my_putstr("\nJ'ai deja pris toutes les munitions que j'ai pu trouver !\n");
 	    }
 	}
       /*FIN MUNITIONS*/
@@ -160,7 +152,7 @@ int		prendre()
     {
       if (strcmp(entree, "bottes") == 0)
 	{
-	  if (BOTTES == 0)
+	  if (jena.equip_jambes[1].possede == 0)
 	    {
 	      JAMBES_EQUIP = 1;
 	      jena.equip_jambes[JAMBES_EQUIP].possede = 1;
@@ -174,7 +166,7 @@ int		prendre()
 	}
       else
 	{
-	  my_putstr("Je ne vois pas de ");
+	  my_putstr("\nJe ne vois pas de ");
 	  my_putstr(entree);
 	  my_putstr(" dans cette salle !\n\n");
 	}
@@ -200,7 +192,7 @@ int		prendre()
 	}
       else
 	{
-	  my_putstr("Je ne vois pas de ");
+	  my_putstr("\nJe ne vois pas de ");
 	  my_putstr(entree);
 	  my_putstr(" dans cette salle !\n\n");
 	}
@@ -211,7 +203,7 @@ int		prendre()
   /*DEBUT 11*/
   if(SALLE == 11)
     {
-      if (strcmp(entree, "medicaments") == 0)
+      if ((strcmp(entree, "medicaments") == 0) || strcmp(entree, "medicament") == 0)
 	{
 	  if (MEDIC_RESE > 0)
 	    {

@@ -10,7 +10,7 @@ void		fouiller()
   is_muni = 0;
   is_medic = 0;
 
-  my_putstr("\nJ'ai fouillé la piece... Il y a...\n");
+  my_putstr("\nJ'ai fouillé la piece... Il y a...\n\n");
   if(MEDIC_MAP > 0)
     {
       my_putstr(" - un <medicament>\n");
@@ -18,14 +18,14 @@ void		fouiller()
     }
   if(MUNI_MAP > 0)
     {
-      my_putstr(" - des <munitions>\n\n");
+      my_putstr(" - des <munitions>\n");
       is_muni = 1;
     }
 
 /*SALLE 01*/
 if (SALLE == 1)
   {
-    my_putstr("\n- une <console> centrale.\n\n");
+    my_putstr(" - une <console> centrale.\n\n");
           return;
   }
 
@@ -34,11 +34,14 @@ if (SALLE == 1)
       /*SALLE 2*/
   if (SALLE == 2)
     {
-      my_putstr("\n - un lit, pour prendre <du repos> [60secondes]\n\n");
       if (CARTE_COM == 0)
         {
-	         my_putstr(" - une <carte> d'identification\n\n");
-	      }
+	  my_putstr(" - une <carte> d'identification\n\n");
+	}
+      else
+	{
+	  my_putstr("Rien.\n\n");
+	}
       return;
     }
   /*FIN SALLE02*/
@@ -60,7 +63,7 @@ if (SALLE == 1)
 	    }
 	}
       else
-	my_putstr("\nC'est reparti ! Je vais peut etre finir par m'habituer a ce vaisseau glauque a l'atmosphere oppressante  !... Non ?\n\n");
+	my_putstr("Rien.\n\n");
       return;
     }
   /*FIN SALLE04*/
@@ -68,13 +71,13 @@ if (SALLE == 1)
   /*DEBUT SALLE07*/
   if (SALLE == 7)
     {
-      if (BOTTES == 0)
+      if (jena.equip_jambes[1].possede == 0)
 	{
 	  my_putstr(" - des <bottes> en cuir.\n\n");
 	}
-      else
+	else
 	{
-	  my_putstr("\nJ'ai beau chercher, je ne vois rien a récuperer.\n\n");
+	  my_putstr("Rien.\n\n");
 	}
       return;
     }
@@ -88,7 +91,7 @@ if (SALLE == 1)
 	}
       else if (MUNI_MAP == 0)
 	{
-	  my_putstr("\nJ'ai beau chercher, je ne vois rien a récuperer.\n\n");
+	  my_putstr("Rien.\n\n");
 	}
       return;
     }
@@ -103,7 +106,7 @@ if (SALLE == 1)
 	}
       else if (MUNI_MAP == 0)
 	{
-	  my_putstr("\nJ'ai beau chercher, je ne vois rien a récuperer.\n\n");
+	  my_putstr("Rien.\n\n");
 	}
       return;
     }
@@ -118,14 +121,14 @@ if (SALLE == 1)
 	}
       else
 	{
-	  my_putstr("\nJ'ai beau chercher, je ne vois rien a récuperer.\n\n");
-	}
+	  my_putstr("Rien.\n\n");
+	  }
       return;
     }
   /*FIN SALLE24*/
 
   if (is_muni == 0 && is_medic == 0)
-    my_putstr("\nRien.\n\n");
+    my_putstr("Rien.\n\n");
   else
     my_putstr("\n");
 }
