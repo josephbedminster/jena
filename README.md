@@ -31,11 +31,19 @@ Le but étant de monter en compétence en relevant les défis liés à la créat
 ***
    
 ###![image install] (http://www.hostingpics.net/thumbs/97/31/80/mini_973180cloudstorage3.png) Installation
-   
-> **>** Telecharger [Save link as...]: http://bedminster.fr/jena/install.sh
-   
+    
+Sous Linux :   
+> **>** curl http://bedminster.fr/jena/install.sh >> install.sh
+    
+Sous Mac :
+> **>**	 curl http://bedminster.fr/jena/install.sh >> install.sh
+    
+Pour l'installer :
 > **>** sh install.sh
-   
+    
+Pour l'executer / effectuer les mises a jour :
+> **>** sh update.sh
+    
 ***
    
 ###![image infos] (http://www.hostingpics.net/thumbs/11/25/01/mini_112501computerscreen14.png) Informations
