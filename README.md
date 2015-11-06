@@ -36,13 +36,13 @@ Sous Linux :
 > **>** curl http://bedminster.fr/jena/install.sh >> install.sh
     
 Sous Mac :
-> **>**	 curl http://bedminster.fr/jena/install.sh >> install.sh
+> **>**	 wget http://bedminster.fr/jena/install.sh >> install.sh
     
 Pour l'installer :
 > **>** sh install.sh
     
 Pour l'executer / effectuer les mises a jour :
-> **>** sh update.sh
+> **>** cd jena && sh update.sh
     
 ***
    
