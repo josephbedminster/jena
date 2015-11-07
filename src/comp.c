@@ -32,7 +32,7 @@ int             comparer(char* entree)
     }
   
   
-  if ((my_strcmp(entree, "aide") == 0) || (atoi(entree) == 0))
+  if ((my_strcmp(entree, "aide") == 0))
     {
       help();
       return (0);
