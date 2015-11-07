@@ -4,7 +4,7 @@ extern t_attack attackList;
 extern t_player jena;
 
 int             comparer(char* entree)
-{ 
+{
   if ((my_strcmp(entree, "regarder") == 0) || (atoi(entree) == 5))
     {
       look();
